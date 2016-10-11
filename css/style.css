@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+}
+
+/*LOGIN SECTION*/
+
+section.login {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    width: 30vw;
+    border: 1px solid black;
+}
+
+.login-field {
+    justify-content: center;
+}
+
+.login-field input {
+    width: 60%;
+    margin: 20px 0 0 0;
+    height: 30px;
+    text-align: center;
+}
+
+.login-field input[type="submit"] {
+    width: 20%;
+    margin: 20px 0;
+}
+
+/*END LOGIN SECTION*/
+
+/*HELPER CLASSES*/
+
+.flex {
+    display: flex;
+}
+
+/*END HELPER CLASSES*/
