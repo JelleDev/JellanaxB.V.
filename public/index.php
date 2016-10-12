@@ -6,20 +6,16 @@
  * Time: 11:13
  */
 
+require 'header.php';
+
 ?>
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Barroc-IT Web App</title>
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
-</head>
-<body>
-    <div class="container">
+
+<div class="container">
+    <div class="main-page">
+        <nav>
+            <h1 class="title">Barroc-IT</h1>
+        </nav>
         <section class="login flex">
             <div class="login-box">
                 <form action="" method="POST">
@@ -38,5 +34,8 @@
             </div>
         </section>
     </div>
-</body>
-</html>
+</div>
+
+<?php
+require 'footer.php';
+?>

@@ -3,21 +3,37 @@
     margin: 0;
 }
 
+h1 {
+    font-family: 'Open Sans Condensed', Cursive;
+    font-size: 50px;
+}
+
 .container {
     width: 100%;
+}
+
+.main-page {
+    background: url("../img/seigaiha.png");
+    height: 100vh;
+}
+
+.title {
+    text-align: center;
+    padding: 8% 0 2% 0;
+    color: black;
 }
 
 /*LOGIN SECTION*/
 
 section.login {
     justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .login-box {
     width: 30vw;
-    border: 1px solid black;
+    height: 30vh;
+    border: 1px solid lightgrey;
+    background: white;
 }
 
 .login-field {
