@@ -4,7 +4,7 @@
 }
 
 body {
-    background: url("../img/fabric_of_squares_gray.png");
+    background: url("../img/cubes.png");
 }
 
 .container {
@@ -20,12 +20,8 @@ header h1 {
     text-align: center;
 }
 
-.top-bar {
-    margin: 2% 0 0 0;
-}
-
-.top-bar h2, .bottom-bar h3 {
-    margin: 10px 0;
+.info-bar {
+    background: white;
 }
 
 .info-bar div {

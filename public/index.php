@@ -29,4 +29,4 @@ require_once 'header.php';
     </section>
 </div>
 
-<?php require 'footer.php'; ?>
+<?php require_once 'footer.php'; ?>
