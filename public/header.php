@@ -18,5 +18,6 @@
     <title>Barroc-IT Web App</title>
     <link rel="stylesheet" href="../css/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css">
 </head>
 <body>

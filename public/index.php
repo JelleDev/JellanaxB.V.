@@ -2,40 +2,31 @@
 /**
  * Created by PhpStorm.
  * User: Jelle
- * Date: 11-10-2016
- * Time: 11:13
+ * Date: 13-10-2016
+ * Time: 09:27
  */
 
 require 'header.php';
 
 ?>
 
-
 <div class="container">
-    <div class="main-page">
-        <nav>
-            <h1 class="title">Barroc-IT</h1>
-        </nav>
-        <section class="login flex">
-            <div class="login-box">
-                <form action="" method="POST">
-                    <div class="form-group login-field flex">
-                        <label hidden for="username">Username</label>
-                        <input type="text" id="username" name="username" placeholder="Username">
-                    </div>
-                    <div class="form-group login-field flex">
-                        <label hidden for="password">Password</label>
-                        <input type="text" id="password" name="password" placeholder="Password">
-                    </div>
-                    <div class="form-group login-field flex">
-                        <input type="submit" name="login" value="Log in">
-                    </div>
-                </form>
+    <header>
+        <h1>Barroc-IT</h1>
+    </header>
+    <section class="login">
+        <form class="col-md-4 col-md-offset-4" action="" method="get">
+            <div class="form-group">
+                <label class="sr-only" for="username">Username</label>
+                <input class="form-control" type="text" name="username" id="username" placeholder="Username">
             </div>
-        </section>
-    </div>
+            <div class="form-group">
+                <label class="sr-only" for="password">Password</label>
+                <input class="form-control" type="password" name="password" id="password" placeholder="Password">
+            </div>
+            <input class="btn btn-primary col-md-4 col-md-offset-4" type="submit" value="Log in">
+        </form>
+    </section>
 </div>
 
-<?php
-require 'footer.php';
-?>
+<?php require 'footer.php'; ?>
