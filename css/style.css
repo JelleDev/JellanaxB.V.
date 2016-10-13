@@ -4,12 +4,14 @@
 }
 
 body {
-    background: url("../img/sayagata-400px.png");
+    background: url("../img/fabric_of_squares_gray.png");
 }
 
 .container {
     width: 100%;
 }
+
+/*HEADER*/
 
 header h1 {
     margin: 12% 0 30px 0;
@@ -17,6 +19,29 @@ header h1 {
     font-size: 50px;
     text-align: center;
 }
+
+.top-bar {
+    margin: 2% 0 0 0;
+}
+
+.top-bar h2, .bottom-bar h3 {
+    margin: 10px 0;
+}
+
+.info-bar div {
+    border: 1px solid black;
+}
+
+.info-bar .col-md-12:last-child {
+    border-top: none;
+}
+
+aside {
+    height: 100%;
+}
+
+
+/*END HEADER*/
 
 /*LOGIN SECTION*/
 

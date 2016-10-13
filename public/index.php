@@ -6,7 +6,7 @@
  * Time: 09:27
  */
 
-require 'header.php';
+require_once 'header.php';
 
 ?>
 
@@ -15,7 +15,7 @@ require 'header.php';
         <h1>Barroc-IT</h1>
     </header>
     <section class="login">
-        <form class="col-md-4 col-md-offset-4" action="" method="get">
+        <form class="col-md-4 col-md-offset-4" action="" method="post">
             <div class="form-group">
                 <label class="sr-only" for="username">Username</label>
                 <input class="form-control" type="text" name="username" id="username" placeholder="Username">
