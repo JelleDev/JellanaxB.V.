@@ -18,28 +18,16 @@ require_once 'header.php';
                     <h2>Barroc-IT system</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3>Here you can search for a specific client</h3>
+                    <h3>Here you can search for a specific project</h3>
                 </div>
             </div>
         </header>
         <section class="information col-md-12">
             <form class="search form-horizontal">
                 <div class="form-group">
-                    <label for="clientname" class="col-sm-2 control-label">Clientname</label>
+                    <label for="projectname" class="col-sm-2 control-label">Projectname</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="clientname" placeholder="Clientname">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="companyname" class="col-sm-2 control-label">Companyname</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="companyname" placeholder="Companyname">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="clientnumber" class="col-sm-2 control-label">Clientnumber</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="clientnumber" placeholder="Clientnumber">
+                        <input type="text" class="form-control" id="projectname" placeholder="Projectname">
                     </div>
                 </div>
 
@@ -51,8 +39,8 @@ require_once 'header.php';
     </div>
     <aside class="col-md-2">
         <h2>Search</h2>
-        <div class="clients">
-            <h2>Clients</h2>
+        <div class="projects">
+            <h2>Projects</h2>
         </div>
 
     </aside>
