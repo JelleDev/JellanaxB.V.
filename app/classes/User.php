@@ -25,14 +25,21 @@ class User
         exit;
     }
 
-    public function redirect($path, $message){
-        header('location: ' . BASE_URL . '/public/' . $path . '?=' . $message);
-    }
-
     public function logout(){
         if(isset($_SESSION)){
             session_destroy();
         }
+    }
+
+    public function isLoggedIn(){
+        if($this->logged){
+            return true;
+        }
+        return false;
+    }
+
+    public function redirect($path, $message){
+        header('location: ' . BASE_URL . '/public/' . $path . '?=' . $message);
     }
 
     /*

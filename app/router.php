@@ -8,7 +8,16 @@
 
 require realpath(__DIR__ . '/init.php');
 
-?>
+$role = $user->getRole();
 
-<p>U bent ingelogt als <?php echo $user->getRole(); ?></p>
-<p>Wilt u <a href="http://localhost/JellanaxB.V/app/controller/authcontroller.php?type=logout">Uitloggen?</a></p>
+switch ($role){
+    case 'admin': $user->redirect('admin.php', 'Admin');
+        break;
+    case 'development': $user->redirect('development.php', 'Development');
+        break;
+    case 'sales': $user->redirect('sales.php', 'Sales');
+        break;
+    case 'finance': $user->redirect('finance.php', 'Finance');
+        break;
+    default: $user->redirect('index.php', 'notLogged');
+}

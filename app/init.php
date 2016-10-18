@@ -44,4 +44,5 @@ if(isset($_SESSION['uid'])) {
     $user->setRole($userData['department']);
 
     var_dump($user);
+    var_dump($_SESSION);
 }
