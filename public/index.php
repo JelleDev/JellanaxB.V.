@@ -29,4 +29,6 @@ require realpath(__DIR__ . '/header.php');
     </section>
 </div>
 
-<?php require realpath(__DIR__ . '/footer.php'); ?>
+<?php
+require realpath(__DIR__ . '/footer.php');
+?>
