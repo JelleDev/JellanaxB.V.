@@ -22,7 +22,11 @@ require_once 'header.php';
                 </div>
             </div>
         </header>
-        <section class="information"></section>
+        <section class="information">
+            <div class="search-box">
+                <form action="" method="post"></form>
+            </div>
+        </section>
     </div>
     <aside class="col-md-3"></aside>
 </div>

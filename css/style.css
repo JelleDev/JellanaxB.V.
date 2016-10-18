@@ -7,10 +7,6 @@ body {
     background: url("../img/cubes.png");
 }
 
-.container {
-    width: 100%;
-}
-
 /*HEADER*/
 
 header h1 {
@@ -20,12 +16,12 @@ header h1 {
     text-align: center;
 }
 
-.info-bar {
-    background: white;
-}
-
 .info-bar div {
     border: 1px solid black;
+}
+
+.info-bar h2, .info-bar h3 {
+    margin: 10px 0;
 }
 
 .info-bar .col-md-12:last-child {
@@ -48,6 +44,10 @@ input[type="submit"] {
 
 
 /*END LOGIN SECTION*/
+
+/*INFORMATION SECTION*/
+
+/*END INFORMATION SECTION*/
 
 /*HELPER CLASSES*/
 

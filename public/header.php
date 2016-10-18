@@ -6,6 +6,8 @@
  * Time: 12:05
  */
 
+require realpath(__DIR__ . '/../app/init.php');
+
 ?>
 
 <!doctype html>
