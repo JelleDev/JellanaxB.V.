@@ -39,7 +39,7 @@ require_once 'header.php';
     </div>
     <aside class="col-md-2">
         <h2>Search</h2>
-        <div class="projects">
+        <div class="projects active-tab">
             <h2>Projects</h2>
         </div>
 

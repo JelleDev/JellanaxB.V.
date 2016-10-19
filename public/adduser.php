@@ -18,41 +18,48 @@ require_once 'header.php';
                     <h2>Barroc-IT system</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3>Here you can search for a specific client</h3>
+                    <h3>Here you can add a new user</h3>
                 </div>
             </div>
         </header>
         <section class="information col-md-12">
             <form class="search form-horizontal">
                 <div class="form-group">
-                    <label for="clientname" class="col-sm-2 control-label">Clientname</label>
+                    <label for="username" class="col-sm-2 control-label">Username</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="clientname" placeholder="Clientname">
+                        <input type="text" class="form-control" id="username" placeholder="Username">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="companyname" class="col-sm-2 control-label">Companyname</label>
+                    <label for="password" class="col-sm-2 control-label">Password</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="companyname" placeholder="Companyname">
+                        <input type="password" class="form-control" id="password" placeholder="Password">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="clientnumber" class="col-sm-2 control-label">Clientnumber</label>
+                    <label for="department" class="col-sm-2 control-label">Department</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="clientnumber" placeholder="Clientnumber">
+                        <input type="text" class="form-control" id="department" placeholder="Department">
                     </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary col-md-2 col-md-offset-9">
                 </div>
 
-                <div class="form-group">
-                    <input type="submit" value="Search" class="btn btn-primary col-md-2 col-md-offset-9">
-                </div>
             </form>
         </section>
     </div>
     <aside class="col-md-2">
-        <h2>Search</h2>
-        <div class="clients active-tab">
+        <h2>Admin</h2>
+        <div class="clients">
             <h2>Clients</h2>
+            <h3>Appointments</h3>
+            <h2>Invoices</h2>
+            <h2>Projects</h2>
+            <div class="active-tab">
+                <h2>Users</h2>
+            </div>
+
         </div>
 
     </aside>

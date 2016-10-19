@@ -18,7 +18,7 @@ require_once 'header.php';
                     <h2>Barroc-IT system</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3>Here you can search for a specific client</h3>
+                    <h3>Here you can search for a specific appointment</h3>
                 </div>
             </div>
         </header>
@@ -37,9 +37,15 @@ require_once 'header.php';
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="clientnumber" class="col-sm-2 control-label">Clientnumber</label>
+                    <label for="project" class="col-sm-2 control-label">Project</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="clientnumber" placeholder="Clientnumber">
+                        <input type="text" class="form-control" id="project" placeholder="Project">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="date" class="col-sm-2 control-label">Date</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="date" placeholder="Date">
                     </div>
                 </div>
 
@@ -50,9 +56,13 @@ require_once 'header.php';
         </section>
     </div>
     <aside class="col-md-2">
-        <h2>Search</h2>
-        <div class="clients active-tab">
+        <h2>Sales/Admin</h2>
+        <div class="appointments">
             <h2>Clients</h2>
+            <div class="active-tab">
+                <h3>Appointments</h3>
+            </div>
+
         </div>
 
     </aside>

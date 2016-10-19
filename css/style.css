@@ -74,7 +74,30 @@ form.search{
     border-top: 1px solid #000000;
     height: 221px;
 }
+
+.appointments{
+    border-top: 1px solid #000000;
+    height: 395px;
+}
+
+.invoices{
+    margin-top: 18px;
+    border-top: 1px solid #000000;
+    height: 337px;
+}
+
 /*END INFORMATION SECTION*/
+
+/*TAB-LIST*/
+
+.active-tab{
+    color: blue;
+}
+
+
+
+/*END TAB-LIST*/
+
 
 /*HELPER CLASSES*/
 
