@@ -3,14 +3,14 @@ require 'header.php';
 ?>
 
 <div class="container">
-    <div class="main-part col-md-9">
+	<div class="main-part col-md-9">
         <header class="col-md-12">
             <div class="info-bar">
                 <div class="col-md-12">
                     <h2>0 Results found</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="#">Add a Client</a></h3>
+                    <h3><a href="#">Add a project</a></h3>
                 </div>
             </div>
         </header>
@@ -65,14 +65,15 @@ require 'header.php';
     	<div class="aside-clients">
     		<ul class="aside-client">
     			<li class="logged_in_as">Admin</li>
-    			<active><li><a href="customers.php">Clients</a></li></active>
+    			<active><li><a href="projects.php">Projects</a></li></active>
     			<li>Users</li>
     			<li>Appointments</li>
-    			<li>Projects</li>
+    			<li>Clients</li>
     		</ul>
     	</div>
     </aside>
 </div>
+
 
 <?php
 require 'footer.php';
