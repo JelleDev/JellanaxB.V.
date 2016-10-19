@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $account = [
         'uid' => $data->user_id,
-        'username' => $data->username,
+        'department_id' => $data->department_id
     ];
 
     $user->login($account);

@@ -20,7 +20,7 @@ class User
 
     public function login($account){
         $_SESSION['uid'] = $account['uid'];
-        $_SESSION['departmentid'] = $account['departmentid'];
+        $_SESSION['department_id'] = $account['department_id'];
         header('location: ' . BASE_URL . '/app/router.php');
         exit;
     }
