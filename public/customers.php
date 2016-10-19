@@ -7,10 +7,10 @@ require 'header.php';
         <header class="col-md-12">
             <div class="info-bar">
                 <div class="col-md-12">
-                    <h2>Barroc-IT system</h2>
+                    <h2>0 Resultaten gevonden</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3>This is just a template</h3>
+                    <h3><a href="#">Project toevoegen</a></h3>
                 </div>
             </div>
         </header>
@@ -40,10 +40,38 @@ require 'header.php';
         			<li class="col-md-3">Klantnaam</li>
         			<li class="col-md-3">E-mail adress</li>
         		</ul>
+        		<ul class="client col-md-12">
+        			<li class="col-md-3"><a href="#">Bedrijfsnaam</a></li>
+        			<li class="col-md-3">Telefoonnummer</li>
+        			<li class="col-md-3">Klantnaam</li>
+        			<li class="col-md-3">E-mail adress</li>
+        		</ul>
+        		<ul class="client col-md-12">
+        			<li class="col-md-3"><a href="#">Bedrijfsnaam</a></li>
+        			<li class="col-md-3">Telefoonnummer</li>
+        			<li class="col-md-3">Klantnaam</li>
+        			<li class="col-md-3">E-mail adress</li>
+        		</ul>
+        		<ul class="client col-md-12">
+        			<li class="col-md-3"><a href="#">Bedrijfsnaam</a></li>
+        			<li class="col-md-3">Telefoonnummer</li>
+        			<li class="col-md-3">Klantnaam</li>
+        			<li class="col-md-3">E-mail adress</li>
+        		</ul>
         	</div>
         </section>
     </div>
-    <aside class="col-md-3"></aside>
+    <aside class="col-md-3">
+    	<div class="aside-clients">
+    		<ul class="aside-client">
+    			<li class="logged_in_as">Admin</li>
+    			<li>Projects</li>
+    			<li>Users</li>
+    			<li>Appointments</li>
+    			<li>Clients</li>
+    		</ul>
+    	</div>
+    </aside>
 </div>
 
 <?php

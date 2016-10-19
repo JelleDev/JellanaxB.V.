@@ -7,6 +7,13 @@ body {
     background: url("../img/cubes.png");
 }
 
+.container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+    margin-top: 70px;
+}
+
 /*HEADER*/
 
 header h1 {
@@ -23,6 +30,7 @@ header h1 {
 .info-bar h2, .info-bar h3 {
     margin: 10px 0;
 }
+
 
 .info-bar .col-md-12:last-child {
     border-top: none;
@@ -52,9 +60,31 @@ input[type="submit"] {
     border: 1px solid black;
     padding-top: 10px;
     padding-bottom: 10px;
-
-
+    height: 100%;
 }
+.clients ul {
+    margin-bottom: 0px;
+}
+.aside-client li {
+    list-style-type: none;
+    font-size: 30px;
+    font-family: 'Open Sans Condensed', Cursive;
+    padding-left: 30px; 
+    padding-top: 10px;
+}
+aside.col-md-3 {
+    border: 1px solid black;
+    padding: 0px;
+}
+.logged_in_as {
+    border-bottom: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+}
+li.logged_in_as {
+    padding: 30px 0;
+}
+
 
 /*END INFORMATION SECTION*/
 
