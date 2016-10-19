@@ -39,7 +39,7 @@ class User
     }
 
     public function redirect($path, $message){
-        header('location: ' . BASE_URL . '/public/' . $path . '?=' . $message);
+        header('location: ' . BASE_URL . '/public/' . $path . '?' . $message);
     }
 
     /*
