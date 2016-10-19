@@ -47,6 +47,15 @@ input[type="submit"] {
 
 /*INFORMATION SECTION*/
 
+.client li  {
+    list-style-type: none;
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+
+}
+
 /*END INFORMATION SECTION*/
 
 /*HELPER CLASSES*/
