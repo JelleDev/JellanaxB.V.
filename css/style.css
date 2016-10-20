@@ -54,6 +54,10 @@ input[type="submit"] {
 /*END LOGIN SECTION*/
 
 /*INFORMATION SECTION*/
+/*Headsection*/
+li.col-md-3.bold {
+    font-weight: 600 !important;
+}
 /*CUSTOMER/PROJECTS PHP PAGE*/
 
 .client li  {
