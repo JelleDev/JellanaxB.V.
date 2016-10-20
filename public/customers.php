@@ -41,19 +41,19 @@ require 'header.php';
         			<li class="col-md-3">E-mail adress</li>
         		</ul>
         		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Bedrijfsnaam</a></li>
+        			<li class="col-md-3"><a href="#">Companyname</a></li>
         			<li class="col-md-3">Telephonenumber</li>
         			<li class="col-md-3">Customername</li>
         			<li class="col-md-3">E-mail adress</li>
         		</ul>
         		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Bedrijfsnaam</a></li>
+        			<li class="col-md-3"><a href="#">Companyname</a></li>
         			<li class="col-md-3">Telephonenumber</li>
         			<li class="col-md-3">Customername</li>
         			<li class="col-md-3">E-mail adress</li>
         		</ul>
         		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Bedrijfsnaam</a></li>
+        			<li class="col-md-3"><a href="#">Companyname</a></li>
         			<li class="col-md-3">Telephonenumber</li>
         			<li class="col-md-3">Customername</li>
         			<li class="col-md-3">E-mail adress</li>
