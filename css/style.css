@@ -14,6 +14,7 @@ body {
     margin-top: 70px;
 }
 
+
 /*HEADER*/
 
 header h1 {
@@ -118,6 +119,9 @@ ul.information-clients.col-md-12 {
 
 .flex {
     display: flex;
+}
+.active {
+    text-decoration: underline;
 }
 
 /*END HELPER CLASSES*/

@@ -10,7 +10,7 @@ require 'header.php';
                     <h2>0 Results found</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="#">Add a Client</a></h3>
+                    <h3><a href="appointment.php">Add an appointment</a></h3>
                 </div>
             </div>
         </header>
@@ -65,10 +65,10 @@ require 'header.php';
     	<div class="aside-clients">
     		<ul class="aside-client">
     			<li class="logged_in_as">Admin</li>
-    			<active><li><a href="customers.php">Clients</a></li></active>
-    			<li>Users</li>
-    			<li>Appointments</li>
-    			<li>Projects</li>
+    			<li><a href="customers.php">Clients</a></li>
+    			<li><a href="users.php">Users</a></li>
+    			<li class="active"><a href="appointments.php">Appointments</a></li>
+    			<li><a href="projects.php">Projects</a></li>
     		</ul>
     	</div>
     </aside>

@@ -44,9 +44,9 @@ $clients = $client->getAllClients();
     		<ul class="aside-client">
     			<li class="logged_in_as">Admin</li>
 				<li class="active"><a href="customers.php">Clients</a></li>
-    			<li>Users</li>
-    			<li>Appointments</li>
-    			<li>Projects</li>
+                <li><a href="users.php">Users</a></li>
+                <li><a href="appointments.php">Appointments</a></li>
+                <li><a href="projects.php">Projects</a></li>
     		</ul>
     	</div>
     </aside>

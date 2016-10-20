@@ -65,10 +65,10 @@ require 'header.php';
     	<div class="aside-clients">
     		<ul class="aside-client">
     			<li class="logged_in_as">Admin</li>
-    			<active><li><a href="projects.php">Projects</a></li></active>
-    			<li>Users</li>
-    			<li>Appointments</li>
-    			<li>Clients</li>
+                <li><a href="customers.php">Clients</a></li>
+                <li><a href="users.php">Users</a></li>
+                <li><a href="appointments.php">Appointments</a></li>
+                <li class="active"><a href="projects.php">Projects</a></li>
     		</ul>
     	</div>
     </aside>
