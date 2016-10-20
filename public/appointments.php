@@ -10,7 +10,7 @@ require 'header.php';
                     <h2>0 Results found</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="appointment.php">Add an appointment</a></h3>
+                    <h3><a href="add-appointment.php">Add an appointment</a></h3>
                 </div>
             </div>
         </header>
