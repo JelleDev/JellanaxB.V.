@@ -32,8 +32,8 @@ $clients = $client->getAllClients();
 						<li class='col-md-3'><a href='#'>" . $customer['companyname'] . "</a></li>
 						<li class='col-md-3'>" . $customer['phonenumber1'] . "</li>
 						<li class='col-md-3'>" . $customer['contactperson'] . "</li>
-						<li class='col-md-3'>" . $customer['emailadress'] . "</li>";
-
+						<li class='col-md-3'>" . $customer['emailadress'] . "</li>
+						</ul>";
 				}
 				?>
         	</div>

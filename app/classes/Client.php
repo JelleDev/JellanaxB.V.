@@ -20,4 +20,11 @@ class Client
             ->fetchAll(PDO::FETCH_ASSOC);
         return $clientData;
     }
+
+    public function getClient($id){
+        $clientData = $this->db->pdo
+            ->query("SELECT * FROM `tbl_clients` WHERE `id` = $id")
+            ->fetch(PDO::FETCH_ASSOC);
+        return $clientData;
+    }
 }
