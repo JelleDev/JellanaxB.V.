@@ -61,7 +61,6 @@ input[type="submit"] {
     border: 1px solid black;
     padding-top: 10px;
     padding-bottom: 10px;
-    height: 100%;
 }
 .clients ul {
     margin-bottom: 0px;
