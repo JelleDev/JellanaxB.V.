@@ -1,5 +1,9 @@
 <?php
 require 'header.php';
+
+$client = new Client();
+
+$clients = $client->getAllClients();
 ?>
 
 <div class="container">
@@ -22,42 +26,16 @@ require 'header.php';
         			<li class="col-md-3">Customername</li>
         			<li class="col-md-3">E-mail adress</li>
         		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">Customername</li>
-        			<li class="col-md-3">E-mail adress</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">Customername</li>
-        			<li class="col-md-3">E-mail adress</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">Customername</li>
-        			<li class="col-md-3">E-mail adress</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Bedrijfsnaam</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">Customername</li>
-        			<li class="col-md-3">E-mail adress</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Bedrijfsnaam</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">Customername</li>
-        			<li class="col-md-3">E-mail adress</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Bedrijfsnaam</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">Customername</li>
-        			<li class="col-md-3">E-mail adress</li>
-        		</ul>
+				<?php
+				foreach ($clients as $customer){
+					echo "<ul class='client col-md-12'>
+						<li class='col-md-3'><a href='#'>" . $customer['companyname'] . "</a></li>
+						<li class='col-md-3'>" . $customer['phonenumber1'] . "</li>
+						<li class='col-md-3'>" . $customer['contactperson'] . "</li>
+						<li class='col-md-3'>" . $customer['emailadress'] . "</li>";
+
+				}
+				?>
         	</div>
         </section>
     </div>
@@ -65,7 +43,7 @@ require 'header.php';
     	<div class="aside-clients">
     		<ul class="aside-client">
     			<li class="logged_in_as">Admin</li>
-    			<active><li><a href="customers.php">Clients</a></li></active>
+				<li class="active"><a href="customers.php">Clients</a></li>
     			<li>Users</li>
     			<li>Appointments</li>
     			<li>Projects</li>
