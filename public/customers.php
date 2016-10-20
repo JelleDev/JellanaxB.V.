@@ -21,10 +21,10 @@ $clients = $client->getAllClients();
         <section class="information">
         	<div class="clients">
         		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">Customername</li>
-        			<li class="col-md-3">E-mail adress</li>
+        			<li class="col-md-3 bold">Companyname</a></li>
+        			<li class="col-md-3 bold">Telephonenumber</li>
+        			<li class="col-md-3 bold">Customername</li>
+        			<li class="col-md-3 bold">E-mail adress</li>
         		</ul>
 				<?php
 				foreach ($clients as $customer){
