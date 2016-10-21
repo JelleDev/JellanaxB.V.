@@ -14,6 +14,22 @@ body {
     margin-top: 70px;
 }
 
+<<<<<<< HEAD
+.col-md-12, .col-md-10{
+    padding: 0 !important;
+}
+
+.main-part {
+    background: #FFFFFF;
+}
+
+aside {
+    background: #FFFFFF;
+    height: 100%;
+    border: 1px solid black;
+}
+=======
+>>>>>>> 414d88037702c02896f8a5eeb9fcb57913ad0462
 
 /*HEADER*/
 
@@ -37,11 +53,6 @@ header h1 {
     border-top: none;
 }
 
-aside {
-    height: 100%;
-}
-
-
 /*END HEADER*/
 
 /*LOGIN SECTION*/
@@ -51,10 +62,58 @@ input[type="submit"] {
     padding: 5px 9px;
 }
 
-
 /*END LOGIN SECTION*/
 
 /*INFORMATION SECTION*/
+<<<<<<< HEAD
+
+.information {
+    border: 1px solid #000000;
+}
+
+form.search{
+    margin-top: 50px;
+    margin-right: 90px;
+    margin-left: 90px;
+}
+
+.clients{
+    border-top: 1px solid #000000;
+    height: 337px;
+}
+
+.projects{
+    border-top: 1px solid #000000;
+    height: 221px;
+}
+
+.appointments{
+    border-top: 1px solid #000000;
+    height: 395px;
+}
+
+.invoices{
+    margin-top: 18px;
+    border-top: 1px solid #000000;
+    height: 743px;
+}
+
+/*END INFORMATION SECTION*/
+
+/*TAB-LIST*/
+
+.active-tab{
+    color: blue;
+}
+
+
+
+/*END TAB-LIST*/
+.edit-invoice-buttons{
+    justify-content: space-around;
+}
+
+=======
 /*Headsection*/
 li.col-md-3.bold {
     font-weight: 600 !important;
@@ -117,6 +176,7 @@ li.logged_in_as {
 }
 
 /*END INFORMATION SECTION*/
+>>>>>>> 414d88037702c02896f8a5eeb9fcb57913ad0462
 
 /*HELPER CLASSES*/
 
