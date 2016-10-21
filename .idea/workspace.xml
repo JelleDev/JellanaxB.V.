@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f13d1649-3cbe-4045-aeb0-664efa696859" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/classes/Client.php" afterPath="$PROJECT_DIR$/app/classes/Client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/customer.php" afterPath="$PROJECT_DIR$/public/customer.php" />
     </list>
     <ignored path="JellanaxB.V.iws" />
@@ -116,9 +114,24 @@
       <file leaf-file-name="customer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/customer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="42" column="72" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
-              <folding />
+            <state relative-caret-position="374">
+              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+              <folding>
+                <marker date="1477037575400" expanded="true" signature="304:1867" ph="..." />
+                <marker date="1477037575400" expanded="true" signature="341:1867" ph="..." />
+                <marker date="1477037575400" expanded="true" signature="376:682" ph="..." />
+                <marker date="1477037575400" expanded="true" signature="411:664" ph="..." />
+                <marker date="1477037575400" expanded="true" signature="451:515" ph="..." />
+                <marker date="1477037575400" expanded="true" signature="555:645" ph="..." />
+                <marker date="1477037575400" expanded="true" signature="722:1867" ph="..." />
+                <marker date="1477037575400" expanded="true" signature="758:1867" ph="..." />
+                <marker date="1477037575400" expanded="true" signature="818:1867" ph="..." />
+                <marker date="1477037575400" expanded="true" signature="879:1752" ph="..." />
+                <marker date="1477037575400" expanded="true" signature="1813:1867" ph="..." />
+                <marker date="1477037575400" expanded="true" signature="2875:3165" ph="..." />
+                <marker date="1477037575400" expanded="true" signature="2908:3152" ph="..." />
+                <marker date="1477037575400" expanded="true" signature="2940:3140" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -380,12 +393,12 @@
       <workItem from="1476686723753" duration="4603000" />
       <workItem from="1476773580769" duration="12244000" />
       <workItem from="1476859758405" duration="7296000" />
-      <workItem from="1476946094405" duration="7883000" />
+      <workItem from="1476946094405" duration="12123000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54688000" />
+    <option name="totallyTimeSpent" value="58928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -758,7 +771,7 @@
         <state relative-caret-position="323">
           <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
           <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
+            <element signature="e#6#87#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -873,9 +886,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/customer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="42" column="72" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
-          <folding />
+        <state relative-caret-position="374">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+          <folding>
+            <marker date="1477037575400" expanded="true" signature="304:1867" ph="..." />
+            <marker date="1477037575400" expanded="true" signature="341:1867" ph="..." />
+            <marker date="1477037575400" expanded="true" signature="376:682" ph="..." />
+            <marker date="1477037575400" expanded="true" signature="411:664" ph="..." />
+            <marker date="1477037575400" expanded="true" signature="451:515" ph="..." />
+            <marker date="1477037575400" expanded="true" signature="555:645" ph="..." />
+            <marker date="1477037575400" expanded="true" signature="722:1867" ph="..." />
+            <marker date="1477037575400" expanded="true" signature="758:1867" ph="..." />
+            <marker date="1477037575400" expanded="true" signature="818:1867" ph="..." />
+            <marker date="1477037575400" expanded="true" signature="879:1752" ph="..." />
+            <marker date="1477037575400" expanded="true" signature="1813:1867" ph="..." />
+            <marker date="1477037575400" expanded="true" signature="2875:3165" ph="..." />
+            <marker date="1477037575400" expanded="true" signature="2908:3152" ph="..." />
+            <marker date="1477037575400" expanded="true" signature="2940:3140" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
