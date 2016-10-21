@@ -10,7 +10,7 @@
  *
  *
  * */
-define('BASE_URL', 'http://localhost/JellanaxB.V/');
+define('BASE_URL', 'http://localhost/JellanaxB.V');
 
 /*
  * Sets default Path names

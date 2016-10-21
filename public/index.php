@@ -6,7 +6,7 @@
  * Time: 09:27
  */
 
-require_once 'header.php';
+require realpath(__DIR__ . '/header.php');
 
 ?>
 
@@ -15,7 +15,7 @@ require_once 'header.php';
         <h1>Barroc-IT</h1>
     </header>
     <section class="login">
-        <form class="col-md-4 col-md-offset-4" action="" method="post">
+        <form class="col-md-4 col-md-offset-4" action="<?php echo BASE_URL ?>/app/controller/authcontroller.php" method="POST">
             <div class="form-group">
                 <label class="sr-only" for="username">Username</label>
                 <input class="form-control" type="text" name="username" id="username" placeholder="Username">
@@ -29,4 +29,6 @@ require_once 'header.php';
     </section>
 </div>
 
-<?php require_once 'footer.php'; ?>
+<?php
+require realpath(__DIR__ . '/footer.php');
+?>

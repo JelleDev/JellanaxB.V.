@@ -8,9 +8,13 @@ body {
 }
 
 .container {
-    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+    margin-top: 70px;
 }
 
+<<<<<<< HEAD
 .col-md-12, .col-md-10{
     padding: 0 !important;
 }
@@ -24,6 +28,8 @@ aside {
     height: 100%;
     border: 1px solid black;
 }
+=======
+>>>>>>> 414d88037702c02896f8a5eeb9fcb57913ad0462
 
 /*HEADER*/
 
@@ -37,6 +43,11 @@ header h1 {
 .info-bar div {
     border: 1px solid black;
 }
+
+.info-bar h2, .info-bar h3 {
+    margin: 10px 0;
+}
+
 
 .info-bar .col-md-12:last-child {
     border-top: none;
@@ -54,6 +65,7 @@ input[type="submit"] {
 /*END LOGIN SECTION*/
 
 /*INFORMATION SECTION*/
+<<<<<<< HEAD
 
 .information {
     border: 1px solid #000000;
@@ -101,11 +113,80 @@ form.search{
     justify-content: space-around;
 }
 
+=======
+/*Headsection*/
+li.col-md-3.bold {
+    font-weight: 600 !important;
+}
+/*CUSTOMER/PROJECTS PHP PAGE*/
+
+.client li  {
+    list-style-type: none;
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.clients ul {
+    margin-bottom: 0px;
+}
+.aside-client li {
+    list-style-type: none;
+    font-size: 30px;
+    font-family: 'Open Sans Condensed', Cursive;
+    padding-left: 30px; 
+    padding-top: 10px;
+}
+aside.col-md-3 {
+    border: 1px solid black;
+    padding: 0px;
+}
+.logged_in_as {
+    border-bottom: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+}
+li.logged_in_as {
+    padding: 30px 0;
+}
+/*EDITCLIENT PAGE*/
+.information-client.col-md-6 {
+    padding-left: 0px;
+}
+.information-clients li {
+    list-style-type: none;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.information-clients.col-md-12 {
+    padding-top: 20px !important;
+}
+.editclients-button a {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid black;
+}
+.editclients-button {
+    text-align: center;
+}
+.information-client-add {
+    padding-top: 20px;
+}
+
+/*END INFORMATION SECTION*/
+>>>>>>> 414d88037702c02896f8a5eeb9fcb57913ad0462
 
 /*HELPER CLASSES*/
 
 .flex {
     display: flex;
 }
-
+.active {
+    text-decoration: underline;
+}
+.form-group {
+   
+}
 /*END HELPER CLASSES*/
