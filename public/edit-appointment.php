@@ -61,7 +61,7 @@ require 'header.php';
                 <li><a href="customers.php">Clients</a></li>
                 <li><a href="users.php">Users</a></li>
                 <li class="active"><a href="appointments.php">Appointments</a></li>
-                <li><a href="projects.php">Projects</a></li
+                <li><a href="projects.php">Projects</a></li>
     		</ul>
     	</div>
     </aside>
