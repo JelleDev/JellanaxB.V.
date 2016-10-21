@@ -25,9 +25,9 @@ $customerData = $client->getClient($client_id);
                     <div class="information-client-add col-md-12">
                         <form>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputCompanyname">Email address</label>
+                                <label class="sr-only" for="exampleInputCompanyname">Companyname</label>
                                 <input type="text" class="form-control" id="exampleInputCompanyname" value="<?php echo $customerData['companyname']; ?>" placeholder="Companyname"  name="companyname">
-                                </div>
+                            </div>
                             <div class="form-group">
                                 <label class="sr-only" for="exampleInputAdress1">Adress1</label>
                                 <input type="text" class="form-control" id="exampleInputAdress1" value="<?php echo $customerData['adress1']; ?>" name="Adress1">

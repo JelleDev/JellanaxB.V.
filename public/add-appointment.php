@@ -7,10 +7,10 @@ require 'header.php';
         <header class="col-md-12">
             <div class="info-bar">
                 <div class="col-md-12">
-                    <h2>Edit Appointment</h2>
+                    <h2>Add an appointment</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="appointment.php">< Go back</a></h3>
+                    <h3><a href="appointments.php">< Go back</a></h3>
                 </div>
             </div>
         </header>
@@ -47,10 +47,7 @@ require 'header.php';
                                 <input type="text" class="form-control" id="exampleInputTelephonenumber" placeholder="Telephonenumber" name="Telephonenumber">
                             </div>
                             <input type="submit" class="btn btn-primary" value="Save changes    ">
-                    </div>
-                </ul>
-                  
-        		
+                    </div>                        		
         	</div>
         </section>
     </div>
