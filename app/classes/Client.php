@@ -23,7 +23,7 @@ class Client
 
     public function getClient($id){
         $clientData = $this->db->pdo
-            ->query("SELECT * FROM `tbl_clients` WHERE `id` = $id")
+            ->query("SELECT * FROM `tbl_clients` WHERE `client_id` = $id")
             ->fetch(PDO::FETCH_ASSOC);
         return $clientData;
     }

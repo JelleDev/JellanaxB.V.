@@ -98,7 +98,8 @@ li.logged_in_as {
     border: 1px solid black;
     padding: 3px;
 }
-ul.information-clients.col-md-12 {
+
+.information-clients.col-md-12 {
     padding-top: 20px !important;
 }
 .editclients-button a {

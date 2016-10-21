@@ -1,5 +1,11 @@
 <?php
 require 'header.php';
+
+$client = new Client();
+
+$client_id = $_GET['id'];
+
+$customerData = $client->getClient($client_id);
 ?>
 
 <div class="container">
@@ -16,15 +22,13 @@ require 'header.php';
         </header>
         <section class="editclientphp">
         	<div class="clients-edit">
-                <ul class="information-clients col-md-12">
-                    <div class="information-client col-md-6">
+                <div class="information-clients col-md-12">
+                    <ul class="information-client col-md-6">
                         <li>Companyname</li>
                         <li>Adress 1</li>
-                        <li>Housenumber 1</li>
                         <li>Zip code 1</li>
                         <li>City 1</li>
                         <li>Adress 2</li>
-                        <li>Homenumber 2</li>
                         <li>Zip code 2</li>
                         <li>City 2</li>
                         <li>Contact Person</li>
@@ -33,11 +37,10 @@ require 'header.php';
                         <li>Telephonenumber 2</li>
                         <li>Faxnumber</li>
                         <li>E-mail adress</li>
-                    </div>
-                    <div class="information-client col-md-6">
-                        <li>anne</li>
-                        <li>is</li>
-                        <li>leuk</li>
+                    </ul>
+                    <ul class="information-client col-md-6">
+                        <li><?php echo $customerData['companyname']; ?></li>
+                        <li><?php echo $customerData['adress1']; ?></li>
                         <li>l</li>
                         <li>h</li>
                         <li>h</li>
@@ -50,8 +53,8 @@ require 'header.php';
                         <li>h</li>
                         <li>h</li>
                         <li>h</li>
-                    </div>
-                </ul>
+                    </ul>
+                </div>
                 <div class="editclients-button"><a href="#">Modify</a></div>
                   
         		
