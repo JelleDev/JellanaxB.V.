@@ -19,7 +19,7 @@ require 'header.php';
                     <div class="information-client-add col-md-12">
                         <form>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputCompanyname">Email address</label>
+                                <label class="sr-only" for="exampleInputCompanyname">Companyname</label>
                                 <input type="text" class="form-control" id="exampleInputCompanyname" placeholder="Companyname" name="companyname">
                                 </div>
                             <div class="form-group">
