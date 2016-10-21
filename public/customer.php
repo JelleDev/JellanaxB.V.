@@ -52,8 +52,7 @@ $secondInfo = [
                             }
                         }
                         ?>
-
-                        <li>Contact Person</li>
+                        <li>Contact Person lolahahha</li>
                         <li>E-mail adress</li>
                     </ul>
                     <ul class="information-client col-md-6">
