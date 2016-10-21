@@ -27,10 +27,6 @@ require 'header.php';
                                 <input type="text" class="form-control" id="exampleInputAdress1" placeholder="Adress1" name="Adress1">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputHousenumber1">Housenumber1</label>
-                                <input type="text" class="form-control" id="exampleInputHousenumber1" placeholder="Housenumber1" name="Housenumber1">
-                            </div>
-                            <div class="form-group">
                                 <label class="sr-only" for="exampleInputZipcode1">Zipcode1</label>
                                 <input type="text" class="form-control" id="exampleInputZipcode1" placeholder="Zipcode1" name="Zipcode1">
                             </div>
