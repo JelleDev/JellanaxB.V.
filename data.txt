@@ -1,0 +1,26 @@
+Lesson01:						
+Fill in the blank:
+
+1. If Statement
+2. Do While Loop
+3. 
+4. For Loop
+5. 4 Bytes
+6. 
+7. Recursive
+8. Contstant
+9. double
+10. flow chart
+
+Multiple choice:
+
+1. a
+2. d
+3. c
+4. a
+5. a
+6. a
+7. b
+8. c
+9. a
+10. a
