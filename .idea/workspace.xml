@@ -118,7 +118,23 @@
       <file leaf-file-name="customer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/customer.php">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
               <folding>
+                <marker date="1477039737012" expanded="true" signature="304:1876" ph="..." />
+                <marker date="1477039737012" expanded="true" signature="341:1876" ph="..." />
+                <marker date="1477039737012" expanded="true" signature="376:682" ph="..." />
+                <marker date="1477039737012" expanded="true" signature="411:664" ph="..." />
+                <marker date="1477039737012" expanded="true" signature="451:515" ph="..." />
+                <marker date="1477039737012" expanded="true" signature="555:645" ph="..." />
+                <marker date="1477039737012" expanded="true" signature="722:1876" ph="..." />
+                <marker date="1477039737012" expanded="true" signature="758:1876" ph="..." />
+                <marker date="1477039737012" expanded="true" signature="818:1876" ph="..." />
+                <marker date="1477039737012" expanded="true" signature="879:1761" ph="..." />
+                <marker date="1477039737012" expanded="true" signature="1822:1876" ph="..." />
+                <marker date="1477039737012" expanded="true" signature="2884:3174" ph="..." />
+                <marker date="1477039737012" expanded="true" signature="2917:3161" ph="..." />
+                <marker date="1477039737012" expanded="true" signature="2949:3149" ph="..." />
               </folding>
             </state>
           </provider>
@@ -381,10 +397,12 @@
       <workItem from="1476686723753" duration="4603000" />
       <workItem from="1476773580769" duration="12244000" />
       <workItem from="1476859758405" duration="7296000" />
+      <workItem from="1476946094405" duration="12578000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="59383000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -874,7 +892,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/customer.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
           <folding>
+            <marker date="1477039737012" expanded="true" signature="304:1876" ph="..." />
+            <marker date="1477039737012" expanded="true" signature="341:1876" ph="..." />
+            <marker date="1477039737012" expanded="true" signature="376:682" ph="..." />
+            <marker date="1477039737012" expanded="true" signature="411:664" ph="..." />
+            <marker date="1477039737012" expanded="true" signature="451:515" ph="..." />
+            <marker date="1477039737012" expanded="true" signature="555:645" ph="..." />
+            <marker date="1477039737012" expanded="true" signature="722:1876" ph="..." />
+            <marker date="1477039737012" expanded="true" signature="758:1876" ph="..." />
+            <marker date="1477039737012" expanded="true" signature="818:1876" ph="..." />
+            <marker date="1477039737012" expanded="true" signature="879:1761" ph="..." />
+            <marker date="1477039737012" expanded="true" signature="1822:1876" ph="..." />
+            <marker date="1477039737012" expanded="true" signature="2884:3174" ph="..." />
+            <marker date="1477039737012" expanded="true" signature="2917:3161" ph="..." />
+            <marker date="1477039737012" expanded="true" signature="2949:3149" ph="..." />
           </folding>
         </state>
       </provider>
