@@ -52,10 +52,11 @@ $secondInfo = [
                             }
                         }
                         ?>
-                        <li>Contact Person lolahahha</li>
+                        <li>Contact Person</li>
                         <li>E-mail adress</li>
                     </ul>
                     <ul class="information-client col-md-6">
+
                         <li><?php echo $customerData['companyname']; ?></li>
                         <li><?php echo $customerData['adress1']; ?></li>
                         <li><?php echo $customerData['zipcode1']; ?></li>
@@ -73,7 +74,7 @@ $secondInfo = [
                         <li><?php echo $customerData['emailadress']; ?></li>
                     </ul>
                 </div>
-                <div class="editclients-button"><a href="edit-customer.php">Modify</a></div>
+                <div class="editclients-button"><a href="edit-customer.php<?php echo '?id=' . $client_id;?>">Modify</a></div>
                   
         		
         	</div>
