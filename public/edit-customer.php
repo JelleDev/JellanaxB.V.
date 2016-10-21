@@ -25,53 +25,54 @@ $customerData = $client->getClient($client_id);
                     <div class="information-client-add col-md-12">
                         <form>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputCompanyname">Companyname</label>
+                                <label for="exampleInputCompanyname">Companyname*</label>
                                 <input type="text" class="form-control" id="exampleInputCompanyname" value="<?php echo $customerData['companyname']; ?>" placeholder="Companyname"  name="companyname">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputAdress1">Adress1</label>
+                                <label for="exampleInputAdress1">Adress1*</label>
                                 <input type="text" class="form-control" id="exampleInputAdress1" value="<?php echo $customerData['adress1']; ?>" name="Adress1">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputZipcode1">Zipcode1</label>
+                                <label for="exampleInputZipcode1">Zipcode1*</label>
                                 <input type="text" class="form-control" id="exampleInputZipcode1" value="<?php echo $customerData['zipcode1']; ?>" name="Zipcode1">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputCity1">City1</label>
+                                <label for="exampleInputCity1">City1*</label>
                                 <input type="text" class="form-control" id="exampleInputCity1" value="<?php echo $customerData['residence1']; ?>" name="InputCity1">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputAdress2">Adress2</label>
+                                <label for="exampleInputAdress2">Adress2</label>
                                 <input type="text" class="form-control" id="exampleInputAdress2" value="<?php echo $customerData['adress2']; ?>" name="Adress2">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputZipcode2">Zipcode2</label>
+                                <label for="exampleInputZipcode2">Zipcode2</label>
                                 <input type="text" class="form-control" id="exampleInputZipcode2" value="<?php echo $customerData['zipcode2']; ?>" name="Zipcode2">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputCity2">City2</label>
+                                <label for="exampleInputCity2">City2</label>
                                 <input type="text" class="form-control" id="exampleInputCity2" value="<?php echo $customerData['residence2']; ?>" name="City2">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputContactPerson">ContactPerson</label>
+                                <label for="exampleInputContactPerson">ContactPerson*</label>
                                 <input type="text" class="form-control" id="exampleInputContactPerson" value="<?php echo $customerData['contactperson']; ?>" name="Contactperson">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputInitials">Initials</label>
+                                <label for="exampleInputInitials">Initials</label>
                                 <input type="text" class="form-control" id="exampleInputInitials" value="<?php echo $customerData['initials']; ?>" name="Initials">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputTelephonenumber1">Telephonenumber1</label>
+                                <label for="exampleInputTelephonenumber1">Telephonenumber1*</label>
                                 <input type="text" class="form-control" id="exampleInputTelephonenumber1" value="<?php echo $customerData['phonenumber1']; ?>" name="Telephonenumber1">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputTelephonenumber2">Telephonenumber2</label>
+                                <label for="exampleInputTelephonenumber2">Telephonenumber2</label>
                                 <input type="text" class="form-control" id="exampleInputTelephonenumber2" value="<?php echo $customerData['phonenumber2']; ?>" name="Telephonenumber2">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputE-mailadress">E-mailadress</label>
+                                <label for="exampleInputE-mailadress">E-mailadress*</label>
                                 <input type="email" class="form-control" id="exampleInputE-mailadress" value="<?php echo $customerData['emailadress']; ?>" name="E-mailadress">
                             </div>
+                            <p class="disclaimer">* Fields are required.</p>
                             <input type="submit" class="btn btn-primary" value="Save changes    ">
                     </div>
                 </ul>
