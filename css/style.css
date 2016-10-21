@@ -96,7 +96,7 @@ li.logged_in_as {
 .information-clients li {
     list-style-type: none;
     border: 1px solid black;
-    padding: 3px;
+    padding: 5px;
 }
 
 .information-clients.col-md-12 {
@@ -112,6 +112,9 @@ li.logged_in_as {
 .editclients-button {
     text-align: center;
 }
+.information-client-add {
+    padding-top: 20px;
+}
 
 /*END INFORMATION SECTION*/
 
@@ -123,5 +126,7 @@ li.logged_in_as {
 .active {
     text-decoration: underline;
 }
-
+.form-group {
+   
+}
 /*END HELPER CLASSES*/
