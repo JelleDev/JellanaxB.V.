@@ -14,7 +14,7 @@ $clients = $client->getAllClients();
                     <h2>0 Results found</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="add-customer">Add a Client</a></h3>
+                    <h3><a href="add-customer.php">Add a Client</a></h3>
                 </div>
             </div>
         </header>
