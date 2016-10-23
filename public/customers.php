@@ -4,6 +4,8 @@ require 'header.php';
 $client = new Client();
 
 $clients = $client->getAllClients();
+
+$clientCount = count($clients);
 ?>
 
 <div class="container">
@@ -11,7 +13,7 @@ $clients = $client->getAllClients();
         <header class="col-md-12">
             <div class="info-bar">
                 <div class="col-md-12">
-                    <h2>0 Results found</h2>
+                    <h2><?php echo $clientCount . ' Results found'; ?> </h2>
                 </div>
                 <div class="col-md-12">
                     <h3><a href="add-customer.php">Add a Client</a></h3>
