@@ -1,5 +1,9 @@
 <?php
 require 'header.php';
+
+$project = new Project();
+
+$projectinfo = $project->getMainProjectInfo();
 ?>
 
 <div class="container">
@@ -7,7 +11,7 @@ require 'header.php';
         <header class="col-md-12">
             <div class="info-bar">
                 <div class="col-md-12">
-                    <h2>0 Results found</h2>
+                    <h2><?php echo count($project->getMainProjectInfo()); ?> Results found</h2>
                 </div>
                 <div class="col-md-12">
                     <h3><a href="#">Add a project</a></h3>
@@ -17,47 +21,21 @@ require 'header.php';
         <section class="information">
         	<div class="clients">
         		<ul class="client col-md-12">
+        			<li class="col-md-3 bold">Projectname</li>
         			<li class="col-md-3 bold">Companyname</li>
         			<li class="col-md-3 bold">Telephonenumber</li>
-        			<li class="col-md-3 bold">Customername</li>
-        			<li class="col-md-3 bold">E-mail adress</li>
+        			<li class="col-md-3 bold">Emailadress</li>
         		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">Customername</li>
-        			<li class="col-md-3">E-mail adress</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">Customername</li>
-        			<li class="col-md-3">E-mail adress</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">Customername</li>
-        			<li class="col-md-3">E-mail adress</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">Customername</li>
-        			<li class="col-md-3">E-mail adress</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">Customername</li>
-        			<li class="col-md-3">E-mail adress</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="#">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">Customername</li>
-        			<li class="col-md-3">E-mail adress</li>
-        		</ul>
+				<?php
+				foreach ($projectinfo as $info){
+					echo "<ul class='client col-md-12'>
+					<li class='col-md-3'><a href='#'>" . $info['projectname'] . "</a></li>
+					<li class='col-md-3'>" . $info['companyname'] . "</li>
+					<li class='col-md-3'>" . $info['phonenumber1'] . "</li>
+					<li class='col-md-3'>" . $info['emailadress'] . "</li>";
+				}
+				?>
+
         	</div>
         </section>
     </div>
