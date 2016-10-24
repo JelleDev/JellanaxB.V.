@@ -24,6 +24,7 @@ $customerData = $client->getClient($client_id);
         	<div class="clients-edit">                 
                 <div class="information-client-add col-md-12">
                     <form action="<?php echo BASE_URL ?>/app/controller/clientcontroller.php" method="post">
+                        <input type="hidden" name="client_id" value="<?php echo $client_id; ?>">
                         <div class="form-group">
                             <label for="exampleInputCompanyname">Companyname*</label>
                             <input type="text" class="form-control" id="exampleInputCompanyname" value="<?php echo $customerData['companyname']; ?>" placeholder="Companyname"  name="companyname">
@@ -74,7 +75,7 @@ $customerData = $client->getClient($client_id);
                             <input type="email" class="form-control" id="exampleInputE-mailadress" value="<?php echo $customerData['emailadress']; ?>" placeholder="Emailadress" name="E-mailadress">
                         </div>
                         <p class="disclaimer">* Fields are required.</p>
-                        <input type="submit" class="btn btn-primary" value="Save changes">
+                        <input type="submit" class="btn btn-primary" name="type" value="Save changes">
                     </form>
                 </div>
         	</div>

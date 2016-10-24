@@ -11,7 +11,8 @@ $secondInfo = [
     $customerData['adress2'],
     $customerData['zipcode2'],
     $customerData['residence2'],
-    $customerData['phonenumber2']
+    $customerData['phonenumber2'],
+    $customerData['initials']
 ];
 
 ?>
@@ -43,11 +44,12 @@ $secondInfo = [
                             'Adress 2',
                             'Zipcode 2',
                             'Residence 2',
-                            'Telephonenumber 2'
+                            'Telephonenumber 2',
+                            'Initials'
                         ];
 
-                        for($i = 0; $i < 4; $i++){
-                            if(!is_null($secondInfo[$i])){
+                        for($i = 0; $i < 5; $i++){
+                            if(!empty($secondInfo[$i])){
                                 echo "<li>" . $infoFields[$i] . "</li>";
                             }
                         }
@@ -64,8 +66,8 @@ $secondInfo = [
                         <li><?php echo $customerData['phonenumber1']; ?></li>
 
                         <?php
-                        for($i = 0; $i < 4; $i++){
-                            if(!is_null($secondInfo[$i])){
+                        for($i = 0; $i < 5; $i++){
+                            if(!empty($secondInfo[$i])){
                                 echo "<li>" . $secondInfo[$i] . "</li>";
                             }
                         }
