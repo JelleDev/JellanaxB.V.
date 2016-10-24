@@ -28,6 +28,33 @@ class Client
         return $clientData;
     }
 
+    public function addClient($clientInfo){
+        $sql = "INSERT INTO `tbl_clients` 
+                (`companyname`, `adress1`, `zipcode1`, `residence1`, `adress2`,
+                `zipcode2`, `residence2`, `initials`, `contactperson`, `phonenumber1`,
+                `phonenumber2`, `emailadress`)
+                VALUES (:companyname, :adress1, :zipcode1, :residence1, :adress2, :zipcode2,
+                :residence2, :initials, :contactperson, :phonenumber1, :phonenumber2, :emailadress)";
+
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':companyname', $clientInfo['companyname']);
+        $stmt->bindParam(':adress1', $clientInfo['adress1']);
+        $stmt->bindParam(':zipcode1', $clientInfo['zipcode1']);
+        $stmt->bindParam(':residence1', $clientInfo['residence1']);
+        $stmt->bindParam(':adress2', $clientInfo['adress2']);
+        $stmt->bindParam(':zipcode2', $clientInfo['zipcode2']);
+        $stmt->bindParam(':residence2', $clientInfo['residence2']);
+        $stmt->bindParam(':initials', $clientInfo['initials']);
+        $stmt->bindParam(':contactperson', $clientInfo['contactperson']);
+        $stmt->bindParam(':phonenumber1', $clientInfo['phonenumber1']);
+        $stmt->bindParam(':phonenumber2', $clientInfo['phonenumber2']);
+        $stmt->bindParam(':emailadress', $clientInfo['emailadress']);
+        $stmt->execute();
+
+        header('location: ' . BASE_URL . '/public/customers.php');
+        exit;
+    }
+
     public function modifyClient($id, $clientInfo){
         $sql = "UPDATE `tbl_clients`
                 SET `companyname` = :companyname,

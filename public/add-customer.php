@@ -17,57 +17,57 @@ require 'header.php';
         <section class="editclientphp">
         	<div class="clients-edit">                 
                     <div class="information-client-add col-md-12">
-                        <form>
+                        <form action="<?php echo BASE_URL . '/app/controller/clientcontroller.php'; ?>" method="POST">
                             <div class="form-group">
-                                <label for="exampleInputCompanyname">Email address*</label>
+                                <label for="exampleInputCompanyname">Companyname*</label>
                                 <input type="text" class="form-control" id="exampleInputCompanyname" placeholder="Companyname" name="companyname">
                                 </div>
                             <div class="form-group">
-                                <label for="exampleInputAdress1">Adress1*</label>
-                                <input type="text" class="form-control" id="exampleInputAdress1" placeholder="Adress1" name="Adress1">
+                                <label for="exampleInputAdress1">Adress*</label>
+                                <input type="text" class="form-control" id="exampleInputAdress1" placeholder="Adress" name="Adress1">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputZipcode1">Zipcode1*</label>
-                                <input type="text" class="form-control" id="exampleInputZipcode1" placeholder="Zipcode1" name="Zipcode1">
+                                <label for="exampleInputZipcode1">Zipcode*</label>
+                                <input type="text" class="form-control" id="exampleInputZipcode1" placeholder="Zipcode" name="Zipcode1">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputCity1">City1*</label>
-                                <input type="text" class="form-control" id="exampleInputCity1" placeholder="City1" name="InputCity1">
+                                <label for="exampleInputCity1">City*</label>
+                                <input type="text" class="form-control" id="exampleInputCity1" placeholder="City" name="InputCity1">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputAdress2">Adress2</label>
-                                <input type="text" class="form-control" id="exampleInputAdress2" placeholder="Adress2" name="Adress2">
+                                <label for="exampleInputTelephonenumber1">Phonenumber*</label>
+                                <input type="text" class="form-control" id="exampleInputTelephonenumber1" placeholder="Phonenumber" name="Telephonenumber1">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputZipcode2">Zipcode2</label>
-                                <input type="text" class="form-control" id="exampleInputZipcode2" placeholder="Zipcode2" name="Zipcode2">
+                                <label for="exampleInputAdress2">Adress 2</label>
+                                <input type="text" class="form-control" id="exampleInputAdress2" placeholder="Adress" name="Adress2">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputCity2">City2</label>
-                                <input type="text" class="form-control" id="exampleInputCity2" placeholder="City2" name="City2">
+                                <label for="exampleInputZipcode2">Zipcode 2</label>
+                                <input type="text" class="form-control" id="exampleInputZipcode2" placeholder="Zipcode" name="Zipcode2">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputCity2">City 2</label>
+                                <input type="text" class="form-control" id="exampleInputCity2" placeholder="City" name="City2">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputTelephonenumber2">Phonenumber 2</label>
+                                <input type="text" class="form-control" id="exampleInputTelephonenumber2" placeholder="Phonenumber" name="Telephonenumber2">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputInitials">Initials</label>
+                                <input type="text" class="form-control" id="exampleInputInitials" placeholder="Initials" name="Initials">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputContactPerson">ContactPerson*</label>
                                 <input type="text" class="form-control" id="exampleInputContactPerson" placeholder="ContactPerson" name="Contactperson">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputInitials">Initials*</label>
-                                <input type="text" class="form-control" id="exampleInputInitials" placeholder="Initials" name="Initials">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputTelephonenumber1">Telephonenumber1*</label>
-                                <input type="text" class="form-control" id="exampleInputTelephonenumber1" placeholder="Telephonenumber1" name="Telephonenumber1">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputTelephonenumber2">Telephonenumber2</label>
-                                <input type="text" class="form-control" id="exampleInputTelephonenumber2" placeholder="Telephonenumber2" name="Telephonenumber2">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputE-mailadress">E-mailadress*</label>
-                                <input type="email" class="form-control" id="exampleInputE-mailadress" placeholder="E-mailadress" name="E-mailadress">
+                                <label for="exampleInputE-mailadress">Emailadress*</label>
+                                <input type="email" class="form-control" id="exampleInputE-mailadress" placeholder="Emailadress" name="E-mailadress">
                             </div>
                             <p class="disclaimer">* Fields are required.</p>
-                            <input type="submit" class="btn btn-primary" value="add customer">
+                            <input type="submit" class="btn btn-primary" name="type" value="Add customer">
                     </div>
                 </ul>
                   
