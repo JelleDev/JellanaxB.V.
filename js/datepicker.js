@@ -3,6 +3,7 @@ $( function chooseDate() {
         showOn: "button",
         buttonImage: "../img/icons/calendar.png",
         buttonImageOnly: true,
-        buttonText: "Select date"
+        buttonText: "Select date",
+        dateFormat: "dd-mm-yy"
     });
 } );
