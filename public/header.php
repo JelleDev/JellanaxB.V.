@@ -20,6 +20,8 @@ require realpath(__DIR__ . '/../app/init.php');
     <title>Barroc-IT Web App</title>
     <link rel="stylesheet" href="../css/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
     <link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css">
+    <script src="../js/jquery.min.js"></script>
 </head>
 <body>

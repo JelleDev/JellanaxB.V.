@@ -31,8 +31,9 @@ require 'header.php';
                                 <input type="text" class="form-control" id="exampleInputLocation" placeholder="Location" name="Location">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputDate">Date</label>
-                                <input type="text" class="form-control" id="exampleInputDate" placeholder="Date" name="Date">
+                                <label class="sr-only" for="datepicker">Date</label>
+                                <script>chooseDate();</script>
+                                <input type="text" class="form-control" placeholder="Date" name="Date" id="datepicker">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="exampleInputContactperson">Contactperson</label>
