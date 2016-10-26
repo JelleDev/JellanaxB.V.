@@ -19,32 +19,45 @@ require 'header.php';
                     <div class="information-client-add col-md-12">
                         <form>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputCompanyname">Companyname</label>
+                                <label for="exampleInputCompanyname">Companyname*</label>
                                 <input type="text" class="form-control" id="exampleInputCompanyname" placeholder="Companyname" name="companyname">
                                 </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputCustomername">Customername</label>
+                                <label for="exampleInputCustomername">Customername*</label>
                                 <input type="text" class="form-control" id="exampleInputCustomername" placeholder="Customername" name="Customername">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputLocation">Location</label>
+                                <label for="exampleInputLocation">Location</label>
                                 <input type="text" class="form-control" id="exampleInputLocation" placeholder="Location" name="Location">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputDate">Date</label>
+                                <label for="exampleInputDate">Date</label>
                                 <input type="text" class="form-control" id="exampleInputDate" placeholder="Date" name="Date">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputContactperson">Contactperson</label>
+                                <label for="exampleInputTime">Time</label>
+                                <input type="text" class="form-control" id="exampleInputTime" placeholder="Time" name="Time">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputContactperson">Contactperson</label>
                                 <input type="text" class="form-control" id="exampleInputContactperson" placeholder="Contactperson" name="InputContactperson">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputProject">Project</label>
+                                <label for="exampleInputProject">Project</label>
                                 <input type="text" class="form-control" id="exampleInputProject" placeholder="Project" name="Project">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputTelephonenumber">Telephonenumber</label>
+                                <label for="exampleInputTelephonenumber">Telephonenumber</label>
                                 <input type="text" class="form-control" id="exampleInputTelephonenumber" placeholder="Telephonenumber" name="Telephonenumber">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputE-mail">E-mail</label>
+                                <input type="text" class="form-control" id="exampleInputE-mail" placeholder="E-mail" name="E-mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputSubject">Subject</label>
+                                <textarea></textarea>
+                                <input type="text" class="form-control" id="exampleInputSubject" placeholder="Subject" name="Subject">
                             </div>
                             <input type="submit" class="btn btn-primary" value="Save changes    ">
                     </div>
