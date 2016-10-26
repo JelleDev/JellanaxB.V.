@@ -22,10 +22,12 @@ require 'header.php';
                         <li>Customername</li>
                         <li>Location</li>
                         <li>Date</li>
+                        <li>Time</li>
                         <li>Contactname</li>
                         <li>Project</li>
                         <li>Telephonenumber</li>
                         <li>E-mail adress</li>
+                        <li>Subject</li>
                     </div>
                     <div class="information-client col-md-6">
                         <li>anne</li>
@@ -36,6 +38,8 @@ require 'header.php';
                         <li>h</li>
                         <li>h</li>
                         <li>h</li>
+                        <li>h</li>
+                        <li>xtra groot veld</li>
                     </div>
                 </ul>
                 <div class="editclients-button"><a href="edit-appointment.php">Modify</a></div>

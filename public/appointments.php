@@ -18,44 +18,44 @@ require 'header.php';
         	<div class="clients">
         		<ul class="client col-md-12">
         			<li class="col-md-3 bold">Companyname</li>
-        			<li class="col-md-3 bold">Telephonenumber</li>
-        			<li class="col-md-3 bold">E-mail adress</li>
+        			<li class="col-md-3 bold">Project</li>
+        			<li class="col-md-3 bold">Location</li>
         			<li class="col-md-3 bold">Date/time</li>
         		</ul>
         		<ul class="client col-md-12">
         			<li class="col-md-3"><a href="appointment.php">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">E-mail adress</li>
+        			<li class="col-md-3">Project</li>
+        			<li class="col-md-3">Location</li>
         			<li class="col-md-3">Date/time</li>
         		</ul>
         		<ul class="client col-md-12">
         			<li class="col-md-3"><a href="appointment.php">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">E-mail adress</li>
+        			<li class="col-md-3">Project</li>
+        			<li class="col-md-3">Location</li>
         			<li class="col-md-3">Date/time</li>
         		</ul>
         		<ul class="client col-md-12">
         			<li class="col-md-3"><a href="appointment.php">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">E-mail adress</li>
+        			<li class="col-md-3">Project</li>
+        			<li class="col-md-3">Location</li>
         			<li class="col-md-3">Date/time</li>
         		</ul>
         		<ul class="client col-md-12">
         			<li class="col-md-3"><a href="appointment.php">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">E-mail adress</li>
+        			<li class="col-md-3">Project</li>
+        			<li class="col-md-3">Location</li>
         			<li class="col-md-3">Date/time</li>
         		</ul>
         		<ul class="client col-md-12">
         			<li class="col-md-3"><a href="appointment.php">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">E-mail adress</li>
+        			<li class="col-md-3">Project</li>
+        			<li class="col-md-3">Location</li>
         			<li class="col-md-3">Date/time</li>
         		</ul>
         		<ul class="client col-md-12">
         			<li class="col-md-3"><a href="appointment.php">Companyname</a></li>
-        			<li class="col-md-3">Telephonenumber</li>
-        			<li class="col-md-3">E-mail adress</li>
+        			<li class="col-md-3">Project</li>
+        			<li class="col-md-3">Location</li>
         			<li class="col-md-3">Date/time</li>
         		</ul>
         	</div>
