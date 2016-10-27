@@ -48,10 +48,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         exit;
     }
 
-    $account = [
-        'uid' => $data->user_id,
-        'department_id' => $data->department_id
-    ];
+    $uid = $data->user_id;
 
-    $user->login($account);
+    $user->login($uid);
 }

@@ -76,8 +76,11 @@ $secondInfo = [
                         <li><?php echo $customerData['emailadress']; ?></li>
                     </ul>
                 </div>
-                <div class="editclients-button"><a href="edit-customer.php<?php echo '?id=' . $client_id;?>">Modify</a></div>
-                  
+                <?php
+                if($user->canModifyCustomer()){
+                    echo "<div class='editclients-button'><a href='edit-customer.php?id=" . $client_id . "'>Modify</a></div>";
+                }
+                ?>
         		
         	</div>
         </section>

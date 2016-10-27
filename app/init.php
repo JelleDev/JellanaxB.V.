@@ -42,7 +42,7 @@ if(isset($_SESSION['uid'])) {
     $user->logged = true;
     $user->setUsername($userData['username']);
     $user->setRole($userData['department']);
-
     var_dump($user);
-    var_dump($_SESSION);
+
+    echo "Wilt u <a href='" . BASE_URL . "/app/controller/authcontroller.php?type=logout'>Uitloggen</a>";
 }

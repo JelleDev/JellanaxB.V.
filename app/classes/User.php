@@ -18,10 +18,9 @@ class User
         $this->logged = false;
     }
 
-    public function login($account){
-        $_SESSION['uid'] = $account['uid'];
-        $_SESSION['department_id'] = $account['department_id'];
-        header('location: ' . BASE_URL . '/app/router.php');
+    public function login($uid){
+        $_SESSION['uid'] = $uid;
+        header('location: ' . BASE_URL . '/public/customers.php');
         exit;
     }
 
@@ -43,6 +42,12 @@ class User
         exit;
     }
 
+    public function canModifyCustomer(){
+        if(($this->getRole() == 'sales' || $this->getRole() == 'admin') && $this->logged){
+            return true;
+        }
+        return false;
+    }
     /*
      * GETTERS AND SETTERS
      * */
