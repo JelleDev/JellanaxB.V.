@@ -23,16 +23,16 @@ $projectinfo = $project->getMainProjectInfo();
         		<ul class="client col-md-12">
         			<li class="col-md-3 bold">Projectname</li>
         			<li class="col-md-3 bold">Companyname</li>
-        			<li class="col-md-3 bold">Telephonenumber</li>
-        			<li class="col-md-3 bold">Emailadress</li>
+        			<li class="col-md-3 bold">Subject</li>
+        			<li class="col-md-3 bold">Deadline</li>
         		</ul>
 				<?php
 				foreach ($projectinfo as $info){
 					echo "<ul class='client col-md-12'>
 					<li class='col-md-3'><a href='#'>" . $info['projectname'] . "</a></li>
 					<li class='col-md-3'>" . $info['companyname'] . "</li>
-					<li class='col-md-3'>" . $info['phonenumber1'] . "</li>
-					<li class='col-md-3'>" . $info['emailadress'] . "</li>";
+					<li class='col-md-3'>" . $info['project_subject'] . "</li>
+					<li class='col-md-3'>" . date('m-d-Y', strtotime($info['deadline'])) . "</li>";
 				}
 				?>
 

@@ -1,9 +1,18 @@
 <?php
 require 'header.php';
 
+
 $client = new Client();
 
 $client_id = $_GET['id'];
+
+if(!isset($client_id) || empty($client_id)){
+    $user->redirect('customers.php', 'NotPermitted');
+}
+
+if(!$user->canModifyCustomer()){
+    $user->redirect('customer.php', 'id=' . $client_id . '&NotPermitted');
+}
 
 $customerData = $client->getClient($client_id);
 ?>

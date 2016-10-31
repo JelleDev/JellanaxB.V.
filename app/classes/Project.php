@@ -16,7 +16,7 @@ class Project {
     public function getMainProjectInfo(){
         $clientData = $this->db->pdo
             ->query("SELECT tbl_projects.`projectname`, tbl_clients.`companyname`,
-                            tbl_clients.`phonenumber1`, tbl_clients.`emailadress`
+                            tbl_projects.`project_subject`, tbl_projects.`deadline`
                     FROM `tbl_clients`
                     INNER JOIN `tbl_projects`
                     ON tbl_clients.`client_id` =  tbl_projects.`client_id`")

@@ -7,6 +7,7 @@
  */
 
 ?>
-
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/datepicker.js"></script>
 </body>
 </html>

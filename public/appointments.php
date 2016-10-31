@@ -1,5 +1,11 @@
 <?php
 require 'header.php';
+
+$appointment = new Appointment();
+
+$appointmentInfo = $appointment->getMainAppointmentInfo();
+
+$amountAppointments = count($appointmentInfo);
 ?>
 
 <div class="container">
@@ -7,7 +13,7 @@ require 'header.php';
         <header class="col-md-12">
             <div class="info-bar">
                 <div class="col-md-12">
-                    <h2>0 Results found</h2>
+                    <h2><?php echo $amountAppointments; ?> Results found</h2>
                 </div>
                 <div class="col-md-12">
                     <h3><a href="add-appointment.php">Add an appointment</a></h3>
@@ -20,44 +26,19 @@ require 'header.php';
         			<li class="col-md-3 bold">Companyname</li>
         			<li class="col-md-3 bold">Project</li>
         			<li class="col-md-3 bold">Location</li>
-        			<li class="col-md-3 bold">Date/time</li>
+        			<li class="col-md-3 bold">Date and time</li>
         		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="appointment.php">Companyname</a></li>
-        			<li class="col-md-3">Project</li>
-        			<li class="col-md-3">Location</li>
-        			<li class="col-md-3">Date/time</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="appointment.php">Companyname</a></li>
-        			<li class="col-md-3">Project</li>
-        			<li class="col-md-3">Location</li>
-        			<li class="col-md-3">Date/time</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="appointment.php">Companyname</a></li>
-        			<li class="col-md-3">Project</li>
-        			<li class="col-md-3">Location</li>
-        			<li class="col-md-3">Date/time</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="appointment.php">Companyname</a></li>
-        			<li class="col-md-3">Project</li>
-        			<li class="col-md-3">Location</li>
-        			<li class="col-md-3">Date/time</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="appointment.php">Companyname</a></li>
-        			<li class="col-md-3">Project</li>
-        			<li class="col-md-3">Location</li>
-        			<li class="col-md-3">Date/time</li>
-        		</ul>
-        		<ul class="client col-md-12">
-        			<li class="col-md-3"><a href="appointment.php">Companyname</a></li>
-        			<li class="col-md-3">Project</li>
-        			<li class="col-md-3">Location</li>
-        			<li class="col-md-3">Date/time</li>
-        		</ul>
+        		<?php
+				foreach($appointmentInfo as $info){
+        			$dateTime = date("m-d-Y, g:ia", strtotime($info['date_time']));
+        			echo "<ul class='client col-md-12'>
+						<li class='col-md-3'><a href='appointment.php'>" . $info['companyname'] . "</a></li>
+						<li class='col-md-3'>" . $info['projectname'] . "</li>
+						<li class='col-md-3'>" . $info['location'] . "</li>
+						<li class='col-md-3'>" . $dateTime . "</li>
+						</ul>";
+				}
+				?>
         	</div>
         </section>
     </div>

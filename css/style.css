@@ -184,7 +184,8 @@ li.logged_in_as {
 .active {
     text-decoration: underline;
 }
-.form-group {
-   
+
+.form-control.chooseDate {
+    width: 90%;
 }
 /*END HELPER CLASSES*/
