@@ -27,38 +27,37 @@ require 'header.php';
                                 <input type="text" class="form-control" id="exampleInputCustomername" placeholder="Customername" name="Customername">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputLocation">Location</label>
+                                <label for="exampleInputLocation">Location*</label>
                                 <input type="text" class="form-control" id="exampleInputLocation" placeholder="Location" name="Location">
                             </div>
-                            <div class="form-group">
-                                <label for="datepicker">Date</label>
+                            <div class="form-group relative">
+                                <label for="datepicker">Date*</label>
                                 <script>chooseDate();</script>
                                 <input type="text" class="form-control chooseDate" placeholder="Date" name="Date" id="datepicker">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputTime">Time</label>
+                                <label for="exampleInputTime">Time*</label>
                                 <input type="text" class="form-control" id="exampleInputTime" placeholder="Time" name="Time">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputContactperson">Contactperson</label>
+                                <label for="exampleInputContactperson">Contactperson*</label>
                                 <input type="text" class="form-control" id="exampleInputContactperson" placeholder="Contactperson" name="InputContactperson">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputProject">Project</label>
+                                <label for="exampleInputProject">Project*</label>
                                 <input type="text" class="form-control" id="exampleInputProject" placeholder="Project" name="Project">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputTelephonenumber">Telephonenumber</label>
+                                <label for="exampleInputTelephonenumber">Telephonenumber*</label>
                                 <input type="text" class="form-control" id="exampleInputTelephonenumber" placeholder="Telephonenumber" name="Telephonenumber">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputE-mail">E-mail</label>
+                                <label for="exampleInputE-mail">E-mail*</label>
                                 <input type="text" class="form-control" id="exampleInputE-mail" placeholder="E-mail" name="E-mail">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputSubject">Subject</label>
-                                <textarea></textarea>
-                                <input type="text" class="form-control" id="exampleInputSubject" placeholder="Subject" name="Subject">
+                                <textarea class="form-control" id="exampleInputSubject" placeholder="Subject" name="Subject"></textarea>
                             </div>
                             <input type="submit" class="btn btn-primary" value="Save changes    ">
                     </div>

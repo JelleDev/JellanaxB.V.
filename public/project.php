@@ -7,7 +7,7 @@ require 'header.php';
         <header class="col-md-12">
             <div class="info-bar">
                 <div class="col-md-12">
-                    <h2>Appointment info</h2>
+                    <h2>Projects</h2>
                 </div>
                 <div class="col-md-12">
                     <h3><a href="appointments.php">< Go back</a></h3>
@@ -39,11 +39,11 @@ require 'header.php';
                         <li>h</li>
                         <li>h</li>
                         <li>h</li>
-                        <li><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam facilis molestiae deleniti accusantium earum eligendi. Veritatis tempora consequuntur dolorem repudiandae iusto sit fugit quo fuga odit, eaque! Unde asperiores, dicta.</div>
-                        <div>Officia dolor, possimus repellendus vero ducimus explicabo obcaecati unde, soluta reprehenderit vel, similique quibusdam, deleniti eaque ipsa. Adipisci cupiditate quaerat repellat maiores fuga architecto, quos mollitia fugiat, nemo commodi ut?</div></li>
+                        <li><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius provident molestiae tempora ipsa atque magnam culpa aut sunt temporibus eos adipisci ratione placeat natus ipsum, odit aperiam praesentium, quod cupiditate.</div>
+                        <div>Praesentium vero voluptatum fugiat aliquid, iure a vel, nesciunt, doloremque qui doloribus aperiam ducimus deleniti, veniam dignissimos! Tempore voluptate consequuntur rem itaque vitae ducimus blanditiis totam, provident corporis excepturi, laborum!</div></li>
                     </div>
                 </ul>
-                <div class="editclients-button"><a href="edit-appointment.php">Modify</a></div>
+                <div class="editclients-button"><a href="edit-project.php">Modify</a></div>
                   
         		
         	</div>
@@ -55,8 +55,8 @@ require 'header.php';
     			<li class="logged_in_as">Admin</li>
     			<li><a href="customers.php">Clients</a></li>
                 <li><a href="users.php">Users</a></li>
-                <li class="active"><a href="appointments.php">Appointments</a></li>
-                <li><a href="projects.php">Projects</a></li>
+                <li><a href="appointments.php">Appointments</a></li>
+                <li class="active"><a href="projects.php">Projects</a></li>
     		</ul>
     	</div>
     </aside>

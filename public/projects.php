@@ -14,7 +14,7 @@ $projectinfo = $project->getMainProjectInfo();
                     <h2><?php echo count($project->getMainProjectInfo()); ?> Results found</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="#">Add a project</a></h3>
+                    <h3><a href="add-project.php">Add a project</a></h3>
                 </div>
             </div>
         </header>

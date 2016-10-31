@@ -7,10 +7,10 @@ require 'header.php';
         <header class="col-md-12">
             <div class="info-bar">
                 <div class="col-md-12">
-                    <h2>Add an appointment</h2>
+                    <h2>Edit Project</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="appointments.php">< Go back</a></h3>
+                    <h3><a href="appointment.php">< Go back</a></h3>
                 </div>
             </div>
         </header>
@@ -51,7 +51,7 @@ require 'header.php';
                                 <label for="exampleInputTelephonenumber">Telephonenumber*</label>
                                 <input type="text" class="form-control" id="exampleInputTelephonenumber" placeholder="Telephonenumber" name="Telephonenumber">
                             </div>
-                             <div class="form-group">
+                            <div class="form-group">
                                 <label for="exampleInputE-mail">E-mail*</label>
                                 <input type="text" class="form-control" id="exampleInputE-mail" placeholder="E-mail" name="E-mail">
                             </div>
@@ -60,7 +60,10 @@ require 'header.php';
                                 <textarea class="form-control" id="exampleInputSubject" placeholder="Subject" name="Subject"></textarea>
                             </div>
                             <input type="submit" class="btn btn-primary" value="Save changes    ">
-                    </div>                        		
+                    </div>
+                </ul>
+                  
+        		
         	</div>
         </section>
     </div>
