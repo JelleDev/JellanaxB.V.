@@ -91,11 +91,11 @@ $customerData = $client->getClient($client_id);
                             <input type="email" class="form-control" id="exampleInputPayment-limit" placeholder="Payment-limit" name="Payment-limit">
                         </div>
                          <div class="form-group">
-                            <label for="exampleInputPotential-client">Potential-client*</label>
+                            <label for="exampleInputPotential-client">Potential-client</label>
                             <input type="email" class="form-control" id="exampleInputPotential-client" placeholder="Potential-client" name="Potential-client">
                         </div>
                          <div class="form-group">
-                            <label for="exampleInputSales-person">Sales-person*</label>
+                            <label for="exampleInputSales-person">Sales-person</label>
                             <input type="email" class="form-control" id="exampleInputSales-person" placeholder="Sales-person" name="Sales-person">
                         </div>
                          <div class="form-group">

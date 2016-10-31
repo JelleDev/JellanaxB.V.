@@ -75,11 +75,11 @@ if(!$user->canModifyCustomer()){
                             <input type="email" class="form-control" id="exampleInputBank-account-number" placeholder="Bank-account-number" name="Bank-account-number">
                         </div>
                          <div class="form-group">
-                            <label for="exampleInputPayment-limit">Payment-limit*</label>
+                            <label for="exampleInputPayment-limit">Payment-limit</label>
                             <input type="email" class="form-control" id="exampleInputPayment-limit" placeholder="Payment-limit" name="Payment-limit">
                         </div>
                          <div class="form-group">
-                            <label for="exampleInputPotential-client">Potential-client*</label>
+                            <label for="exampleInputPotential-client">Potential-client</label>
                             <input type="email" class="form-control" id="exampleInputPotential-client" placeholder="Potential-client" name="Potential-client">
                         </div>
                          <div class="form-group">
