@@ -1,5 +1,12 @@
 <?php
 require 'header.php';
+
+if(!$user->canAccesUsers()){
+    $user->redirect('customers.php', 'NotPermitted');
+}
+
+$account = new Account();
+
 ?>
 
 <div class="container">
@@ -10,31 +17,35 @@ require 'header.php';
                     <h2>Add a user</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="customers.php">< Go back</a></h3>
+                    <h3><a href="users.php">< Go back</a></h3>
                 </div>
             </div>
         </header>
         <section class="editclientphp">
         	<div class="clients-edit">                 
                     <div class="information-client-add col-md-12">
-                        <form>
+                        <form action="<?php echo BASE_URL . '/app/controller/accountcontroller.php'; ?>" method="POST">
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputCompanyname">Username</label>
+                                <label for="exampleInputCompanyname">Username</label>
                                 <input type="text" class="form-control" id="exampleInputCompanyname" placeholder="Username" name="username">
                                 </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputAdress1">Password</label>
-                                <input type="text" class="form-control" id="exampleInputAdress1" placeholder="Password" name="password">
+                                <label for="exampleInputAdress1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputAdress1" placeholder="Password" name="password">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputHousenumber1">Department</label>
-                                <input type="text" class="form-control" id="exampleInputHousenumber1" placeholder="Department" name="department">
+                                <label for="exampleInputHousenumber1">Department</label>
+                                <select class="form-control" name="department" id="exampleInputHousenumber1">
+                                    <option></option>
+                                    <option value="1">Admin</option>
+                                    <option value="2">Sales</option>
+                                    <option value="3">Finance</option>
+                                    <option value="4">Development</option>
+                                </select>
                             </div>
-                            <input type="submit" class="btn btn-primary" value="add user">
+                            <input type="submit" class="btn btn-primary" value="Add user">
                     </div>
                 </ul>
-                  
-        		
         	</div>
         </section>
     </div>

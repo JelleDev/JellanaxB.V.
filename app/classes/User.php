@@ -48,6 +48,13 @@ class User
         }
         return false;
     }
+
+    public function canAccesUsers(){
+        if($this->getRole() == 'admin' && $this->logged){
+            return true;
+        }
+        return false;
+    }
     /*
      * GETTERS AND SETTERS
      * */

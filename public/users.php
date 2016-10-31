@@ -1,7 +1,7 @@
 <?php
 require 'header.php';
 
-if(($user->getRole() != 'admin') || !$user->logged){
+if(!$user->canAccesUsers()){
     $user->redirect('customers.php', 'NotPermitted');
 }
 
@@ -21,7 +21,7 @@ $countAccounts = count($accounts);
                     <h2><?php echo $countAccounts; ?> Results found</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href='adduser.php'>Add User</a></h3>
+                    <h3><a href='add-user.php'>Add User</a></h3>
                 </div>
             </div>
         </header>

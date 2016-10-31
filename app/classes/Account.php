@@ -23,4 +23,19 @@ class Account
             ->fetchAll(PDO::FETCH_ASSOC);
         return $userData;
     }
+
+    public function addUser($userData){
+        $sql = "INSERT INTO `tbl_users`
+                (`username`, `password`, `department_id`, active)
+                VALUES (:username, :password, :departmentid, :active)";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':username', $userData['username']);
+        $stmt->bindParam(':password', $userData['password']);
+        $stmt->bindParam(':departmentid', $userData['departmentid']);
+        $stmt->bindParam(':active', $userData['active']);
+        $stmt->execute();
+
+        header('location: ' . BASE_URL . '/public/users.php');
+        exit;
+    }
 }
