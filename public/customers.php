@@ -16,13 +16,11 @@ $clientCount = count($clients);
                     <h2><?php echo $clientCount . ' Results found'; ?> </h2>
                 </div>
                 <div class="col-md-12">
-                    <h3>
-                        <?php
-                        if($user->canModifyCustomer()){
-                            echo "<a href='add-customer.php'>Add a client</a>";
-                        }
-                        ?>
-                    </h3>
+                    <?php
+                    if($user->canModifyCustomer()){
+                        echo "<h3><a href='add-customer.php'>Add a client</a></h3>";
+                    }
+                    ?>
                 </div>
             </div>
         </header>

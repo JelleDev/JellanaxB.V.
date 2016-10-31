@@ -1,6 +1,10 @@
 <?php
 require 'header.php';
 
+if(($user->getRole() != 'admin') || !$user->logged){
+    $user->redirect('customers.php', 'NotPermitted');
+}
+
 $account = new Account();
 
 $accounts = $account->getUserData();
@@ -17,7 +21,7 @@ $countAccounts = count($accounts);
                     <h2><?php echo $countAccounts; ?> Results found</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="adduser.php">Add User</a></h3>
+                    <h3><a href='adduser.php'>Add User</a></h3>
                 </div>
             </div>
         </header>
@@ -41,7 +45,7 @@ $countAccounts = count($accounts);
     <aside class="col-md-3">
     	<div class="aside-clients">
     		<ul class="aside-client">
-    			<li class="logged_in_as">Admin</li>
+    			<li class="logged_in_as"><?php echo $user->getRole(); ?></li>
 				<li><a href="customers.php">Clients</a></li>
                 <li class="active"><a href="users.php">Users</a></li>
                 <li><a href="appointments.php">Appointments</a></li>
