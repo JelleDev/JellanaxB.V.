@@ -56,6 +56,16 @@ $secondInfo = [
                         ?>
                         <li>Contact Person</li>
                         <li>E-mail adress</li>
+                        <li>Bank account number</li>
+                        <li>Payment limit</li>
+                        <li>Potential client</li>
+                        <li>Sales person</li>
+                        <li>Last contact</li>
+                        <li>Sales percentage</li>
+                        <li>Creditworthy</li>
+                        <li>Credit balance</li>
+                        <li>Gross revenue</li>
+                        <li>Ledger account number</li>
                     </ul>
                     <ul class="information-client col-md-6">
 
