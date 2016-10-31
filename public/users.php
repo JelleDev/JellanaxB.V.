@@ -1,6 +1,12 @@
 <?php
 require 'header.php';
 
+$account = new Account();
+
+$accounts = $account->getUserData();
+
+$countAccounts = count($accounts);
+
 ?>
 
 <div class="container">
@@ -8,7 +14,7 @@ require 'header.php';
         <header class="col-md-12">
             <div class="info-bar">
                 <div class="col-md-12">
-                    <h2>0 Results found</h2>
+                    <h2><?php echo $countAccounts; ?> Results found</h2>
                 </div>
                 <div class="col-md-12">
                     <h3><a href="adduser.php">Add User</a></h3>
@@ -18,13 +24,17 @@ require 'header.php';
         <section class="information">
         	<div class="clients">
         		<ul class="client col-md-12">
-        			<li class="col-md-6 bold">Username</a></li>
+        			<li class="col-md-6 bold">Username</li>
         			<li class="col-md-6 bold">Department</li>
         		</ul>
-                <ul class="client col-md-12">
-                    <li class="col-md-6">Jeljor12</a></li>
-                    <li class="col-md-6">Sales</li>
-                </ul>
+                <?php
+                foreach($accounts as $account){
+                    echo "<ul class='client col-md-12'>
+                        <li class='col-md-6'>" . $account['username'] . "</li>
+                        <li class='col-md-6'>" . $account['department'] . "</li>
+                        </ul>";
+                }
+                ?>
         	</div>
         </section>
     </div>
