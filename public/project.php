@@ -10,7 +10,7 @@ require 'header.php';
                     <h2>Projects</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="appointments.php">< Go back</a></h3>
+                    <h3><a href="projects.php">< Go back</a></h3>
                 </div>
             </div>
         </header>
@@ -19,14 +19,16 @@ require 'header.php';
                 <ul class="information-clients col-md-12">
                     <div class="information-client col-md-6">
                         <li>Companyname</li>
-                        <li>Customername</li>
-                        <li>Location</li>
-                        <li>Date</li>
+                        <li>Projectname</li>
+                        <li>Deadline</li>
+                        <li>date</li>
                         <li>Time</li>
-                        <li>Contactname</li>
-                        <li>Project</li>
-                        <li>Telephonenumber</li>
-                        <li>E-mail adress</li>
+                        <li>maintenence contract</li>
+                        <li>hardware</li>
+                        <li>Operating system</li>
+                        <li>Application</li>
+                        <li>Offernumber</li>
+                        <li>Offerstatus</li>
                         <li>Subject</li>
                     </div>
                     <div class="information-client col-md-6">
@@ -34,6 +36,8 @@ require 'header.php';
                         <li>is</li>
                         <li>leuk</li>
                         <li>l</li>
+                        <li>h</li>
+                        <li>h</li>
                         <li>h</li>
                         <li>h</li>
                         <li>h</li>

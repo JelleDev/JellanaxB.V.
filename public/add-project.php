@@ -10,7 +10,7 @@ require 'header.php';
                     <h2>Add a Project</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="appointments.php">< Go back</a></h3>
+                    <h3><a href="projects.php">< Go back</a></h3>
                 </div>
             </div>
         </header>
@@ -19,34 +19,46 @@ require 'header.php';
                     <div class="information-client-add col-md-12">
                         <form>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputCompanyname">Companyname*</label>
+                                <label for="exampleInputCompanyname">Companyname*</label>
                                 <input type="text" class="form-control" id="exampleInputCompanyname" placeholder="Companyname" name="companyname">
                                 </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputCustomername">Customername*</label>
-                                <input type="text" class="form-control" id="exampleInputCustomername" placeholder="Customername" name="Customername">
+                                <label for="exampleInputProjectname">Projectname*</label>
+                                <input type="text" class="form-control" id="exampleInputProjectname" placeholder="Projectname" name="Projectname">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputLocation">Location</label>
-                                <input type="text" class="form-control" id="exampleInputLocation" placeholder="Location" name="Location">
+                                <label for="exampleInputDeadline">Deadline</label>
+                                <input type="text" class="form-control" id="exampleInputDeadline" placeholder="Deadline" name="Deadline">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputDate">Date</label>
-                                <input type="text" class="form-control" id="exampleInputDate" placeholder="Date" name="Date">
+                                <label for="exampleInputMaintenencecontract">Maintenence contract*</label>
+                                <input type="text" class="form-control" id="exampleInputMaintenencecontract" placeholder="Maintenencecontract" name="Maintenencecontract">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputContactperson">Contactperson</label>
-                                <input type="text" class="form-control" id="exampleInputContactperson" placeholder="Contactperson" name="InputContactperson">
+                                <label for="exampleInputHardware">Hardware</label>
+                                <input type="text" class="form-control" id="exampleInputHardware" placeholder="Hardware" name="InputHardware">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputProject">Project*</label>
-                                <input type="text" class="form-control" id="exampleInputProject" placeholder="Project" name="Project">
+                                <label for="exampleInputOperating-system">Operating-system</label>
+                                <input type="text" class="form-control" id="exampleInputOperating-system" placeholder="Operating-system" name="Operating-system">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputTelephonenumber">Telephonenumber*</label>
-                                <input type="text" class="form-control" id="exampleInputTelephonenumber" placeholder="Telephonenumber" name="Telephonenumber">
+                                <label for="exampleInputApplication">Application</label>
+                                <input type="text" class="form-control" id="exampleInputApplication" placeholder="Application" name="Application">
                             </div>
-                            <input type="submit" class="btn btn-primary" value="Save changes    ">
+                            <div class="form-group">
+                                <label for="exampleInputOffernumber">Offernumber*</label>
+                                <input type="text" class="form-control" id="exampleInputOffernumber" placeholder="Offernumber" name="Offernumber">
+                            </div>
+                             <div class="form-group">
+                                <label for="exampleInputOfferstatus">Offerstatus*</label>
+                                <input type="text" class="form-control" id="exampleInputOfferstatus" placeholder="Offerstatus" name="Offerstatus">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputSubject">Subject</label>
+                                <textarea class="form-control" id="exampleInputSubject" placeholder="Subject" name="Subject"></textarea>
+                            </div>
+                            <input type="submit" class="btn btn-primary" value="Save changes">
                     </div>                        		
         	</div>
         </section>
@@ -57,8 +69,8 @@ require 'header.php';
     			<li class="logged_in_as">Admin</li>
                 <li><a href="customers.php">Clients</a></li>
                 <li><a href="users.php">Users</a></li>
-                <li class="active"><a href="appointments.php">Appointments</a></li>
-                <li><a href="projects.php">Projects</a></li>
+                <li><a href="appointments.php">Appointments</a></li>
+                <li class="active">><a href="projects.php">Projects</a></li>
     		</ul>
     	</div>
     </aside>

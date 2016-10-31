@@ -10,7 +10,7 @@ require 'header.php';
                     <h2>Edit Project</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="appointment.php">< Go back</a></h3>
+                    <h3><a href="projects.php">< Go back</a></h3>
                 </div>
             </div>
         </header>
@@ -23,37 +23,36 @@ require 'header.php';
                                 <input type="text" class="form-control" id="exampleInputCompanyname" placeholder="Companyname" name="companyname">
                                 </div>
                             <div class="form-group">
-                                <label for="exampleInputCustomername">Customername*</label>
-                                <input type="text" class="form-control" id="exampleInputCustomername" placeholder="Customername" name="Customername">
+                                <label for="exampleInputProjectname">Projectname*</label>
+                                <input type="text" class="form-control" id="exampleInputProjectname" placeholder="Projectname" name="Projectname">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputLocation">Location*</label>
-                                <input type="text" class="form-control" id="exampleInputLocation" placeholder="Location" name="Location">
-                            </div>
-                            <div class="form-group relative">
-                                <label for="datepicker">Date*</label>
-                                <script>chooseDate();</script>
-                                <input type="text" class="form-control chooseDate" placeholder="Date" name="Date" id="datepicker">
+                                <label for="exampleInputDeadline">Deadline</label>
+                                <input type="text" class="form-control" id="exampleInputDeadline" placeholder="Deadline" name="Deadline">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputTime">Time*</label>
-                                <input type="text" class="form-control" id="exampleInputTime" placeholder="Time" name="Time">
+                                <label for="exampleInputMaintenencecontract">Maintenence contract*</label>
+                                <input type="text" class="form-control" id="exampleInputMaintenencecontract" placeholder="Maintenencecontract" name="Maintenencecontract">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputContactperson">Contactperson*</label>
-                                <input type="text" class="form-control" id="exampleInputContactperson" placeholder="Contactperson" name="InputContactperson">
+                                <label for="exampleInputHardware">Hardware</label>
+                                <input type="text" class="form-control" id="exampleInputHardware" placeholder="Hardware" name="InputHardware">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputProject">Project*</label>
-                                <input type="text" class="form-control" id="exampleInputProject" placeholder="Project" name="Project">
+                                <label for="exampleInputOperating-system">Operating-system</label>
+                                <input type="text" class="form-control" id="exampleInputOperating-system" placeholder="Operating-system" name="Operating-system">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputTelephonenumber">Telephonenumber*</label>
-                                <input type="text" class="form-control" id="exampleInputTelephonenumber" placeholder="Telephonenumber" name="Telephonenumber">
+                                <label for="exampleInputApplication">Application</label>
+                                <input type="text" class="form-control" id="exampleInputApplication" placeholder="Application" name="Application">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputE-mail">E-mail*</label>
-                                <input type="text" class="form-control" id="exampleInputE-mail" placeholder="E-mail" name="E-mail">
+                                <label for="exampleInputOffernumber">Offernumber*</label>
+                                <input type="text" class="form-control" id="exampleInputOffernumber" placeholder="Offernumber" name="Offernumber">
+                            </div>
+                             <div class="form-group">
+                                <label for="exampleInputOfferstatus">Offerstatus*</label>
+                                <input type="text" class="form-control" id="exampleInputOfferstatus" placeholder="Offerstatus" name="Offerstatus">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputSubject">Subject</label>
