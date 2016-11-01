@@ -1,5 +1,9 @@
 <?php
 require 'header.php';
+
+$project = new Project();
+
+$clientInfo = $project->getCompanyName();
 ?>
 
 <div class="container">
@@ -20,19 +24,28 @@ require 'header.php';
                         <form>
                             <div class="form-group">
                                 <label for="exampleInputCompanyname">Companyname*</label>
-                                <input type="text" class="form-control" id="exampleInputCompanyname" placeholder="Companyname" name="companyname">
-                                </div>
+                                <select class="form-control" id="exampleInputCompanyname" name="companyname">
+                                    <option></option>
+                                    <?php
+                                    foreach($clientInfo as $info){
+                                        $companyname = $info['companyname'];
+                                        echo "<option value='" . $companyname . "'>" . $companyname . "</option>";
+                                    }
+                                    ?>
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <label for="exampleInputProjectname">Projectname*</label>
                                 <input type="text" class="form-control" id="exampleInputProjectname" placeholder="Projectname" name="Projectname">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputDeadline">Deadline</label>
-                                <input type="text" class="form-control" id="exampleInputDeadline" placeholder="Deadline" name="Deadline">
+                                <label for="exampleInputMaintenencecontract">Maintenance contract*</label>
+                                <input type="text" class="form-control" id="exampleInputMaintenancecontract" placeholder="Maintenance contract" name="Maintenencecontract">
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputMaintenencecontract">Maintenence contract*</label>
-                                <input type="text" class="form-control" id="exampleInputMaintenencecontract" placeholder="Maintenencecontract" name="Maintenencecontract">
+                            <div class="form-group relative">
+                                <label for="datepicker">Deadline</label>
+                                <script>chooseDate();</script>
+                                <input type="text" class="form-control chooseDate" placeholder="Deadline" name="Deadline" id="datepicker">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputHardware">Hardware</label>

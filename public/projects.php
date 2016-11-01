@@ -29,7 +29,7 @@ $projectinfo = $project->getMainProjectInfo();
 				<?php
 				foreach ($projectinfo as $info){
 					echo "<ul class='client col-md-12'>
-					<li class='col-md-3'><a href='#'>" . $info['projectname'] . "</a></li>
+					<li class='col-md-3'><a href='project.php'>" . $info['projectname'] . "</a></li>
 					<li class='col-md-3'>" . $info['companyname'] . "</li>
 					<li class='col-md-3'>" . $info['project_subject'] . "</li>
 					<li class='col-md-3'>" . date('m-d-Y', strtotime($info['deadline'])) . "</li>";

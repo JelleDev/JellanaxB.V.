@@ -23,4 +23,11 @@ class Project {
             ->fetchAll(PDO::FETCH_ASSOC);
         return $clientData;
     }
+
+    public function getCompanyName(){
+        $clientData = $this->db->pdo
+            ->query("SELECT `companyname` FROM `tbl_clients` ORDER BY `companyname` ASC")
+            ->fetchAll(PDO::FETCH_ASSOC);
+        return $clientData;
+    }
 }

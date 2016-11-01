@@ -37,7 +37,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     if($result != 1){
         $user->redirect('index.php', 'invalid_username');
-        exit;
     }
 
     $data = $stmt->fetch(PDO::FETCH_OBJ);
@@ -45,7 +44,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     if($password != $dbpass){
         $user->redirect('index.php', 'invalid_password');
-        exit;
     }
 
     $uid = $data->user_id;
