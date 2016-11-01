@@ -79,6 +79,7 @@ require 'header.php';
                 ?>
                 <li class="active"><a href="appointments.php">Appointments</a></li>
                 <li><a href="projects.php">Projects</a></li>
+                <li><a href="invoices.php">Invoices</li>
     		</ul>
     	</div>
     </aside>

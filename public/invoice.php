@@ -41,13 +41,21 @@ require 'header.php';
         	</div>
         </section>
     </div>
-    <aside class="col-md-3">
-    	<div class="aside-clients">
-    		<ul class="aside-client">
-    			<li class="logged_in_as">Finance/Admin</li>
-    			<li class="active"><a href="customers.php">Invoices</a></li>
-    		</ul>
-    	</div>
+     <aside class="col-md-3">
+        <div class="aside-clients">
+            <ul class="aside-client">
+                <li class="logged_in_as">Admin</li>
+                <li><a href="customers.php">Clients</a></li>
+                 <?php
+                if($user->canAccesUsers()){
+                    echo "<li><a href='users.php'>Users</a></li>";
+                }
+                ?>
+                <li><a href="appointments.php">Appointments</a></li>
+                <li><a href="projects.php">Projects</a></li>
+                <li class="active"><a href="invoices.php">Invoices</li>
+            </ul>
+        </div>
     </aside>
 </div>
 

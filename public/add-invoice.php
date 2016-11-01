@@ -11,14 +11,14 @@ require_once 'header.php';
 ?>
 
 <div class="container">
-    <div class="main-part col-md-10">
+    <div class="main-part col-md-9">
         <header class="col-md-12">
             <div class="info-bar">
                 <div class="col-md-12">
                     <h2>Barroc-IT system</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3>Here you can add an invoice</h3>
+                    <h3>Add an invoice</h3>
                 </div>
             </div>
         </header>
@@ -92,12 +92,21 @@ require_once 'header.php';
             </form>
         </section>
     </div>
-    <aside class="col-md-2">
-        <h3>Finance/Admin</h3>
-        <div class="invoices active-tab">
-            <h2>Invoices</h2>
+     <aside class="col-md-3">
+        <div class="aside-clients">
+            <ul class="aside-client">
+                <li class="logged_in_as">Admin</li>
+                <li><a href="customers.php">Clients</a></li>
+                 <?php
+                if($user->canAccesUsers()){
+                    echo "<li><a href='users.php'>Users</a></li>";
+                }
+                ?>
+                <li><a href="appointments.php">Appointments</a></li>
+                <li><a href="projects.php">Projects</a></li>
+                <li class="active"><a href="invoices.php">Invoices</li>
+            </ul>
         </div>
-
     </aside>
 </div>
 
