@@ -137,6 +137,7 @@ aside.col-md-3 {
 }
 li.logged_in_as {
     padding: 30px 0;
+    text-transform: capitalize;
 }
 /*EDITCLIENT PAGE*/
 .information-client.col-md-6 {
@@ -175,6 +176,12 @@ img.ui-datepicker-trigger {
 /*END INFORMATION SECTION*/
 
 /*HELPER CLASSES*/
+h3 {
+    padding-left: 20px;
+}
+h2 {
+    padding-left: 20px; 
+}
 
 .flex {
     display: flex;

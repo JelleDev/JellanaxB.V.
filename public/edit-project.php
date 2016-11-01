@@ -69,7 +69,7 @@ require 'header.php';
     <aside class="col-md-3">
     	<div class="aside-clients">
     		<ul class="aside-client">
-    			<li class="logged_in_as">Admin</li>
+    			<li class="logged_in_as"><?php echo $user->getRole(); ?></li>
                 <li><a href="customers.php">Clients</a></li>
                  <?php
                 if($user->canAccesUsers()){
