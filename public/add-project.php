@@ -21,15 +21,14 @@ $clientInfo = $project->getCompanyName();
         <section class="editclientphp">
         	<div class="clients-edit">                 
                     <div class="information-client-add col-md-12">
-                        <form>
+                        <form action="<?php echo BASE_URL;?>/app/controller/projectcontroller.php" method="post">
                             <div class="form-group">
                                 <label for="exampleInputCompanyname">Companyname*</label>
-                                <select class="form-control" id="exampleInputCompanyname" name="companyname">
+                                <select class="form-control" id="exampleInputCompanyname" name="Client_id">
                                     <option></option>
                                     <?php
                                     foreach($clientInfo as $info){
-                                        $companyname = $info['companyname'];
-                                        echo "<option value='" . $companyname . "'>" . $companyname . "</option>";
+                                        echo "<option value='" . $info['client_id'] . "'>" . $info['companyname'] . "</option>";
                                     }
                                     ?>
                                 </select>
@@ -40,10 +39,14 @@ $clientInfo = $project->getCompanyName();
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputMaintenencecontract">Maintenance contract*</label>
-                                <input type="text" class="form-control" id="exampleInputMaintenancecontract" placeholder="Maintenance contract" name="Maintenencecontract">
+                                <select class="form-control" id="exampleInputMaintenancecontract" name="Maintenencecontract">
+                                    <option></option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
                             </div>
                             <div class="form-group relative">
-                                <label for="datepicker">Deadline</label>
+                                <label for="datepicker">Deadline*</label>
                                 <script>chooseDate();</script>
                                 <input type="text" class="form-control chooseDate" placeholder="Deadline" name="Deadline" id="datepicker">
                             </div>
@@ -65,13 +68,17 @@ $clientInfo = $project->getCompanyName();
                             </div>
                              <div class="form-group">
                                 <label for="exampleInputOfferstatus">Offerstatus*</label>
-                                <input type="text" class="form-control" id="exampleInputOfferstatus" placeholder="Offerstatus" name="Offerstatus">
+                                <select class="form-control" id="exampleInputOfferstatus" name="Offerstatus">
+                                    <option></option>
+                                    <option value="1">Active</option>
+                                    <option value="0">Inactive</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputSubject">Subject</label>
+                                <label for="exampleInputSubject">Subject*</label>
                                 <textarea class="form-control" id="exampleInputSubject" placeholder="Subject" name="Subject"></textarea>
                             </div>
-                            <input type="submit" class="btn btn-primary" value="Save changes">
+                            <input type="submit" class="btn btn-primary" name="type" value="Add project">
                     </div>                        		
         	</div>
         </section>
@@ -79,7 +86,7 @@ $clientInfo = $project->getCompanyName();
     <aside class="col-md-3">
     	<div class="aside-clients">
     		<ul class="aside-client">
-    			<li class="logged_in_as">Admin</li>
+    			<li class="logged_in_as"><?php echo $user->getRole();?></li>
                 <li><a href="customers.php">Clients</a></li>
                  <?php
                 if($user->canAccesUsers()){
