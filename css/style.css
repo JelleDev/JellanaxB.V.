@@ -107,6 +107,17 @@ form.search{
 /*Headsection*/
 li.col-md-3.bold, li.col-md-6.bold {
     font-weight: 600 !important;
+    font-size: 14px;
+}
+
+li.col-md-2.bold {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+li.col-md-4.bold {
+    font-weight: 600;
+    font-size: 14px;
 }
 /*CUSTOMER/PROJECTS PHP PAGE*/
 
@@ -130,10 +141,28 @@ aside.col-md-3 {
     border: 1px solid black;
     padding: 0px;
 }
+
+li.logged_in_as {
+    font-size: 35px !important;
+}
+
 .logged_in_as {
     border-bottom: 1px solid black;
     font-size: 50px;
     text-align: center;
+    background-color: grey;
+}
+
+.clients li {
+    font-size: 13px;
+}
+
+aside.col-md-3 {
+    background-color: #EDEDED;
+}
+
+aside a {
+    color: black;
 }
 li.logged_in_as {
     padding: 30px 0;

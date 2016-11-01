@@ -28,18 +28,18 @@ $clientCount = count($clients);
         	<div class="clients">
         		<ul class="client col-md-12">
         			<li class="col-md-3 bold">Companyname</li>
-        			<li class="col-md-3 bold">Telephonenumber</li>
+        			<li class="col-md-2 bold">Telephonenumber</li>
         			<li class="col-md-3 bold">Customername</li>
-        			<li class="col-md-3 bold">E-mail adress</li>
+        			<li class="col-md-4 bold">E-mail adress</li>
         		</ul>
 				<?php
 				foreach ($clients as $customer){
 					$client_id = $customer['client_id'];
 					echo "<ul class='client col-md-12'>
 						<li class='col-md-3'><a href='http://localhost/JellanaxB.V/public/customer.php?id=" . $client_id ."'>" . $customer['companyname'] . "</a></li>
-						<li class='col-md-3'>" . $customer['phonenumber1'] . "</li>
+						<li class='col-md-2'>" . $customer['phonenumber1'] . "</li>
 						<li class='col-md-3'>" . $customer['contactperson'] . "</li>
-						<li class='col-md-3'>" . $customer['emailadress'] . "</li>
+						<li class='col-md-4'>" . $customer['emailadress'] . "</li>
 						</ul>";
 				}
 				?>
