@@ -3,7 +3,7 @@ require 'header.php';
 
 $project = new Project();
 
-$projectinfo = $project->getMainProjectInfo();
+$projectInfo = $project->getMainProjectInfo();
 ?>
 
 <div class="container">
@@ -27,9 +27,9 @@ $projectinfo = $project->getMainProjectInfo();
         			<li class="col-md-3 bold">Deadline</li>
         		</ul>
 				<?php
-				foreach ($projectinfo as $info){
+				foreach ($projectInfo as $info){
 					echo "<ul class='client col-md-12'>
-					<li class='col-md-3'><a href='project.php'>" . $info['projectname'] . "</a></li>
+					<li class='col-md-3'><a href='project.php?id=" . $info['project_id'] . "'>" . $info['projectname'] . "</a></li>
 					<li class='col-md-3'>" . $info['companyname'] . "</li>
 					<li class='col-md-3'>" . $info['project_subject'] . "</li>
 					<li class='col-md-3'>" . date('m-d-Y', strtotime($info['deadline'])) . "</li>";

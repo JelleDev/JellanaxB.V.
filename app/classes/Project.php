@@ -15,12 +15,23 @@ class Project {
 
     public function getMainProjectInfo(){
         $clientData = $this->db->pdo
-            ->query("SELECT tbl_projects.`projectname`, tbl_clients.`companyname`,
+            ->query("SELECT tbl_projects.`project_id`, tbl_projects.`projectname`, tbl_clients.`companyname`,
                             tbl_projects.`project_subject`, tbl_projects.`deadline`
                     FROM `tbl_clients`
                     INNER JOIN `tbl_projects`
                     ON tbl_clients.`client_id` =  tbl_projects.`client_id`")
             ->fetchAll(PDO::FETCH_ASSOC);
+        return $clientData;
+    }
+
+    public function getProjectInfo($id){
+        $clientData = $this->db->pdo
+            ->query("SELECT tbl_clients.`companyname`, tbl_projects.*
+                    FROM `tbl_projects`
+                    INNER JOIN `tbl_clients`
+                    ON tbl_clients.`client_id` = tbl_projects.`client_id`
+                    WHERE tbl_projects.`project_id` = $id")
+            ->fetch(PDO::FETCH_ASSOC);
         return $clientData;
     }
 

@@ -1,5 +1,14 @@
 <?php
 require 'header.php';
+
+
+$project = new Project();
+
+$project_id = $_GET['id'];
+
+$projectInfo = $project->getProjectInfo($project_id);
+
+var_dump($projectInfo);
 ?>
 
 <div class="container">
