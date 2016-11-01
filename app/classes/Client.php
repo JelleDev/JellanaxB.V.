@@ -22,10 +22,14 @@ class Client
     }
 
     public function getClient($id){
-        $clientData = $this->db->pdo
-            ->query("SELECT * FROM `tbl_clients` WHERE `client_id` = $id")
-            ->fetch(PDO::FETCH_ASSOC);
-        return $clientData;
+        $sql = "SELECT * FROM `tbl_clients` WHERE `client_id` = :id";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $result;
     }
 
     public function addClient($clientInfo){
