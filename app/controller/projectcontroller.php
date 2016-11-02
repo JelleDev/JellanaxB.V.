@@ -43,7 +43,46 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             }
         }
 
+        if($allInfo['Maintenencecontract'] == 'Yes'){
+            $allInfo['Maintenencecontract'] = 1;
+        }
+        else {
+            $allInfo['Maintenencecontract'] = 0;
+        }
+
+        if($allInfo['Offerstatus'] == 'Active'){
+            $allInfo['Offerstatus'] = 1;
+        }
+        else {
+            $allInfo['Offerstatus'] = 0;
+        }
+
         $project->addProject($allInfo);
-        $user->redirect('projects.php', 'AddedProject');
+    }
+
+    if($_POST['type'] == 'Save changes'){
+        foreach ($requiredInfo as $info){
+            if(!Validator::notEmpty()->validate($info)){
+                $user->redirect('add-project.php', 'Empty required field');
+            }
+        }
+
+        $project_id = $_POST['Project_id'];
+
+        if($allInfo['Maintenencecontract'] == 'Yes'){
+            $allInfo['Maintenencecontract'] = 1;
+        }
+        else {
+            $allInfo['Maintenencecontract'] = 0;
+        }
+
+        if($allInfo['Offerstatus'] == 'Active'){
+            $allInfo['Offerstatus'] = 1;
+        }
+        else {
+            $allInfo['Offerstatus'] = 0;
+        }
+
+        $project->modifyProject($allInfo, $project_id);
     }
 }

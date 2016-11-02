@@ -1,5 +1,13 @@
 <?php
 require 'header.php';
+
+$project = new Project();
+
+$project_id = $_GET['id'];
+
+$projectInfo = $project->getProjectInfo($project_id);
+
+$companyInfo = $project->getCompanyName();
 ?>
 
 <div class="container">
@@ -17,48 +25,86 @@ require 'header.php';
         <section class="editclientphp">
         	<div class="clients-edit">                 
                     <div class="information-client-add col-md-12">
-                        <form>
+                        <form action="<?php echo BASE_URL; ?>/app/controller/projectcontroller.php" method="POST">
                             <div class="form-group">
+                                <label class="sr-only" for="hiddenid">Project_id</label>
+                                <input type="hidden" id="hiddenid" name="Project_id" value="<?php echo $project_id; ?>">
                                 <label for="exampleInputCompanyname">Companyname*</label>
-                                <input type="text" class="form-control" id="exampleInputCompanyname" placeholder="Companyname" name="companyname">
-                                </div>
+                                <select class="form-control" id="exampleInputCompanyname" name="Client_id">
+                                    <?php
+                                    foreach($companyInfo as $info){
+                                        if($projectInfo['companyname'] == $info['companyname']){
+                                            echo "<option value='" . $info['client_id'] . "'selected>" . $info['companyname'] . "</option>";
+                                        }
+                                        else {
+                                            echo "<option value='" . $info['client_id'] . "'>" . $info['companyname'] . "</option>";
+                                        }
+                                    }
+                                    ?>
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <label for="exampleInputProjectname">Projectname*</label>
-                                <input type="text" class="form-control" id="exampleInputProjectname" placeholder="Projectname" name="Projectname">
+                                <input type="text" class="form-control" id="exampleInputProjectname" placeholder="Projectname" name="Projectname" value="<?php echo $projectInfo['projectname']; ?>">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputDeadline">Deadline</label>
-                                <input type="text" class="form-control" id="exampleInputDeadline" placeholder="Deadline" name="Deadline">
+                                <label for="exampleInputMaintenencecontract">Maintenance contract*</label>
+                                <select class="form-control" id="exampleInputMaintenencecontract" name="Maintenencecontract">
+                                    <?php
+                                    $maintenance = $projectInfo['maintenance_contract'];
+                                    if($maintenance == 1){
+                                     echo "<option value='Yes'>Yes</option>
+                                        <option value='No'>No</option>";
+                                    }
+                                    else {
+                                        echo "<option value='Yes'>Yes</option>
+                                            <option value='No' selected>No</option>";
+                                    }
+                                    ?>
+                                </select>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputMaintenencecontract">Maintenence contract*</label>
-                                <input type="text" class="form-control" id="exampleInputMaintenencecontract" placeholder="Maintenencecontract" name="Maintenencecontract">
+                            <div class="form-group relative">
+                                <label for="datepicker">Deadline*</label>
+                                <script>chooseDate();</script>
+                                <input type="text" class="form-control chooseDate" placeholder="Deadline" name="Deadline" id="datepicker" value="<?php echo date('m-d-Y', strtotime($projectInfo['deadline'])); ?>">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputHardware">Hardware</label>
-                                <input type="text" class="form-control" id="exampleInputHardware" placeholder="Hardware" name="InputHardware">
+                                <input type="text" class="form-control" id="exampleInputHardware" placeholder="Hardware" name="InputHardware" value="<?php echo $projectInfo['hardware']; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputOperating-system">Operating-system</label>
-                                <input type="text" class="form-control" id="exampleInputOperating-system" placeholder="Operating-system" name="Operating-system">
+                                <input type="text" class="form-control" id="exampleInputOperating-system" placeholder="Operating-system" name="Operating-system" value="<?php echo $projectInfo['operating_system']; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputApplication">Application</label>
-                                <input type="text" class="form-control" id="exampleInputApplication" placeholder="Application" name="Application">
+                                <input type="text" class="form-control" id="exampleInputApplication" placeholder="Application" name="Application" value="<?php echo $projectInfo['application']; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputOffernumber">Offernumber*</label>
-                                <input type="text" class="form-control" id="exampleInputOffernumber" placeholder="Offernumber" name="Offernumber">
+                                <input type="text" class="form-control" id="exampleInputOffernumber" placeholder="Offernumber" name="Offernumber" value="<?php echo $projectInfo['offernumber']; ?>">
                             </div>
                              <div class="form-group">
                                 <label for="exampleInputOfferstatus">Offerstatus*</label>
-                                <input type="text" class="form-control" id="exampleInputOfferstatus" placeholder="Offerstatus" name="Offerstatus">
+                                <select class="form-control" id="exampleInputOfferstatus" name="Offerstatus">
+                                    <?php
+                                    $status = $projectInfo['offerstatus'];
+                                    if($status == 1){
+                                        echo "<option value='Active'>Active</option>
+                                        <option value='Inactive'>Inactive</option>";
+                                    }
+                                    else {
+                                        echo "<option value='Active'>Active</option>
+                                            <option value='Inactive' selected>Inactive</option>";
+                                    }
+                                    ?>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputSubject">Subject</label>
-                                <textarea class="form-control" id="exampleInputSubject" placeholder="Subject" name="Subject"></textarea>
+                                <label for="exampleInputSubject">Subject*</label>
+                                <textarea class="form-control" id="exampleInputSubject" placeholder="Subject" name="Subject"><?php echo $projectInfo['project_subject']; ?></textarea>
                             </div>
-                            <input type="submit" class="btn btn-primary" value="Save changes    ">
+                            <input type="submit" class="btn btn-primary" name="type" value="Save changes">
                     </div>
                 </ul>
                   

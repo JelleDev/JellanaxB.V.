@@ -41,8 +41,8 @@ $clientInfo = $project->getCompanyName();
                                 <label for="exampleInputMaintenencecontract">Maintenance contract*</label>
                                 <select class="form-control" id="exampleInputMaintenancecontract" name="Maintenencecontract">
                                     <option></option>
-                                    <option value="1">Yes</option>
-                                    <option value="0">No</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
                                 </select>
                             </div>
                             <div class="form-group relative">
@@ -70,8 +70,8 @@ $clientInfo = $project->getCompanyName();
                                 <label for="exampleInputOfferstatus">Offerstatus*</label>
                                 <select class="form-control" id="exampleInputOfferstatus" name="Offerstatus">
                                     <option></option>
-                                    <option value="1">Active</option>
-                                    <option value="0">Inactive</option>
+                                    <option value="Active">Active</option>
+                                    <option value="Inactive">Inactive</option>
                                 </select>
                             </div>
                             <div class="form-group">

@@ -8,7 +8,25 @@ $project_id = $_GET['id'];
 
 $projectInfo = $project->getProjectInfo($project_id);
 
-var_dump($projectInfo);
+$notRequired = [
+    $projectInfo['hardware'],
+    $projectInfo['operating_system'],
+    $projectInfo['application']
+];
+
+if($projectInfo['maintenance_contract'] == 1){
+    $projectInfo['maintenance_contract'] = 'Yes';
+}
+else {
+    $projectInfo['maintenance_contract'] = 'No';
+}
+
+if($projectInfo['offerstatus'] == 1){
+    $projectInfo['offerstatus'] = 'Active';
+}
+else {
+    $projectInfo['offerstatus'] = 'Inactive';
+}
 ?>
 
 <div class="container">
@@ -30,35 +48,43 @@ var_dump($projectInfo);
                         <li>Companyname</li>
                         <li>Projectname</li>
                         <li>Deadline</li>
-                        <li>date</li>
-                        <li>Time</li>
-                        <li>maintenence contract</li>
-                        <li>hardware</li>
-                        <li>Operating system</li>
-                        <li>Application</li>
+                        <li>Maintenance contract</li>
+
+                        <?php
+                        $notRequiredLabel = [
+                            'Hardware',
+                            'Operating System',
+                            'Application'
+                        ];
+                        for($i = 0; $i < count($notRequired); $i++){
+                            if(!empty($notRequired[$i])){
+                                echo "<li>" . $notRequiredLabel[$i] . "</li>";
+                            }
+                        }
+                        ?>
                         <li>Offernumber</li>
                         <li>Offerstatus</li>
                         <li>Subject</li>
                     </div>
                     <div class="information-client col-md-6">
-                        <li>anne</li>
-                        <li>is</li>
-                        <li>leuk</li>
-                        <li>l</li>
-                        <li>h</li>
-                        <li>h</li>
-                        <li>h</li>
-                        <li>h</li>
-                        <li>h</li>
-                        <li>h</li>
-                        <li>h</li>
-                        <li><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius provident molestiae tempora ipsa atque magnam culpa aut sunt temporibus eos adipisci ratione placeat natus ipsum, odit aperiam praesentium, quod cupiditate.</div>
-                        <div>Praesentium vero voluptatum fugiat aliquid, iure a vel, nesciunt, doloremque qui doloribus aperiam ducimus deleniti, veniam dignissimos! Tempore voluptate consequuntur rem itaque vitae ducimus blanditiis totam, provident corporis excepturi, laborum!</div></li>
+                        <li><?php echo $projectInfo['companyname']; ?></li>
+                        <li><?php echo $projectInfo['projectname']; ?></li>
+                        <li><?php echo date('m-d-Y', strtotime($projectInfo['deadline'])); ?></li>
+                        <li><?php echo $projectInfo['maintenance_contract']; ?></li>
+
+                        <?php
+                        foreach($notRequired as $info){
+                            if(!empty($info)){
+                                echo "<li>" . $info . "</li>";
+                            }
+                        }
+                        ?>
+                        <li><?php echo $projectInfo['offernumber']; ?></li>
+                        <li><?php echo $projectInfo['offerstatus']; ?></li>
+                        <li><?php echo $projectInfo['project_subject']; ?></li>
                     </div>
                 </ul>
-                <div class="editclients-button"><a href="edit-project.php">Modify</a></div>
-                  
-        		
+                <div class="editclients-button"><a href="edit-project.php?id=<?php echo $project_id; ?>">Modify</a></div>
         	</div>
         </section>
     </div>

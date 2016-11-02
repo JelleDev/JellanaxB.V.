@@ -70,8 +70,36 @@ class Project {
         $stmt->bindParam(':offernumber', $projectInfo['Offernumber']);
         $stmt->bindParam(':offerstatus', $projectInfo['Offerstatus']);
         $stmt->execute();
+
+        header('location: ' . BASE_URL . '/public/projects.php');
+        exit;
     }
 
-    public function modifyProject($projectInfo){
+    public function modifyProject($projectInfo, $id){
+        $finished = 0;
+
+        $sql = "UPDATE `tbl_projects`
+                SET `client_id` = :client_id, `projectname` = :projectname, `project_subject` = :subject,
+                    `finished` = :finished, `deadline` = :deadline, `maintenance_contract` = :maintenance,
+                    `hardware` = :hardware, `operating_system` = :operatingsystem, `application` = :application,
+                    `offernumber` = :offernumber, `offerstatus` = :offerstatus
+                WHERE `project_id` = :id";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':client_id', $projectInfo['Client_id']);
+        $stmt->bindParam(':projectname', $projectInfo['Projectname']);
+        $stmt->bindParam(':subject', $projectInfo['Subject']);
+        $stmt->bindParam(':finished', $finished);
+        $stmt->bindParam(':deadline', $projectInfo['Deadline']);
+        $stmt->bindParam(':maintenance', $projectInfo['Maintenencecontract']);
+        $stmt->bindParam(':hardware', $projectInfo['InputHardware']);
+        $stmt->bindParam(':operatingsystem', $projectInfo['Operating-system']);
+        $stmt->bindParam(':application', $projectInfo['Application']);
+        $stmt->bindParam(':offernumber', $projectInfo['Offernumber']);
+        $stmt->bindParam(':offerstatus', $projectInfo['Offerstatus']);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        header('location: ' . BASE_URL . '/public/project.php?id=' . $id);
+        exit;
     }
 }
