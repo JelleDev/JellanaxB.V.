@@ -1,5 +1,11 @@
 <?php
 require 'header.php';
+
+$appointment = new Appointment();
+
+$appointment_id = $_GET['id'];
+
+$appointmentInfo = $appointment->getAppointmentInfo($appointment_id);
 ?>
 
 <div class="container">
@@ -19,11 +25,10 @@ require 'header.php';
                 <ul class="information-clients col-md-12">
                     <div class="information-client col-md-6">
                         <li>Companyname</li>
-                        <li>Customername</li>
+                        <li>Date and time</li>
                         <li>Location</li>
-                        <li>Date</li>
-                        <li>Time</li>
-                        <li>Contactname</li>
+                        <li>Initials</li>
+                        <li>Contactperson</li>
                         <li>Project</li>
                         <li>Telephonenumber</li>
                         <li>E-mail adress</li>
@@ -33,7 +38,6 @@ require 'header.php';
                         <li>anne</li>
                         <li>is</li>
                         <li>leuk</li>
-                        <li>l</li>
                         <li>h</li>
                         <li>h</li>
                         <li>h</li>

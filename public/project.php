@@ -84,7 +84,11 @@ else {
                         <li><?php echo $projectInfo['project_subject']; ?></li>
                     </div>
                 </ul>
-                <div class="editclients-button"><a href="edit-project.php?id=<?php echo $project_id; ?>">Modify</a></div>
+                <?php
+                if($user->canModifyProjects()){
+                    echo "<div class='editclients-button'><a href='edit-project.php?id=" . $project_id . "'>Modify</a></div>";
+                }
+                ?>
         	</div>
         </section>
     </div>

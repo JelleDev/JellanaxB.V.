@@ -1,6 +1,10 @@
 <?php
 require 'header.php';
 
+if(!$user->canModifyProjects()){
+    $user->redirect('projects.php', 'NotPermitted');
+}
+
 $project = new Project();
 
 $clientInfo = $project->getCompanyName();
