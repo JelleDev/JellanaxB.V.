@@ -5,6 +5,14 @@ $appointment = new Appointment();
 
 $appointment_id = $_GET['id'];
 
+if(!isset($appointment_id) || empty($appointment_id)){
+    $user->redirect('appointments.php', 'NotPermitted');
+}
+
+if(!$user->canModifyCustomer()){
+    $user->redirect('appointment.php', 'id=' . $appointment_id . '&NotPermitted');
+}
+
 $appointmentInfo = $appointment->getAppointmentInfo($appointment_id);
 $client_id = $appointmentInfo['client_id'];
 $project_id = $appointmentInfo['project_id'];

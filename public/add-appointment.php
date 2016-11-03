@@ -1,6 +1,11 @@
 <?php
 require 'header.php';
 
+
+if(!$user->canModifyCustomer()){
+    $user->redirect('appointments.php', 'NotPermitted');
+}
+
 if(!$_SERVER['REQUEST_METHOD'] == 'POST'){
     $user->redirect('appointments.php', 'NotPermitted');
 }

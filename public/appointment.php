@@ -56,9 +56,12 @@ $appointmentInfo = $appointment->getAppointmentInfo($appointment_id);
                         ?>
                     </div>
                 </ul>
-                <div class="editclients-button"><a href="edit-appointment.php?id=<?php echo $appointment_id; ?>">Modify</a></div>
-                  
-        		
+                <?php
+                if($user->canModifyCustomer()){
+                    echo "<div class='editclients-button'><a href='edit-appointment.php?id=" . $appointment_id . "'>Modify</a></div>";
+                }
+                ?>
+
         	</div>
         </section>
     </div>

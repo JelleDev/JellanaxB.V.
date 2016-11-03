@@ -1,6 +1,10 @@
 <?php
 require 'header.php';
 
+if(!$user->canModifyCustomer()){
+    $user->redirect('appointments.php', 'NotPermitted');
+}
+
 $appointment = new Appointment();
 
 $appointmentInfo = $appointment->getCompanyNames();

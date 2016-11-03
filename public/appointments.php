@@ -16,7 +16,11 @@ $amountAppointments = count($appointmentInfo);
                     <h2><?php echo $amountAppointments; ?> Results found</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="search_companyname.php">Add an appointment</a></h3>
+                    <?php
+                    if($user->canModifyCustomer()){
+                        echo "<h3><a href='search_companyname.php'>Add an appointment</a></h3>";
+                    }
+                    ?>
                 </div>
             </div>
         </header>
