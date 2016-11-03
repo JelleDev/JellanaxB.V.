@@ -49,6 +49,19 @@ header h1 {
     border-top: none;
 }
 
+.info-bar .col-md-12 {
+    background-color: grey;
+    color: black;
+}
+
+.container a:hover {
+    color: black;
+}
+
+h3 a {
+    color: black;
+}
+
 /*END HEADER*/
 
 /*LOGIN SECTION*/
