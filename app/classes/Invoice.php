@@ -24,6 +24,7 @@ class Invoice
                      ON tbl_clients.`client_id` = tbl_projects.`client_id`
                      INNER JOIN `tbl_invoices`
                      ON tbl_invoices.`project_id` = tbl_projects.`project_id`
+                     ORDER BY tbl_clients.`companyname`, tbl_projects.`projectname`
                      ")
             ->fetchAll(PDO::FETCH_ASSOC);
 

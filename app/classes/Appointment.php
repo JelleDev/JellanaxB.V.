@@ -25,6 +25,7 @@ class Appointment
             ON tbl_clients.`client_id` = tbl_projects.`client_id`
             INNER JOIN `tbl_appointments`
             ON tbl_projects.`project_id` = tbl_appointments.`project_id`
+            ORDER BY tbl_appointments.`date_time`
             ")
             ->fetchAll(PDO::FETCH_ASSOC);
 

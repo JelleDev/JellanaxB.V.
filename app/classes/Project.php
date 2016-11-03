@@ -19,7 +19,8 @@ class Project {
                             tbl_projects.`project_subject`, tbl_projects.`deadline`
                     FROM `tbl_clients`
                     INNER JOIN `tbl_projects`
-                    ON tbl_clients.`client_id` =  tbl_projects.`client_id`")
+                    ON tbl_clients.`client_id` =  tbl_projects.`client_id`
+                    ORDER BY tbl_projects.`deadline`")
             ->fetchAll(PDO::FETCH_ASSOC);
         return $clientData;
     }
