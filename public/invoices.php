@@ -1,5 +1,11 @@
 <?php
 require 'header.php';
+
+$invoice = new Invoice();
+
+$invoiceInfo = $invoice->getAllInvoices();
+
+$amountInvoices = count($invoiceInfo);
 ?>
 
 <div class="container">
@@ -7,7 +13,7 @@ require 'header.php';
         <header class="col-md-12">
             <div class="info-bar">
                 <div class="col-md-12">
-                    <h2>0 Results found</h2>
+                    <h2><?php echo $amountInvoices; ?> Results found</h2>
                 </div>
                 <div class="col-md-12">
                     <h3><a href="add-invoice.php">Add an invoice</a></h3>
@@ -18,18 +24,21 @@ require 'header.php';
         	<div class="clients">
         		<ul class="client col-md-12">
         			<li class="col-md-3 bold">Companyname</li>
-        			<li class="col-md-3 bold">Date</li>
                     <li class="col-md-3 bold">Project</li>
+                    <li class="col-md-3 bold">Date send</li>
                     <li class="col-md-3 bold">Amount</li>
 
         		</ul>
-                <ul class="client col-md-12">
-                    <li class="col-md-3"><a href="invoice.php">Bartels.B.V.</a></li>
-                    <li class="col-md-3">22-10-2099</li>
-                    <li class="col-md-3">Broodje pannenkoek</li>
-                    <li class="col-md-3">$100.000</li>
-
-                </ul>
+                <?php
+                foreach($invoiceInfo as $info){
+                    echo "<ul class='client col-md-12'>
+                            <li class='col-md-3'><a href='invoice.php?id=" . $info['invoice_id'] . "'>" . $info['companyname'] . "</a></li>
+                            <li class='col-md-3'>" . $info['projectname'] . "</li>
+                            <li class='col-md-3'>" . date('m-d-Y', strtotime($info['date_send'])) . "</li>
+                            <li class='col-md-3'>€ " . $info['price'] . ",00</li>
+                          </ul>";
+                }
+                ?>
         	</div>
         </section>
     </div>
