@@ -67,6 +67,13 @@ class Appointment
         return $result;
     }
 
+    public function getCompanyNames(){
+        $companyData = $this->db->pdo
+            ->query("SELECT `companyname`, `client_id`
+                     FROM `tbl_clients`")->fetchAll(PDO::FETCH_ASSOC);
+        return $companyData;
+    }
+
     public function getCompanyName($client_id){
         $sql = "SELECT `companyname` 
                 FROM `tbl_clients` 

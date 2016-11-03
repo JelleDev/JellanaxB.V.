@@ -21,7 +21,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     ];
 
     if($_POST['type'] == 'Add appointment'){
+        foreach ($allInfo as $info) {
+            if (!Validator::notEmpty()->validate($info)) {
+                $user->redirect('add-appointment.php', 'Empty required field');
+            }
+        }
 
+        $allInfo['subject'] = $_POST['Subject'];
+        $glue = [
+            $allInfo['date'],
+            $allInfo['time']
+        ];
+        $allInfo['date_time'] = implode(' ', $glue);
+
+        $appointment->addAppointment($allInfo);
     }
 
     if($_POST['type'] == 'Save changes'){

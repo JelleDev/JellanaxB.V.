@@ -1,5 +1,10 @@
 <?php
 require 'header.php';
+
+$appointment = new Appointment();
+
+$appointmentInfo = $appointment->getCompanyNames();
+
 ?>
 
 <div class="container">
@@ -17,12 +22,20 @@ require 'header.php';
         <section class="editclientphp">
         	<div class="clients-edit">                 
                     <div class="information-client-add col-md-12">
-                        <form>
+                        <form action="add-appointment.php" method="POST">
                             <div class="form-group edit">
                                 <label for="exampleInputCompanyname">Please select a company name.</label>
-                                <input type="text" class="form-control" id="exampleInputCompanyname" placeholder="Companyname" name="companyname">
-                                </div>
-                                <div class="editclients-button"><a href="add-appointment.php">Next</a></div>
+                                <select class="form-control" id="exampleInputCompanyname" name="client_id">
+                                    <option></option>
+                                    <?php
+                                    foreach($appointmentInfo as $info){
+                                        echo "<option value='" . $info['client_id'] . "'>" . $info['companyname'] . "</option>";
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            <input type="submit" class="btn btn-primary" value="Continue">
+                        </form>
                     </div>                        		
         	</div>
         </section>

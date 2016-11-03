@@ -1,5 +1,22 @@
 <?php
 require 'header.php';
+
+if(!$_SERVER['REQUEST_METHOD'] == 'POST'){
+    $user->redirect('appointments.php', 'NotPermitted');
+}
+
+$client_id = $_POST['client_id'];
+
+if(empty($client_id)){
+    $user->redirect('search_companyname.php', 'EmptyCompanyname');
+}
+
+$appointment = new Appointment();
+
+$companyname = $appointment->getCompanyName($client_id);
+$projectnames = $appointment->getProjectNames($client_id);
+
+
 ?>
 
 <div class="container">
@@ -10,7 +27,7 @@ require 'header.php';
                     <h2>Add an appointment</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="appointments.php">< Go back</a></h3>
+                    <h3><a href="search_companyname.php">< Go back</a></h3>
                 </div>
             </div>
         </header>
@@ -20,13 +37,18 @@ require 'header.php';
                         <form action="<?php echo BASE_URL; ?>/app/controller/appointmentcontroller.php" method="POST">
                             <div class="form-group">
                                 <label for="exampleInputCompanyname">Companyname*</label>
-                                <select class="form-control" id="exampleInputCompanyname" name="companyname">
-                                    <option></option>
-                                </select>
+                                <input type="text" class="form-control" id="exampleInputCompanyname" placeholder="Companyname" name="companyname" value="<?php echo $companyname; ?>" readonly>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputProject">Project*</label>
-                                <input type="text" class="form-control" id="exampleInputProject" placeholder="Project" name="Project">
+                                <select class="form-control" id="exampleInputProject" name="Project">
+                                    <option></option>
+                                    <?php
+                                    foreach($projectnames as $projectname){
+                                        echo "<option value='" . $projectname['project_id'] . "'>" . $projectname['projectname'] . "</option>";
+                                    }
+                                    ?>
+                                </select>
                             </div>
                             <div class="form-group relative">
                                 <label for="datepicker">Date*</label>
