@@ -29,6 +29,10 @@ aside {
 
 /*HEADER*/
 
+header.col-md-12 {
+    margin-bottom: 15px;
+}
+
 header h1 {
     margin: 12% 0 30px 0;
     font-family: 'Open Sans Condensed', Cursive;
@@ -59,7 +63,7 @@ header h1 {
 }
 
 h3 a {
-    color: black;
+    color: white;
 }
 
 /*END HEADER*/
@@ -164,6 +168,7 @@ li.logged_in_as {
     font-size: 50px;
     text-align: center;
     background-color: grey;
+    color: black;
 }
 
 .clients li {
