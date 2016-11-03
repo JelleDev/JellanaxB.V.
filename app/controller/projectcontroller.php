@@ -61,13 +61,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
 
     if($_POST['type'] == 'Save changes'){
+        $project_id = $_POST['Project_id'];
+
         foreach ($requiredInfo as $info){
             if(!Validator::notEmpty()->validate($info)){
-                $user->redirect('add-project.php', 'Empty required field');
+                $user->redirect('edit-project.php', 'id=' . $project_id . '&Empty Required Field');
             }
         }
-
-        $project_id = $_POST['Project_id'];
 
         if($allInfo['Maintenencecontract'] == 'Yes'){
             $allInfo['Maintenencecontract'] = 1;

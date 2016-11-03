@@ -74,7 +74,7 @@ $companyInfo = $project->getCompanyName();
                             <div class="form-group relative">
                                 <label for="datepicker">Deadline*</label>
                                 <script>chooseDate();</script>
-                                <input type="text" class="form-control chooseDate" placeholder="Deadline" name="Deadline" id="datepicker" value="<?php echo date('m-d-Y', strtotime($projectInfo['deadline'])); ?>">
+                                <input type="text" class="form-control chooseDate" placeholder="Deadline" name="Deadline" id="datepicker" value="<?php echo date('Y-m-d', strtotime($projectInfo['deadline'])); ?>">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputHardware">Hardware</label>

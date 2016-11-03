@@ -25,29 +25,38 @@ $appointmentInfo = $appointment->getAppointmentInfo($appointment_id);
                 <ul class="information-clients col-md-12">
                     <div class="information-client col-md-6">
                         <li>Companyname</li>
-                        <li>Date and time</li>
+                        <li>Project</li>
+                        <li>Date</li>
+                        <li>Time</li>
                         <li>Location</li>
                         <li>Initials</li>
                         <li>Contactperson</li>
-                        <li>Project</li>
                         <li>Telephonenumber</li>
                         <li>E-mail adress</li>
-                        <li>Subject</li>
+                        <?php
+                        if(!empty($appointmentInfo['appointment_subject'])){
+                            echo "<li>Subject</li>";
+                        }
+                        ?>
                     </div>
                     <div class="information-client col-md-6">
-                        <li>anne</li>
-                        <li>is</li>
-                        <li>leuk</li>
-                        <li>h</li>
-                        <li>h</li>
-                        <li>h</li>
-                        <li>h</li>
-                        <li>h</li>
-                        <li><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam facilis molestiae deleniti accusantium earum eligendi. Veritatis tempora consequuntur dolorem repudiandae iusto sit fugit quo fuga odit, eaque! Unde asperiores, dicta.</div>
-                        <div>Officia dolor, possimus repellendus vero ducimus explicabo obcaecati unde, soluta reprehenderit vel, similique quibusdam, deleniti eaque ipsa. Adipisci cupiditate quaerat repellat maiores fuga architecto, quos mollitia fugiat, nemo commodi ut?</div></li>
+                        <li><?php echo $appointmentInfo['companyname']; ?></li>
+                        <li><?php echo $appointmentInfo['projectname']; ?></li>
+                        <li><?php echo date("m-d-Y", strtotime($appointmentInfo['date_time'])); ?></li>
+                        <li><?php echo date("H:i", strtotime($appointmentInfo['date_time'])); ?></li>
+                        <li><?php echo $appointmentInfo['location'] ?></li>
+                        <li><?php echo $appointmentInfo['initials']; ?></li>
+                        <li><?php echo $appointmentInfo['contactperson']; ?></li>
+                        <li><?php echo $appointmentInfo['phonenumber1']; ?></li>
+                        <li><?php echo $appointmentInfo['emailadress']; ?></li>
+                        <?php
+                        if(!empty($appointmentInfo['appointment_subject'])){
+                            echo "<li>" . $appointmentInfo['appointment_subject'] . "</li>";
+                        }
+                        ?>
                     </div>
                 </ul>
-                <div class="editclients-button"><a href="edit-appointment.php">Modify</a></div>
+                <div class="editclients-button"><a href="edit-appointment.php?id=<?php echo $appointment_id; ?>">Modify</a></div>
                   
         		
         	</div>

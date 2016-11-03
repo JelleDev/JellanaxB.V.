@@ -17,18 +17,16 @@ require 'header.php';
         <section class="editclientphp">
         	<div class="clients-edit">                 
                     <div class="information-client-add col-md-12">
-                        <form>
+                        <form action="<?php echo BASE_URL; ?>/app/controller/appointmentcontroller.php" method="POST">
                             <div class="form-group">
                                 <label for="exampleInputCompanyname">Companyname*</label>
-                                <input type="text" class="form-control" id="exampleInputCompanyname" placeholder="Companyname" name="companyname">
-                                </div>
-                            <div class="form-group">
-                                <label for="exampleInputCustomername">Customername*</label>
-                                <input type="text" class="form-control" id="exampleInputCustomername" placeholder="Customername" name="Customername">
+                                <select class="form-control" id="exampleInputCompanyname" name="companyname">
+                                    <option></option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputLocation">Location*</label>
-                                <input type="text" class="form-control" id="exampleInputLocation" placeholder="Location" name="Location">
+                                <label for="exampleInputProject">Project*</label>
+                                <input type="text" class="form-control" id="exampleInputProject" placeholder="Project" name="Project">
                             </div>
                             <div class="form-group relative">
                                 <label for="datepicker">Date*</label>
@@ -37,29 +35,17 @@ require 'header.php';
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputTime">Time*</label>
-                                <input type="text" class="form-control" id="exampleInputTime" placeholder="Time" name="Time">
+                                <input type="time" class="form-control" id="exampleInputTime" placeholder="Time" name="Time">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputContactperson">Contactperson*</label>
-                                <input type="text" class="form-control" id="exampleInputContactperson" placeholder="Contactperson" name="InputContactperson">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputProject">Project*</label>
-                                <input type="text" class="form-control" id="exampleInputProject" placeholder="Project" name="Project">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputTelephonenumber">Telephonenumber*</label>
-                                <input type="text" class="form-control" id="exampleInputTelephonenumber" placeholder="Telephonenumber" name="Telephonenumber">
-                            </div>
-                             <div class="form-group">
-                                <label for="exampleInputE-mail">E-mail*</label>
-                                <input type="text" class="form-control" id="exampleInputE-mail" placeholder="E-mail" name="E-mail">
+                                <label for="exampleInputLocation">Location*</label>
+                                <input type="text" class="form-control" id="exampleInputLocation" placeholder="Location" name="Location">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputSubject">Subject</label>
                                 <textarea class="form-control" id="exampleInputSubject" placeholder="Subject" name="Subject"></textarea>
                             </div>
-                            <input type="submit" class="btn btn-primary" value="Save changes    ">
+                            <input type="submit" class="btn btn-primary" name="type" value="Add appointment">
                     </div>                        		
         	</div>
         </section>

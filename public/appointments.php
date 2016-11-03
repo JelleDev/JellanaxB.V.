@@ -30,7 +30,7 @@ $amountAppointments = count($appointmentInfo);
         		</ul>
         		<?php
 				foreach($appointmentInfo as $info){
-        			$dateTime = date("m-d-Y, g:ia", strtotime($info['date_time']));
+        			$dateTime = date("m-d-Y, H:i", strtotime($info['date_time']));
         			echo "<ul class='client col-md-12'>
 						<li class='col-md-3'><a href='appointment.php?id=" . $info['appointment_id'] . "'>" . $info['companyname'] . "</a></li>
 						<li class='col-md-3'>" . $info['projectname'] . "</li>
