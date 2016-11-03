@@ -1,6 +1,10 @@
 <?php
 require 'header.php';
 
+if(!$user->canModifyCustomer()){
+    $user->redirect('customers.php', 'NotPermitted');
+}
+
 ?>
 
 <div class="container">
