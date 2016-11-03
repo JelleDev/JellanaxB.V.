@@ -194,6 +194,11 @@ li.logged_in_as {
 .information-client-add {
     padding-top: 20px;
 }
+
+/*search_companyname.php*/
+ .form-group.edit {
+    padding-top: 40px;
+}
 /*EDIT-APPOINTMENT PAGE*/
 
 img.ui-datepicker-trigger {
