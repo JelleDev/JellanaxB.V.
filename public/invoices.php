@@ -25,17 +25,18 @@ $amountInvoices = count($invoiceInfo);
         		<ul class="client col-md-12">
         			<li class="col-md-3 bold">Companyname</li>
                     <li class="col-md-3 bold">Project</li>
-                    <li class="col-md-3 bold">Date send</li>
-                    <li class="col-md-3 bold">Amount</li>
-
+                    <li class="col-md-2 bold">Invoice number</li>
+                    <li class="col-md-2 bold">Date send</li>
+                    <li class="col-md-2 bold">Amount</li>
         		</ul>
                 <?php
                 foreach($invoiceInfo as $info){
                     echo "<ul class='client col-md-12'>
                             <li class='col-md-3'><a href='invoice.php?id=" . $info['invoice_id'] . "'>" . $info['companyname'] . "</a></li>
                             <li class='col-md-3'>" . $info['projectname'] . "</li>
-                            <li class='col-md-3'>" . date('m-d-Y', strtotime($info['date_send'])) . "</li>
-                            <li class='col-md-3'>€ " . $info['price'] . ",00</li>
+                            <li class='col-md-2'>" . $info['invoice_nr'] . "</li>
+                            <li class='col-md-2'>" . date('m-d-Y', strtotime($info['date_send'])) . "</li>
+                            <li class='col-md-2'>€ " . $info['price'] . ",00</li>
                           </ul>";
                 }
                 ?>

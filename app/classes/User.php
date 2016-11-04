@@ -63,6 +63,13 @@ class User
         return false;
     }
 
+    public function canModifyInvoices(){
+        if(($this->getRole() == 'finance' || $this->getRole() == 'admin') && $this->logged){
+            return true;
+        }
+        return false;
+    }
+
     /*
      * GETTERS AND SETTERS
      * */

@@ -1,6 +1,12 @@
 <?php
 require 'header.php';
 
+$invoice_id = $_GET['id'];
+
+$invoice = new Invoice();
+
+$invoiceInfo = $invoice->getInvoice($invoice_id);
+
 ?>
 
 <div class="container">
@@ -20,24 +26,24 @@ require 'header.php';
                 <div class="information-clients col-md-12">
                     <ul class="information-client col-md-6">
                         <li>Companyname</li>
-                        <li>Clientname</li>
-                        <li>Invoice Nr.</li>
-                        <li>Date</li>
-                        <li>Contactperson</li>
                         <li>Project</li>
-                        <li>Phonenumber</li>
-                        <li>Limit</li>
+                        <li>Invoice Nr.</li>
+                        <li>Date send</li>
                         <li>Price</li>
-                        <li>Explanation</li>
                         <li>TAX-code</li>
-                        <li>Paid (Y/N)</li>
-                        <li>Payment Date</li>
-                        <li>Terms (Y/N)</li>
+                        <li>Explanation</li>
+                    </ul>
+                    <ul class="information-client col-md-6">
+                        <li><?php echo $invoiceInfo['companyname']; ?></li>
+                        <li><?php echo $invoiceInfo['projectname']; ?></li>
+                        <li><?php echo $invoiceInfo['invoice_nr']; ?></li>
+                        <li><?php echo $invoiceInfo['date_send']; ?></li>
+                        <li><?php echo $invoiceInfo['price']; ?></li>
+                        <li><?php echo $invoiceInfo['tax_code']; ?>%</li>
+                        <li><?php echo $invoiceInfo['explanation']; ?></li>
                     </ul>
                 </div>
-                <div class="editclients-button"><a href="edit-invoice.php">Modify</a></div>
-                  
-        		
+                <div class="editclients-button"><a href="edit-invoice.php?id=<?php echo $invoiceInfo['invoice_id']; ?>">Modify</a></div>
         	</div>
         </section>
     </div>
