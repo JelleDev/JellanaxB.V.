@@ -44,11 +44,11 @@ else {
         <section class="editclientphp">
         	<div class="clients-edit">
                 <ul class="information-clients col-md-12">
-                    <div class="information-client col-md-6">
-                        <li>Companyname</li>
-                        <li>Projectname</li>
-                        <li>Deadline</li>
-                        <li>Maintenance contract</li>
+                    <div class="information-client col-md-3">
+                        <p>Companyname</p>
+                        <p>Projectname</p>
+                        <p>Deadline</p>
+                        <p>Maintenance contract</p>
 
                         <?php
                         $notRequiredLabel = [
@@ -58,15 +58,15 @@ else {
                         ];
                         for($i = 0; $i < count($notRequired); $i++){
                             if(!empty($notRequired[$i])){
-                                echo "<li>" . $notRequiredLabel[$i] . "</li>";
+                                echo "<p>" . $notRequiredLabel[$i] . "</p>";
                             }
                         }
                         ?>
-                        <li>Offernumber</li>
-                        <li>Offerstatus</li>
-                        <li>Subject</li>
+                        <p>Offernumber</p>
+                        <p>Offerstatus</p>
+                        <p>Subject</p>
                     </div>
-                    <div class="information-client col-md-6">
+                    <div class="information-client col-md-8">
                         <li><?php echo $projectInfo['companyname']; ?></li>
                         <li><?php echo $projectInfo['projectname']; ?></li>
                         <li><?php echo date('m-d-Y', strtotime($projectInfo['deadline'])); ?></li>

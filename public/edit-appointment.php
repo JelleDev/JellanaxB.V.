@@ -79,6 +79,7 @@ $projectNames = $appointment->getProjectNames($client_id);
                                 <label for="exampleInputSubject">Subject</label>
                                 <textarea class="form-control" id="exampleInputSubject" placeholder="Subject" name="Subject"><?php echo $appointmentInfo['appointment_subject']; ?></textarea>
                             </div>
+                             <p class="disclaimer">* Fields are required.</p>
                             <input type="submit" class="btn btn-primary" name="type" value="Save changes">
                     </div>
                 </form>

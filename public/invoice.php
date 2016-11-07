@@ -24,16 +24,16 @@ $invoiceInfo = $invoice->getInvoice($invoice_id);
         <section class="editclientphp">
         	<div class="clients-edit">
                 <div class="information-clients col-md-12">
-                    <ul class="information-client col-md-6">
-                        <li>Companyname</li>
-                        <li>Project</li>
-                        <li>Invoice Nr.</li>
-                        <li>Date send</li>
-                        <li>Price</li>
-                        <li>TAX-code</li>
-                        <li>Explanation</li>
+                    <ul class="information-client col-md-3">
+                        <p>Companyname</p>
+                        <p>Project</p>
+                        <p>Invoice Nr.</p>
+                        <p>Date send</p>
+                        <p>Price</p>
+                        <p>TAX-code</p>
+                        <p>Explanation</p>
                     </ul>
-                    <ul class="information-client col-md-6">
+                    <ul class="information-client col-md-8">
                         <li><?php echo $invoiceInfo['companyname']; ?></li>
                         <li><?php echo $invoiceInfo['projectname']; ?></li>
                         <li><?php echo $invoiceInfo['invoice_nr']; ?></li>

@@ -23,23 +23,23 @@ $appointmentInfo = $appointment->getAppointmentInfo($appointment_id);
         <section class="editclientphp">
         	<div class="clients-edit">
                 <ul class="information-clients col-md-12">
-                    <div class="information-client col-md-6">
-                        <li>Companyname</li>
-                        <li>Project</li>
-                        <li>Date</li>
-                        <li>Time</li>
-                        <li>Location</li>
-                        <li>Initials</li>
-                        <li>Contactperson</li>
-                        <li>Telephonenumber</li>
-                        <li>E-mail adress</li>
+                    <div class="information-client col-md-3">
+                        <p>Companyname</p>
+                        <p>Project</p>
+                        <p>Date</p>
+                        <p>Time</p>
+                        <p>Location</p>
+                        <p>Initials</p>
+                        <p>Contactperson</p>
+                        <p>Telephonenumber</p>
+                        <p>E-mail adress</p>
                         <?php
                         if(!empty($appointmentInfo['appointment_subject'])){
-                            echo "<li>Subject</li>";
+                            echo "<p>Subject</p>";
                         }
                         ?>
                     </div>
-                    <div class="information-client col-md-6">
+                    <div class="information-client col-md-8">
                         <li><?php echo $appointmentInfo['companyname']; ?></li>
                         <li><?php echo $appointmentInfo['projectname']; ?></li>
                         <li><?php echo date("m-d-Y", strtotime($appointmentInfo['date_time'])); ?></li>
