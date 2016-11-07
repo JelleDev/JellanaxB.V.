@@ -82,6 +82,7 @@ $clientInfo = $project->getCompanyName();
                                 <label for="exampleInputSubject">Subject*</label>
                                 <textarea class="form-control" id="exampleInputSubject" placeholder="Subject" name="Subject"></textarea>
                             </div>
+                             <p class="disclaimer">* Fields are required.</p>
                             <input type="submit" class="btn btn-primary" name="type" value="Add project">
                     </div>                        		
         	</div>

@@ -18,21 +18,35 @@ require 'header.php';
         <section class="editclientphp">
         	<div class="clients-edit">
                 <div class="information-clients col-md-12">
-                    <ul class="information-client col-md-6">
-                        <li>Companyname</li>
-                        <li>Clientname</li>
-                        <li>Invoice Nr.</li>
-                        <li>Date</li>
-                        <li>Contactperson</li>
-                        <li>Project</li>
-                        <li>Phonenumber</li>
-                        <li>Limit</li>
-                        <li>Price</li>
-                        <li>Explanation</li>
-                        <li>TAX-code</li>
-                        <li>Paid (Y/N)</li>
-                        <li>Payment Date</li>
-                        <li>Terms (Y/N)</li>
+                    <ul class="information-client col-md-3">
+                        <p>Companyname</p>
+                        <p>Clientname</p>
+                        <p>Invoice Nr.</p>
+                        <p>Date</p>
+                        <p>Contactperson</p>
+                        <p>Project</p>
+                        <p>Phonenumber</p>
+                        <p>limit</p>
+                        <p>Price</p>
+                        <p>Explanation</p>
+                        <p>TAX-code</p>
+                        <p>Paid (Y/N)</p>
+                        <p>Payment Date</p>
+                        <p>Terms (Y/N)</p>
+                    </ul>
+                    <ul class="information-client col-md-8">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                     </ul>
                 </div>
                 <div class="editclients-button"><a href="edit-invoice.php">Modify</a></div>

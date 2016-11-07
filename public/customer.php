@@ -32,12 +32,12 @@ $secondInfo = [
         <section class="editclientphp">
         	<div class="clients-edit">
                 <div class="information-clients col-md-12">
-                    <ul class="information-client col-md-6">
-                        <li>Companyname</li>
-                        <li>Adress</li>
-                        <li>Zip code</li>
-                        <li>City</li>
-                        <li>Telephonenumber</li>
+                    <ul class="information-client col-md-3">
+                        <p>Companyname</p>
+                        <p>Adress</p>
+                        <p>Zip code</p>
+                        <p>City</p>
+                        <p>Telephonenumber</p>
 
                         <?php
                         $infoFields = [
@@ -50,24 +50,24 @@ $secondInfo = [
 
                         for($i = 0; $i < 5; $i++){
                             if(!empty($secondInfo[$i])){
-                                echo "<li>" . $infoFields[$i] . "</li>";
+                                echo "<p>" . $infoFields[$i] . "</p>";
                             }
                         }
                         ?>
-                        <li>Contact Person</li>
-                        <li>E-mail adress</li>
-                        <li>Bank account number</li>
-                        <li>Payment limit</li>
-                        <li>Potential client</li>
-                        <li>Sales person</li>
-                        <li>Last contact</li>
-                        <li>Sales percentage</li>
-                        <li>Creditworthy</li>
-                        <li>Credit balance</li>
-                        <li>Gross revenue</li>
-                        <li>Ledger account number</li>
+                        <p>Contact Person</p>
+                        <p>E-mail adress</p>
+                        <p>Bank account number</p>
+                        <p>Payment limit</p>
+                        <p>Potential client</p>
+                        <p>Sales person</p>
+                        <p>Last contact</p>
+                        <p>Sales percentage</p>
+                        <p>Creditworthy</p>
+                        <p>Credit balance</p>
+                        <p>Gross revenue</p>
+                        <p>Ledger account number</p>
                     </ul>
-                    <ul class="information-client col-md-6">
+                    <ul class="information-client col-md-8">
 
                         <li><?php echo $customerData['companyname']; ?></li>
                         <li><?php echo $customerData['adress1']; ?></li>

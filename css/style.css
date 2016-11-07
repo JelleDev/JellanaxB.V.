@@ -225,6 +225,19 @@ img.ui-datepicker-trigger {
     right: -40px;
 }
 
+/*CUSTOMER.PHP*/
+.information-client.col-md-3 p {
+    padding-bottom: 5px;
+    font-size: 17px;
+}
+
+.information-client.col-md-8 li {
+    padding-bottom: 5px;
+    margin-bottom: 2px;
+    font-size: 17px;
+    padding-left: 20px;
+}
+
 /*END INFORMATION SECTION*/
 
 /*HELPER CLASSES*/
@@ -244,5 +257,11 @@ h2 {
 
 .relative {
     position: relative;
+}
+
+.editclients-button a {
+    background-color: dimgrey;
+    color: white;
+    border-radius: 15px;
 }
 /*END HELPER CLASSES*/
