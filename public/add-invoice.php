@@ -18,11 +18,12 @@ require_once 'header.php';
                     <h2>Barroc-IT system</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3>Add an invoice</h3>
+                    <h3><a href="invoices.php">< Go back</a></h3>
                 </div>
             </div>
         </header>
         <section class="information col-md-12">
+            <h2>Add your invoices here</h2>
             <form class="search form-horizontal">
                 <div class="form-group">
                     <label for="clientname" class="col-sm-2 control-label">Clientname</label>
