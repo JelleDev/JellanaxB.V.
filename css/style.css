@@ -227,12 +227,13 @@ img.ui-datepicker-trigger {
 
 /*CUSTOMER.PHP*/
 .information-client.col-md-3 p {
-    padding-bottom: 5px;
+    padding: 5px;
     font-size: 17px;
+    margin-bottom: 4px !important;
 }
 
 .information-client.col-md-8 li {
-    padding-bottom: 5px;
+    padding: 5px;
     margin-bottom: 2px;
     font-size: 17px;
     padding-left: 20px;
