@@ -7,12 +7,26 @@ $client_id = $_GET['id'];
 
 $customerData = $client->getClient($client_id);
 
+$creditInfo = $client->getCreditBalance($client_id);
+
+$creditBalance = $client->calculateCreditBalance($client_id);
+
+var_dump($customerData);
+
 $secondInfo = [
     $customerData['adress2'],
     $customerData['zipcode2'],
     $customerData['residence2'],
     $customerData['phonenumber2'],
     $customerData['initials']
+];
+
+$extraInfo = [
+    $customerData['bank_account_number'],
+    $customerData['ledger_account_number'],
+    $customerData['potential_client'],
+    $customerData['creditworthy'],
+    '€ ' . $customerData['payment_limit'] . ',00',
 ];
 
 ?>
@@ -57,15 +71,16 @@ $secondInfo = [
                         <li>Contact Person</li>
                         <li>E-mail adress</li>
                         <li>Bank account number</li>
-                        <li>Payment limit</li>
+
+                        <?php
+                        if(!empty($extraInfo[1])){
+                            echo "<li>Ledger account number</li>";
+                        }
+                        ?>
                         <li>Potential client</li>
-                        <li>Sales person</li>
-                        <li>Last contact</li>
-                        <li>Sales percentage</li>
                         <li>Creditworthy</li>
+                        <li>Payment limit</li>
                         <li>Credit balance</li>
-                        <li>Gross revenue</li>
-                        <li>Ledger account number</li>
                     </ul>
                     <ul class="information-client col-md-6">
 
@@ -76,6 +91,7 @@ $secondInfo = [
                         <li><?php echo $customerData['phonenumber1']; ?></li>
 
                         <?php
+
                         for($i = 0; $i < 5; $i++){
                             if(!empty($secondInfo[$i])){
                                 echo "<li>" . $secondInfo[$i] . "</li>";
@@ -84,6 +100,23 @@ $secondInfo = [
                         ?>
                         <li><?php echo $customerData['contactperson']; ?></li>
                         <li><?php echo $customerData['emailadress']; ?></li>
+
+                        <?php
+                        for($i = 0; $i < count($extraInfo); $i++){
+                            if($extraInfo[$i] == '0'){
+                                $extraInfo[$i] = 'No';
+                            }
+                            if($extraInfo[$i] == '1'){
+                                $extraInfo[$i] = 'Yes';
+                            }
+
+                            if(!empty($extraInfo[$i])){
+                                echo "<li>" . $extraInfo[$i] . "</li>";
+                            }
+                        }
+                        ?>
+
+                        <li>€ <?php echo $creditBalance; ?>,00</li>
                     </ul>
                 </div>
                 <?php
