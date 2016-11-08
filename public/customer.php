@@ -11,8 +11,6 @@ $creditInfo = $client->getCreditBalance($client_id);
 
 $creditBalance = $client->calculateCreditBalance($client_id);
 
-var_dump($customerData);
-
 $secondInfo = [
     $customerData['adress2'],
     $customerData['zipcode2'],
@@ -24,7 +22,6 @@ $secondInfo = [
 $extraInfo = [
     $customerData['bank_account_number'],
     $customerData['ledger_account_number'],
-    $customerData['potential_client'],
     $customerData['creditworthy'],
     '€ ' . $customerData['payment_limit'] . ',00',
 ];
@@ -79,7 +76,6 @@ $extraInfo = [
                         }
                         ?>
 
-                        <p>Potential client</p>
                         <p>Creditworthy</p>
                         <p>Payment limit</p>
                         <p>Credit balance</p>
@@ -122,7 +118,7 @@ $extraInfo = [
                     </ul>
                 </div>
                 <?php
-                if($user->canModifyCustomer()){
+                if($user->canModifyCustomer() || $user->canModifyInvoices()){
                     echo "<div class='editclients-button'><a href='edit-customer.php?id=" . $client_id . "'>Modify</a></div>";
                 }
                 ?>

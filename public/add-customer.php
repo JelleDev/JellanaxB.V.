@@ -72,46 +72,17 @@ if(!$user->canModifyCustomer()){
                                 <input type="email" class="form-control" id="exampleInputE-mailadress" placeholder="Emailadress" name="E-mailadress">
                             </div>
                              <div class="form-group">
-                            <label for="exampleInputBank-account-number">Bank-account-number*</label>
-                            <input type="email" class="form-control" id="exampleInputBank-account-number" placeholder="Bank-account-number" name="Bank-account-number">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputPayment-limit">Payment-limit</label>
-                            <input type="email" class="form-control" id="exampleInputPayment-limit" placeholder="Payment-limit" name="Payment-limit">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputPotential-client">Potential-client</label>
-                            <input type="email" class="form-control" id="exampleInputPotential-client" placeholder="Potential-client" name="Potential-client">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputSales-person">Sales-person*</label>
-                            <input type="email" class="form-control" id="exampleInputSales-person" placeholder="Sales-person" name="Sales-person">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputLast-contact">Last-contact*</label>
-                            <input type="email" class="form-control" id="exampleInputLast-contact" placeholder="Last-contact" name="Last-contact">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputSales-percentage">Sales-percentage*</label>
-                            <input type="email" class="form-control" id="exampleInputSales-percentage" placeholder="Sales-percentage" name="Sales-percentage">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputCreditworthy">Creditworthy*</label>
-                            <input type="email" class="form-control" id="exampleInputCreditworthy" placeholder="Creditworthy" name="Creditworthy">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputCreditbalance">Creditbalance*</label>
-                            <input type="email" class="form-control" id="exampleInputCreditbalance" placeholder="Creditbalance" name="Creditbalance">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputGrss-revenue">Grss-revenue*</label>
-                            <input type="email" class="form-control" id="exampleInputGrss-revenue" placeholder="Grss-revenue" name="Grss-revenue">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputLedger-account-number">Ledger-account-number*</label>
-                            <input type="email" class="form-control" id="exampleInputLedger-account-number" placeholder="Ledger-account-number" name="Ledger-account-number">
-                        </div>
-
+                                <label for="exampleInputBank-account-number">Bank-account-number*</label>
+                                <input type="text" class="form-control" id="exampleInputBank-account-number" placeholder="Bank-account-number" name="Bank-account-number">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputLedger-account-number">Ledger-account-number</label>
+                                <input type="text" class="form-control" id="exampleInputLedger-account-number" placeholder="Ledger-account-number" name="Ledger-account-number">
+                            </div>
+                             <div class="form-group">
+                                <label for="exampleInputPayment-limit">Payment-limit*</label>
+                                <input type="text" class="form-control" id="exampleInputPayment-limit" placeholder="Payment-limit" name="Payment-limit">
+                            </div>
                             <p class="disclaimer">* Fields are required.</p>
                             <input type="submit" class="btn btn-primary" name="type" value="Add customer">
                     </div>

@@ -10,11 +10,12 @@ if(!isset($client_id) || empty($client_id)){
     $user->redirect('customers.php', 'NotPermitted');
 }
 
-if(!$user->canModifyCustomer()){
+if(!($user->canModifyCustomer() || $user->canModifyInvoices())){
     $user->redirect('customer.php', 'id=' . $client_id . '&NotPermitted');
 }
 
 $customerData = $client->getClient($client_id);
+
 ?>
 
 <div class="container">
@@ -34,95 +35,96 @@ $customerData = $client->getClient($client_id);
                 <div class="information-client-add col-md-12">
                     <form action="<?php echo BASE_URL ?>/app/controller/clientcontroller.php" method="post">
                         <input type="hidden" name="client_id" value="<?php echo $client_id; ?>">
-                        <div class="form-group">
-                            <label for="exampleInputCompanyname">Companyname*</label>
-                            <input type="text" class="form-control" id="exampleInputCompanyname" value="<?php echo $customerData['companyname']; ?>" placeholder="Companyname"  name="companyname">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputAdress1">Adress*</label>
-                            <input type="text" class="form-control" id="exampleInputAdress1" value="<?php echo $customerData['adress1']; ?>" placeholder="Adress" name="Adress1">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputZipcode1">Zipcode*</label>
-                            <input type="text" class="form-control" id="exampleInputZipcode1" value="<?php echo $customerData['zipcode1']; ?>" placeholder="Zipcode" name="Zipcode1">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputCity1">City*</label>
-                            <input type="text" class="form-control" id="exampleInputCity1" value="<?php echo $customerData['residence1']; ?>" placeholder="City" name="InputCity1">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputTelephonenumber1">Telephonenumber*</label>
-                            <input type="text" class="form-control" id="exampleInputTelephonenumber1" value="<?php echo $customerData['phonenumber1']; ?>" placeholder="Phonenumber" name="Telephonenumber1">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputAdress2">Adress 2</label>
-                            <input type="text" class="form-control" id="exampleInputAdress2" value="<?php echo $customerData['adress2']; ?>" placeholder="Adress" name="Adress2">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputZipcode2">Zipcode 2</label>
-                            <input type="text" class="form-control" id="exampleInputZipcode2" value="<?php echo $customerData['zipcode2']; ?>" placeholder="Zipcode" name="Zipcode2">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputCity2">City 2</label>
-                            <input type="text" class="form-control" id="exampleInputCity2" value="<?php echo $customerData['residence2']; ?>" placeholder="City" name="City2">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputTelephonenumber2">Telephonenumber 2</label>
-                            <input type="text" class="form-control" id="exampleInputTelephonenumber2" value="<?php echo $customerData['phonenumber2']; ?>" placeholder="Phonenumber" name="Telephonenumber2">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputInitials">Initials</label>
-                            <input type="text" class="form-control" id="exampleInputInitials" value="<?php echo $customerData['initials']; ?>" placeholder="Initials" name="Initials">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputContactPerson">ContactPerson*</label>
-                            <input type="text" class="form-control" id="exampleInputContactPerson" value="<?php echo $customerData['contactperson']; ?>" placeholder="Contactperson" name="Contactperson">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputE-mailadress">E-mailadress*</label>
-                            <input type="email" class="form-control" id="exampleInputE-mailadress" value="<?php echo $customerData['emailadress']; ?>" placeholder="Emailadress" name="E-mailadress">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputBank-account-number">Bank-account-number*</label>
-                            <input type="email" class="form-control" id="exampleInputBank-account-number" placeholder="Bank-account-number" name="Bank-account-number">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputPayment-limit">Payment-limit*</label>
-                            <input type="email" class="form-control" id="exampleInputPayment-limit" placeholder="Payment-limit" name="Payment-limit">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputPotential-client">Potential-client</label>
-                            <input type="email" class="form-control" id="exampleInputPotential-client" placeholder="Potential-client" name="Potential-client">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputSales-person">Sales-person</label>
-                            <input type="email" class="form-control" id="exampleInputSales-person" placeholder="Sales-person" name="Sales-person">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputLast-contact">Last-contact*</label>
-                            <input type="email" class="form-control" id="exampleInputLast-contact" placeholder="Last-contact" name="Last-contact">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputSales-percentage">Sales-percentage*</label>
-                            <input type="email" class="form-control" id="exampleInputSales-percentage" placeholder="Sales-percentage" name="Sales-percentage">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputCreditworthy">Creditworthy*</label>
-                            <input type="email" class="form-control" id="exampleInputCreditworthy" placeholder="Creditworthy" name="Creditworthy">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleInputCreditbalance">Creditbalance*</label>
-                            <input type="email" class="form-control" id="exampleInputCreditbalance" placeholder="Creditbalance" name="Creditbalance">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputGrss-revenue">Grss-revenue*</label>
-                            <input type="email" class="form-control" id="exampleInputGrss-revenue" placeholder="Grss-revenue" name="Grss-revenue">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputLedger-account-number">Ledger-account-number*</label>
-                            <input type="email" class="form-control" id="exampleInputLedger-account-number" placeholder="Ledger-account-number" name="Ledger-account-number">
-                        </div>
-
+                        <?php
+                        if($user->canModifyCreditworthy()){
+                            $selected = '';
+                            if($customerData['creditworthy'] == '0'){
+                                $selected = 'selected';
+                            }
+                            echo "<div class='form-group'>
+                                    <label for='creditworthy'>Creditworthy</label>
+                                    <select class='form-control' name='creditworthy' id='creditworthy'>
+                                        <option value='1'>Yes</option>
+                                        <option value='0'" . $selected . ">No</option>
+                                    </select>
+                                </div>";
+                        }
+                        else {
+                            echo "<div class='form-group'>
+                                    <label for='exampleInputCompanyname'>Companyname*</label>
+                                    <input type='text' class='form-control' id='exampleInputCompanyname' value='" . $customerData['companyname'] . "' placeholder='Companyname'  name='companyname'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for='exampleInputAdress1'>Adress*</label>
+                                    <input type='text' class='form-control' id='exampleInputAdress1' value='" . $customerData['adress1'] . "' placeholder='Adress' name='Adress1'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for='exampleInputZipcode1'>Zipcode*</label>
+                                    <input type='text' class='form-control' id='exampleInputZipcode1' value='" . $customerData['zipcode1'] . "' placeholder='Zipcode' name='Zipcode1'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for='exampleInputCity1'>City*</label>
+                                    <input type='text' class='form-control' id='exampleInputCity1' value='" . $customerData['residence1'] . "' placeholder='City' name='InputCity1'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for='exampleInputTelephonenumber1'>Telephonenumber*</label>
+                                    <input type='text' class='form-control' id='exampleInputTelephonenumber1' value='" . $customerData['phonenumber1'] . "' placeholder='Phonenumber' name='Telephonenumber1'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for='exampleInputAdress2'>Adress 2</label>
+                                    <input type='text' class='form-control' id='exampleInputAdress2' value='" . $customerData['adress2'] . "' placeholder='Adress' name='Adress2'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for='exampleInputZipcode2'>Zipcode 2</label>
+                                    <input type='text' class='form-control' id='exampleInputZipcode2' value='" . $customerData['zipcode2'] . "' placeholder='Zipcode' name='Zipcode2'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for='exampleInputCity2'>City 2</label>
+                                    <input type='text' class='form-control' id='exampleInputCity2' value='" . $customerData['residence2'] . "' placeholder='City' name='City2'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for='exampleInputTelephonenumber2'>Telephonenumber 2</label>
+                                    <input type='text' class='form-control' id='exampleInputTelephonenumber2' value='" . $customerData['phonenumber2'] . "' placeholder='Phonenumber' name='Telephonenumber2'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for='exampleInputInitials'>Initials</label>
+                                    <input type='text' class='form-control' id='exampleInputInitials' value='" . $customerData['initials'] . "' placeholder='Initials' name='Initials'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for='exampleInputContactPerson'>Contactperson*</label>
+                                    <input type='text' class='form-control' id='exampleInputContactPerson' value='" . $customerData['contactperson'] . "' placeholder='Contactperson' name='Contactperson'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for='exampleInputE-mailadress'>E-mailadress*</label>
+                                    <input type='text' class='form-control' id='exampleInputE-mailadress' value='" . $customerData['emailadress'] . "' placeholder='Emailadress' name='E-mailadress'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for='exampleInputBank-account-number'>Bank-account-number*</label>
+                                    <input type='text' class='form-control' id='exampleInputBank-account-number' value='" . $customerData['bank_account_number'] . "' placeholder='Bank-account-number' name='Bank-account-number'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for='exampleInputLedger-account-number'>Ledger-account-number</label>
+                                    <input type='text' class='form-control' id='exampleInputLedger-account-number' value='" . $customerData['ledger_account_number'] . "' placeholder='Ledger-account-number' name='Ledger-account-number'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for='exampleInputPayment-limit'>Payment-limit*</label>
+                                    <input type='text' class='form-control' id='exampleInputPayment-limit' value='" . $customerData['payment_limit'] . "' placeholder='Payment-limit' name='Payment-limit'>
+                                </div>";
+                                if($user->canAccesAll()){
+                                    $selected = '';
+                                    if($customerData['creditworthy'] == '0'){
+                                        $selected = 'selected';
+                                    }
+                                    echo "<div class='form-group'>
+                                            <label for='creditworthy'>Creditworthy</label>
+                                            <select class='form-control' name='creditworthy' id='creditworthy'>
+                                                <option value='1'>Yes</option>
+                                                <option value='0'" . $selected . ">No</option>
+                                            </select>
+                                        </div>";
+                                }
+                        }
+                        ?>
                         <p class="disclaimer">* Fields are required.</p>
                         <input type="submit" class="btn btn-primary" name="type" value="Save changes">
                     </form>

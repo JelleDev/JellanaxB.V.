@@ -70,6 +70,28 @@ class User
         return false;
     }
 
+    public function canEditClient(){
+        if($this->getRole() == 'sales' && $this->logged){
+            return true;
+        }
+        return false;
+
+    }
+
+    public function canModifyCreditworthy(){
+        if($this->getRole() == 'finance' && $this->logged){
+            return true;
+        }
+        return false;
+    }
+
+    public function canAccesAll(){
+        if($this->getRole() == 'admin' && $this->logged){
+            return true;
+        }
+        return false;
+    }
+
     /*
      * GETTERS AND SETTERS
      * */
