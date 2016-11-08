@@ -18,7 +18,7 @@ require_once 'header.php';
                     <h2>Barroc-IT system</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3>Edit an invoice</h3>
+                    <h3><a href="invoices.php">< Go back</a></h3>
                 </div>
             </div>
         </header>
