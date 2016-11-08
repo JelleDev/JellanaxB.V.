@@ -10,7 +10,7 @@ require 'header.php';
                     <h2>Add a Project</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="projects.php">< Go back</a></h3>
+                    <h3><a href="invoices.php">< Go back</a></h3>
                 </div>
             </div>
         </header>
