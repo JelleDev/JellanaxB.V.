@@ -199,16 +199,7 @@ li.logged_in_as {
 .information-clients.col-md-12 {
     padding-top: 20px !important;
 }
-.editclients-button a {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: 1px solid black;
-}
-.editclients-button {
-    text-align: center;
-}
+
 .information-client-add {
     padding-top: 20px;
 }
@@ -238,7 +229,20 @@ img.ui-datepicker-trigger {
     font-size: 17px;
     padding-left: 20px;
 }
-
+/*BUTTON MODIFY SAVE ETC*/
+.editclients-button {
+    text-align: center;
+}
+.editclients-button a {
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 17px;
+    font-family: sans-serif;
+    background-color: #2780e3;
+    color: white; 
+}
 /*END INFORMATION SECTION*/
 
 /*HELPER CLASSES*/
@@ -260,9 +264,4 @@ h2 {
     position: relative;
 }
 
-.editclients-button a {
-    background-color: dimgrey;
-    color: white;
-    border-radius: 15px;
-}
 /*END HELPER CLASSES*/
