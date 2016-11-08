@@ -1,5 +1,22 @@
 <?php
 require 'header.php';
+
+$invoice_id = $_GET['id'];
+
+if(!isset($invoice_id) || empty($invoice_id)){
+    $user->redirect('invoices.php', 'NotPermitted');
+}
+
+$invoice = new Invoice();
+$appointment = new Appointment();
+
+$invoiceInfo = $invoice->getInvoice($invoice_id);
+
+$invoice_id = $invoiceInfo['invoice_id'];
+$client_id = $invoiceInfo['client_id'];
+
+$projectnames = $appointment->getProjectNames($client_id);
+
 ?>
 
 <div class="container">
@@ -7,7 +24,7 @@ require 'header.php';
         <header class="col-md-12">
             <div class="info-bar">
                 <div class="col-md-12">
-                    <h2>Add a Project</h2>
+                    <h2>Edit Invoice</h2>
                 </div>
                 <div class="col-md-12">
                     <h3><a href="invoices.php">< Go back</a></h3>
@@ -17,48 +34,44 @@ require 'header.php';
         <section class="editclientphp">
             <div class="clients-edit">
                 <div class="information-client-add col-md-12">
-                    <form>
+                    <form action="<?php echo BASE_URL; ?>/app/controller/invoicecontroller.php" method="POST">
+                        <label class="sr-only" for="invoice_id">Invoiceid</label>
+                        <input type="hidden" id="invoice_id" name="invoice_id" value="<?php echo $invoice_id; ?>">
                         <div class="form-group">
                             <label for="exampleInputCompanyname">Companyname*</label>
-                            <input type="text" class="form-control" id="exampleInputCompanyname" placeholder="Companyname" name="Companyname">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputClientname">Clientname*</label>
-                            <input type="text" class="form-control" id="exampleInputClientname" placeholder="Clientname" name="Clientname">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputDate">Date*</label>
-                            <input type="text" class="form-control" id="exampleInputDate" placeholder="Date" name="Date">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputContactperson">Contactperson*</label>
-                            <input type="text" class="form-control" id="exampleInputContactperson" placeholder="Contactperson" name="Contactperson">
+                            <input type="text" class="form-control" id="exampleInputCompanyname" placeholder="Companyname" name="companyname" value="<?php echo $invoiceInfo['companyname']; ?>" readonly>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputProject">Project*</label>
-                            <input type="text" class="form-control" id="exampleInputProject" placeholder="Project" name="Project">
+                            <select class="form-control" id="exampleInputProject" name="projectid">
+                                <?php
+                                foreach($projectnames as $projectname) {
+                                    if ($projectname['projectname'] == $invoiceInfo['projectname']) {
+                                        echo "<option value='" . $projectname['project_id'] . "' selected>" . $projectname['projectname'] . "</option>";
+                                    } else {
+                                        echo "<option value='" . $projectname['project_id'] . "'>" . $projectname['projectname'] . "</option>";
+                                    }
+                                }
+                                ?>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPhonenumber">Phonenumber*</label>
-                            <input type="text" class="form-control" id="exampleInputPhonenumber" placeholder="Phonenumber" name="Phonenumber">
+                            <label for="invoicenr">Invoice number*</label>
+                            <input type="text" class="form-control" id="invoicenr" placeholder="Invoice number" name="Invoicenr" value="<?php echo $invoiceInfo['invoice_nr']; ?>">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputLimit">Limit*</label>
-                            <input type="text" class="form-control" id="exampleInputLimit" placeholder="Limit" name="Limit">
+                            <label for="exampleInputAmount">Price*</label>
+                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount" name="Amount" value="<?php echo $invoiceInfo['price']; ?>">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputAmount">Amount*</label>
-                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount" name="Amount">
+                            <label for="exampleInputtax">TAX-code (%)*</label>
+                            <input type="text" class="form-control" id="exampleInputtax" placeholder="TAX-code" name="Tax_code" value="<?php echo $invoiceInfo['tax_code']; ?>">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPayment Date">Payment Date*</label>
-                            <input type="text" class="form-control" id="exampleInputPayment Date" placeholder="Payment Date" name="Payment Date">
+                            <label for="Explanation">Explanation</label>
+                            <textarea class="form-control" name="Explanation" id="Explanation" placeholder="Explanation"><?php echo $invoiceInfo['explanation']; ?></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="exampleInputTerms">Terms (Y/N)*</label>
-                            <input class="form-control" id="exampleInputTerms" placeholder="Terms (Y/N)" name="Terms">
-                        </div>
-                        <input type="submit" class="btn btn-primary" value="Save changes">
+                        <input type="submit" class="btn btn-primary" name="type" value="Save changes">
                 </div>
             </div>
         </section>

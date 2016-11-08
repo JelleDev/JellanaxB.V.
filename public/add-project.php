@@ -8,6 +8,15 @@ if(!$user->canModifyProjects()){
 $project = new Project();
 
 $clientInfo = $project->getCompanyName();
+
+foreach($clientInfo as $key => $info){
+    $creditInfo = $user->calculateCreditBalance($info['client_id']);
+    $creditworthy = $project->getCreditWorthy($info['client_id']);
+    if($creditInfo < 0 || $creditworthy == '0'){
+        unset($clientInfo[$key]);
+    }
+}
+
 ?>
 
 <div class="container">

@@ -5,6 +5,11 @@ $appointment = new Appointment();
 
 $appointment_id = $_GET['id'];
 
+if(!isset($appointment_id) || empty($appointment_id)){
+    $user->redirect('appointments.php', 'NotPermitted');
+}
+
+
 $appointmentInfo = $appointment->getAppointmentInfo($appointment_id);
 ?>
 

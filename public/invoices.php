@@ -36,7 +36,10 @@ $amountInvoices = count($invoiceInfo);
                             <li class='col-md-3'>" . $info['projectname'] . "</li>
                             <li class='col-md-2'>" . $info['invoice_nr'] . "</li>
                             <li class='col-md-2'>" . date('m-d-Y', strtotime($info['date_send'])) . "</li>
-                            <li class='col-md-2'>€ " . $info['price'] . ",00</li>
+                            <li class='col-md-2'>
+                               <span class='glyphicon glyphicon-ok'></span>
+                                € " . $info['price'] . ",00
+                            </li>
                           </ul>";
                 }
                 ?>

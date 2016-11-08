@@ -48,4 +48,23 @@ class Invoice
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
+
+    public function modifyInvoice($invoice_id, $invoiceInfo){
+        $sql = "UPDATE `tbl_invoices`
+                SET `project_id` = :project_id, `invoice_nr` = :invoicenr,
+                `explanation` = :explanation, `price` = :price,
+                `tax_code` = :tax_code
+                WHERE `invoice_id` = :invoice_id";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':project_id', $invoiceInfo['project_id']);
+        $stmt->bindParam(':invoicenr', $invoiceInfo['invoice_nr']);
+        $stmt->bindParam(':explanation', $invoiceInfo['explanation']);
+        $stmt->bindParam(':price', $invoiceInfo['price']);
+        $stmt->bindParam(':tax_code', $invoiceInfo['tax_code']);
+        $stmt->bindParam(':invoice_id', $invoice_id);
+        $stmt->execute();
+
+        header('location: ' . BASE_URL . '/public/invoice.php?id=' . $invoice_id);
+        exit;
+    }
 }

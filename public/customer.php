@@ -5,11 +5,13 @@ $client = new Client();
 
 $client_id = $_GET['id'];
 
+if(!isset($client_id) || empty($client_id)){
+    $user->redirect('customers.php', 'NotPermitted');
+}
+
 $customerData = $client->getClient($client_id);
 
-$creditInfo = $client->getCreditBalance($client_id);
-
-$creditBalance = $client->calculateCreditBalance($client_id);
+$creditBalance = $user->calculateCreditBalance($client_id);
 
 $secondInfo = [
     $customerData['adress2'],

@@ -3,6 +3,10 @@ require 'header.php';
 
 $invoice_id = $_GET['id'];
 
+if(!isset($invoice_id) || empty($invoice_id)){
+    $user->redirect('invoices.php', 'NotPermitted');
+}
+
 $invoice = new Invoice();
 
 $invoiceInfo = $invoice->getInvoice($invoice_id);

@@ -42,6 +42,35 @@ class User
         exit;
     }
 
+    public function getCreditBalance($client_id){
+        $sql = "SELECT tbl_clients.`payment_limit`, SUM(tbl_invoices.`price`) AS total
+                FROM `tbl_projects`
+                INNER JOIN `tbl_clients`
+                ON tbl_clients.`client_id` = tbl_projects.`client_id`
+                INNER JOIN `tbl_invoices`
+                ON tbl_invoices.`project_id` = tbl_projects.`project_id`
+                WHERE tbl_clients.`client_id` = :id AND tbl_invoices.`paid` = 0";
+
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':id', $client_id);
+        $stmt->execute();
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
+
+    public function calculateCreditBalance($client_id){
+        $creditInfo = $this->getCreditBalance($client_id);
+
+        $paymentLimit = $creditInfo['payment_limit'];
+        $total = $creditInfo['total'];
+
+        $creditBalance = $paymentLimit - $total;
+
+        return $creditBalance;
+    }
+
     public function canModifyCustomer(){
         if(($this->getRole() == 'sales' || $this->getRole() == 'admin') && $this->logged){
             return true;

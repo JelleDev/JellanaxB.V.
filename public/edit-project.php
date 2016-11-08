@@ -6,11 +6,11 @@ $project = new Project();
 $project_id = $_GET['id'];
 
 if(!isset($project_id) || empty($project_id)){
-    $user->redirect('customers.php', 'NotPermitted');
+    $user->redirect('projects.php', 'NotPermitted');
 }
 
 if(!$user->canModifyProjects()){
-    $user->redirect('customer.php', 'id=' . $project_id . '&NotPermitted');
+    $user->redirect('project.php', 'id=' . $project_id . '&NotPermitted');
 }
 
 $projectInfo = $project->getProjectInfo($project_id);

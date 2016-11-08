@@ -6,6 +6,10 @@ $project = new Project();
 
 $project_id = $_GET['id'];
 
+if(!isset($project_id) || empty($project_id)){
+    $user->redirect('projects.php', 'NotPermitted');
+}
+
 $projectInfo = $project->getProjectInfo($project_id);
 
 $notRequired = [
