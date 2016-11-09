@@ -21,7 +21,6 @@ $appointment = new Appointment();
 $companyname = $appointment->getCompanyName($client_id);
 $projectnames = $appointment->getProjectNames($client_id);
 
-
 ?>
 
 <div class="container">

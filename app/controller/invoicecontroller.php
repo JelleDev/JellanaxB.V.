@@ -20,6 +20,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         'tax_code' => $_POST['Tax_code'],
     ];
 
+    if($_POST['type'] == 'Add invoice'){
+        foreach ($allInfo as $info) {
+            if (!Validator::notEmpty()->validate($info)) {
+                $user->redirect('search_companyname_invoice.php', 'Empty required field');
+            }
+
+            if(!Validator::numeric()->validate($allInfo['price']) || !Validator::numeric()->validate($allInfo['tax_code'])){
+                $user->redirect('search_companyname_invoice.php', 'Not a number');
+            }
+        }
+
+        $allInfo['explanation'] = $_POST['Explanation'];
+
+        $invoice->addInvoice($allInfo);
+    }
+
     if($_POST['type'] == 'Save changes'){
         $invoice_id = $_POST['invoice_id'];
 

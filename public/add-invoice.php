@@ -1,5 +1,25 @@
 <?php
 require 'header.php';
+
+if(!$user->canModifyInvoices()){
+    $user->redirect('invoices.php', 'NotPermitted');
+}
+
+if(!$_SERVER['REQUEST_METHOD'] == 'POST'){
+    $user->redirect('invoices.php', 'NotPermitted');
+}
+
+$client_id = $_POST['client_id'];
+
+if(empty($client_id)){
+    $user->redirect('search_companyname_invoice.php', 'EmptyCompanyname');
+}
+
+$appointment = new Appointment();
+
+$companyname = $appointment->getCompanyName($client_id);
+$projectnames = $appointment->getProjectNames($client_id);
+
 ?>
 
 <div class="container">
@@ -7,7 +27,7 @@ require 'header.php';
         <header class="col-md-12">
             <div class="info-bar">
                 <div class="col-md-12">
-                    <h2>Add a Project</h2>
+                    <h2>Add a Invoice</h2>
                 </div>
                 <div class="col-md-12">
                     <h3><a href="projects.php">< Go back</a></h3>
@@ -17,50 +37,37 @@ require 'header.php';
         <section class="editclientphp">
         	<div class="clients-edit">                 
                     <div class="information-client-add col-md-12">
-                        <form>
+                        <form action="<?php echo BASE_URL; ?>/app/controller/invoicecontroller.php" method="POST">
                             <div class="form-group">
                                 <label for="exampleInputCompanyname">Companyname*</label>
-                                <select class="form-control" id="exampleInputCompanyname" name="companyname">
-                                    <option></option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputClientname">Clientname*</label>
-                                <input type="text" class="form-control" id="exampleInputClientname" placeholder="Clientname" name="Clientname">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputDate">Date*</label>
-                                <input type="text" class="form-control" id="exampleInputDate" placeholder="Date" name="Date">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputContactperson">Contactperson*</label>
-                                <input type="text" class="form-control" id="exampleInputContactperson" placeholder="Contactperson" name="Contactperson">
+                                <input type="text" class="form-control" name="client_id" id="exampleInputCompanyname" placeholder="Companyname" value="<?php echo $companyname; ?>" readonly>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputProject">Project*</label>
-                                <input type="text" class="form-control" id="exampleInputProject" placeholder="Project" name="Project">
+                                <select class="form-control" id="exampleInputProject" name="projectid">
+                                    <option></option>
+                                    <?php foreach($projectnames as $projectname){
+                                        echo "<option value='" . $projectname['project_id'] . "'>" .  $projectname['projectname'] . "</option>";
+                                    } ?>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPhonenumber">Phonenumber*</label>
-                                <input type="text" class="form-control" id="exampleInputPhonenumber" placeholder="Phonenumber" name="Phonenumber">
+                                <label for="exampleInputInvoicenr">Invoice number*</label>
+                                <input type="text" class="form-control" id="exampleInputInvoicenr" placeholder="Invoice number" name="Invoicenr">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputLimit">Limit*</label>
-                                <input type="text" class="form-control" id="exampleInputLimit" placeholder="Limit" name="Limit">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputAmount">Amount*</label>
-                                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount" name="Amount">
+                                <label for="exampleInputAmount">Price*</label>
+                                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Price" name="Amount">
                             </div>
                              <div class="form-group">
-                                <label for="exampleInputPayment Date">Payment Date*</label>
-                                <input type="text" class="form-control" id="exampleInputPayment Date" placeholder="Payment Date" name="Payment Date">
+                                <label for="exampleInputTax">TAX-code (%)*</label>
+                                <input type="text" class="form-control" id="exampleInputTax" placeholder="TAX-code" name="Tax_code">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputTerms">Terms (Y/N)*</label>
-                                <input class="form-control" id="exampleInputTerms" placeholder="Terms (Y/N)" name="Terms">
+                                <label for="exampleInputExplanation">Explanation</label>
+                                <input class="form-control" id="exampleInputExplanation" placeholder="Explanation" name="Explanation">
                             </div>
-                            <input type="submit" class="btn btn-primary" value="Save">
+                            <input type="submit" class="btn btn-primary" name="type" value="Add invoice">
                     </div>                        		
         	</div>
         </section>

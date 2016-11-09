@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if($_POST['type'] == 'Add appointment'){
         foreach ($allInfo as $info) {
             if (!Validator::notEmpty()->validate($info)) {
-                $user->redirect('add-appointment.php', 'Empty required field');
+                $user->redirect('search_companyname.php', 'Empty required field');
             }
         }
 

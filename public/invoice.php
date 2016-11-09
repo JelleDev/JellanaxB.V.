@@ -47,7 +47,11 @@ $invoiceInfo = $invoice->getInvoice($invoice_id);
                         <li><?php echo $invoiceInfo['explanation']; ?></li>
                     </ul>
                 </div>
-                <div class="editclients-button"><a href="edit-invoice.php?id=<?php echo $invoiceInfo['invoice_id']; ?>">Modify</a></div>
+                <?php
+                if($user->canModifyInvoices()){
+                    echo "<div class='editclients-button'><a href='edit-invoice.php?id=" . $invoiceInfo['invoice_id'] . "'>Modify</a></div>";
+                }
+                ?>
         	</div>
         </section>
     </div>

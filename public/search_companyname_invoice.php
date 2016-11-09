@@ -1,11 +1,13 @@
 <?php
 require 'header.php';
 
-if(!$user->canModifyCustomer()){
-    $user->redirect('appointments.php', 'NotPermitted');
+if(!$user->canModifyInvoices()){
+    $user->redirect('invoices.php', 'NotPermitted');
 }
 
+$companyinfo = new Appointment();
 
+$companynames = $companyinfo->getCompanyNames();
 
 ?>
 
@@ -29,7 +31,11 @@ if(!$user->canModifyCustomer()){
                                 <label for="exampleInputCompanyname">Please select a company name.</label>
                                 <select class="form-control" id="exampleInputCompanyname" name="client_id">
                                     <option></option>
-                                   
+                                    <?php
+                                    foreach($companynames as $companyname){
+                                        echo "<option value='" . $companyname['client_id'] . "'>" . $companyname['companyname'] . "</option>";
+                                    }
+                                    ?>
                                 </select>
                             </div>
                             <input type="submit" class="btn btn-primary" value="Continue">
