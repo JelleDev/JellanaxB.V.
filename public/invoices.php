@@ -16,7 +16,7 @@ $amountInvoices = count($invoiceInfo);
                     <h2><?php echo $amountInvoices; ?> Results found</h2>
                 </div>
                 <div class="col-md-12">
-                    <h3><a href="add-invoice.php">Add an invoice</a></h3>
+                    <h3><a href="search_companyname_invoice.php">Add an invoice</a></h3>
                 </div>
             </div>
         </header>
