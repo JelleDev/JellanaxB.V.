@@ -11,6 +11,18 @@ use Respect\Validation\Validator as Validator;
 
 $invoice = new Invoice();
 
+if($_SERVER['REQUEST_METHOD'] == 'GET'){
+    $invoice_id = $_GET['id'];
+
+    if(!isset($invoice_id) || empty($invoice_id)){
+        $user->redirect('invoices.php', 'Id was nog recognized');
+    }
+
+    $invoice->setPaid($invoice_id);
+    $user->redirect('invoices.php', 'Invoice paid');
+}
+
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $allInfo = [

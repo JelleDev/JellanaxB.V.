@@ -16,7 +16,7 @@ class Client
 
     public function getAllClients(){
         $clientData = $this->db->pdo
-            ->query("SELECT * FROM `tbl_clients`")
+            ->query("SELECT * FROM `tbl_clients` ORDER BY `companyname`")
             ->fetchAll(PDO::FETCH_ASSOC);
         return $clientData;
     }

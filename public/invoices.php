@@ -41,7 +41,9 @@ $amountInvoices = count($invoiceInfo);
                             <li class='col-md-2'>" . $info['invoice_nr'] . "</li>
                             <li class='col-md-2'>" . date('m-d-Y', strtotime($info['date_send'])) . "</li>
                             <li class='col-md-2'>
-                               <span class='glyphicon glyphicon-ok'></span>
+                                <a href='" . BASE_URL . "/app/controller/invoicecontroller.php?id=" . $info['invoice_id'] . "'>
+                                    <span class='glyphicon glyphicon-ok'></span>
+                                </a>
                                 € " . $info['price'] . ",00
                             </li>
                           </ul>";

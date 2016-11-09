@@ -24,6 +24,7 @@ class Invoice
                      ON tbl_clients.`client_id` = tbl_projects.`client_id`
                      INNER JOIN `tbl_invoices`
                      ON tbl_invoices.`project_id` = tbl_projects.`project_id`
+                     WHERE tbl_invoices.`paid` = 0;
                      ORDER BY tbl_clients.`companyname`, tbl_projects.`projectname`,
                      tbl_invoices.`invoice_nr`
                      ")
@@ -84,5 +85,15 @@ class Invoice
 
         header('location: ' . BASE_URL . '/public/invoice.php?id=' . $invoice_id);
         exit;
+    }
+
+    public function setPaid($invoice_id){
+        $sql = "UPDATE `tbl_invoices`
+                SET `paid` = 1
+                WHERE `invoice_id` = :invoice_id";
+
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':invoice_id', $invoice_id);
+        $stmt->execute();
     }
 }
