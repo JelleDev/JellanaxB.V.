@@ -34,7 +34,7 @@ $amountAppointments = count($appointmentInfo);
                     if($user->canModifyCustomer()){
                         echo "<div class='col-md-8'>
                                 <h3>
-                                    <a href='add-appointment.php'>Add a client</a>
+                                    <a href='add-appointment.php'>Add an appointment</a>
                                 </h3>
                             </div>";
                     }

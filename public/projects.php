@@ -36,7 +36,7 @@ $amountResults = count($projectInfo);
                     if($user->canModifyProjects()){
                         echo "<div class='col-md-8'>
                                 <h3>
-                                    <a href='add-project.php'>Add a client</a>
+                                    <a href='add-project.php'>Add a project</a>
                                 </h3>
                             </div>";
                     }

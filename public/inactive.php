@@ -10,26 +10,10 @@ require 'header.php';
                 <div class="col-md-12">
                     <h2>Barroc-IT System</h2>
                 </div>
-                <div class="col-md-12">
-                    <h3><a href="edit-inactive.php">Edit inactive elements</a></h3>
-                </div>
             </div>
         </header>
         <section class="information">
-        	<div class="clients">
-        		<ul class="client col-md-12">
-        			<li class="col-md-3 bold">Projects</a></li>
-                    <li class="col-md-3 bold">Invoice number</li>
-                    <li class="col-md-3 bold">Users</li>
-                    <li class="col-md-3 bold">Clients</li>
-        		</ul>
-                <ul class="client col-md-12">
-                    <li class="col-md-3">Barroc-IT<input type="checkbox"></li>
-                    <li class="col-md-3">20089<input type="checkbox"></li>
-                    <li class="col-md-3">Jelle van Dijk<input type="checkbox"></li>
-                    <li class="col-md-3">Jan Jansen<input type="checkbox"></li>
-                </ul>
-        	</div>
+            <a href="paidinvoice.php">Paid invoices</a>
         </section>
     </div>
     <aside class="col-md-3">

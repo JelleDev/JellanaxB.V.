@@ -34,7 +34,7 @@ $amountInvoices = count($invoiceInfo);
                     if($user->canModifyInvoices()){
                         echo "<div class='col-md-8'>
                                 <h3>
-                                    <a href='add-invoice.php'>Add a client</a>
+                                    <a href='add-invoice.php'>Add an invoice</a>
                                 </h3>
                             </div>";
                     }
@@ -89,7 +89,8 @@ $amountInvoices = count($invoiceInfo);
                 ?>
                 <li><a href="appointments.php">Appointments</a></li>
                 <li><a href="projects.php">Projects</a></li>
-                <li class="active"><a href="invoices.php">Invoices</li>
+                <li class="active"><a href="invoices.php">Invoices</a></li>
+                <li><a href="inactive.php">Inactive</a></li>
             </ul>
         </div>
     </aside>
