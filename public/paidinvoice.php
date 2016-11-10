@@ -2,6 +2,10 @@
 require 'header.php';
 use Respect\Validation\Validator as Validator;
 
+if(!$user->canAccesAll()){
+    $user->redirect('customers.php', 'NotPermitted');
+}
+
 $invoice = new Invoice();
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
