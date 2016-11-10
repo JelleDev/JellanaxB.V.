@@ -42,7 +42,7 @@ $invoiceInfo = $invoice->getInvoice($invoice_id);
                         <li><?php echo $invoiceInfo['projectname']; ?></li>
                         <li><?php echo $invoiceInfo['invoice_nr']; ?></li>
                         <li><?php echo date('m-d-Y', strtotime($invoiceInfo['date_send'])); ?></li>
-                        <li><?php echo $invoiceInfo['price']; ?></li>
+                        <li>€ <?php echo $invoiceInfo['price']; ?>,00</li>
                         <li><?php echo $invoiceInfo['tax_code']; ?>%</li>
                         <li><?php echo $invoiceInfo['explanation']; ?></li>
                     </ul>

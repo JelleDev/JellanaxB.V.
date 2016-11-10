@@ -8,6 +8,9 @@
 
 require realpath(__DIR__ . '/../app/init.php');
 
+if(!$user->isLoggedIn()){
+    $user->redirect('index.php', 'NotLoggedIn');
+}
 ?>
 
 <!doctype html>

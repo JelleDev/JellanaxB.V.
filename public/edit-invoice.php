@@ -60,7 +60,7 @@ $projectnames = $appointment->getProjectNames($client_id);
                             <input type="text" class="form-control" id="invoicenr" placeholder="Invoice number" name="Invoicenr" value="<?php echo $invoiceInfo['invoice_nr']; ?>">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputAmount">Price*</label>
+                            <label for="exampleInputAmount">Price (€)*</label>
                             <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount" name="Amount" value="<?php echo $invoiceInfo['price']; ?>">
                         </div>
                         <div class="form-group">

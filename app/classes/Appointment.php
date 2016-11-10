@@ -72,6 +72,9 @@ class Appointment
         $companyData = $this->db->pdo
             ->query("SELECT `companyname`, `client_id`
                      FROM `tbl_clients`
+                     WHERE `client_id` 
+                     IN (SELECT `client_id`
+                         FROM `tbl_projects`) 
                      ORDER BY `companyname`")
             ->fetchAll(PDO::FETCH_ASSOC);
         return $companyData;

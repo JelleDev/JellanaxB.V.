@@ -8,7 +8,6 @@ if(!$user->canModifyCustomer()){
 $appointment = new Appointment();
 
 $appointmentInfo = $appointment->getCompanyNames();
-
 ?>
 
 <div class="container">
