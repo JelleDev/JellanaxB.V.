@@ -78,13 +78,6 @@ class User
         return false;
     }
 
-    public function canAccesUsers(){
-        if($this->getRole() == 'admin' && $this->logged){
-            return true;
-        }
-        return false;
-    }
-
     public function canModifyProjects(){
         if(($this->getRole() == 'development' || $this->getRole() == 'admin') && $this->logged){
             return true;
