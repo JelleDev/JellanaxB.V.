@@ -131,11 +131,24 @@ li.col-md-2.bold {
     font-weight: 600;
     font-size: 14px;
 }
-
 li.col-md-4.bold {
     font-weight: 600;
     font-size: 14px;
 }
+
+/*HEIGHT ADJUSTMENTS*/
+li.col-md-3 {
+    height: 50px;
+}
+
+li.col-md-2 {
+    height: 50px;
+}
+li.col-md-4 {
+    height: 50px;
+}
+
+
 /*CUSTOMER/PROJECTS PHP PAGE*/
 
 .client li  {
