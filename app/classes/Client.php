@@ -32,6 +32,21 @@ class Client
         return $result;
     }
 
+    public function searchInClients($searchInput){
+        $searchInput = '%' . $searchInput . '%';
+        $sql = "SELECT *
+                FROM `tbl_clients`
+                WHERE `companyname` LIKE :searchInput
+                ORDER BY  `companyname`";
+
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':searchInput', $searchInput);
+        $stmt->execute();
+
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
     public function addClient($clientInfo){
         $sql = "INSERT INTO `tbl_clients` 
                 (`companyname`, `adress1`, `zipcode1`, `residence1`, `adress2`,

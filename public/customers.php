@@ -1,9 +1,20 @@
 <?php
 require 'header.php';
+use Respect\Validation\Validator as Validator;
 
 $client = new Client();
 
-$clients = $client->getAllClients();
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $input = $_POST['searchInput'];
+    var_dump($input);
+    if(!Validator::notEmpty()->validate($input)){
+        $user->redirect('customers.php', 'EmptySearchfield');
+    }
+    $clients = $client->searchInClients($input);
+}
+else {
+    $clients = $client->getAllClients();
+}
 
 $clientCount = count($clients);
 ?>
@@ -18,9 +29,20 @@ $clientCount = count($clients);
                 <div class="col-md-12">
                     <?php
                     if($user->canModifyCustomer()){
-                        echo "<h3><a href='add-customer.php'>Add a client</a></h3>";
+                        echo "<div class='col-md-8'>
+                                <h3>
+                                    <a href='add-customer.php'>Add a client</a>
+                                </h3>
+                            </div>";
                     }
                     ?>
+                    <form class="form-inline col-md-4" action="customers.php" method="POST">
+                        <div class="form-group">
+                            <label class="sr-only" for="searchbar"></label>
+                            <input type="text" name="searchInput" id="searchbar" placeholder="Companyname">
+                        </div>
+                        <input type="submit" class="btn btn-primary" name="type" value="Search">
+                    </form>
                 </div>
             </div>
         </header>

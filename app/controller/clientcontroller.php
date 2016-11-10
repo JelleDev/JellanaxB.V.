@@ -16,7 +16,6 @@ $allInfo = [];
 $requiredInfo = [];
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
     if($user->canEditClient()){
         $requiredInfo = [
             $_POST['companyname'],
