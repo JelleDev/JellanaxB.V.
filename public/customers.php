@@ -5,14 +5,26 @@ use Respect\Validation\Validator as Validator;
 $client = new Client();
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $input = $_POST['searchInput'];
-    if(!Validator::notEmpty()->validate($input)){
-        $user->redirect('customers.php', 'EmptySearchfield');
-    }
-    $clients = $client->searchInClients($input);
+    if(isset($_POST['type'])){
+        $input = $_POST['searchInput'];
+        if(!Validator::notEmpty()->validate($input)){
+            $user->redirect('customers.php', 'EmptySearchfield');
+        }
+        $clients = $client->searchInClients($input);
 
-    if(empty($clients)){
-        $user->redirect('customers.php', 'NoResultsFound');
+        if(empty($clients)){
+            $user->redirect('customers.php', 'NoResultsFound');
+        }
+    }
+    else {
+        $clients = [];
+        $clientInfo = $client->getAllClients();
+        foreach($clientInfo as $client){
+            $creditBalance = $user->calculateCreditBalance($client['client_id']);
+            if($creditBalance < 0){
+                array_push($clients, $client);
+            }
+        }
     }
 }
 else {
@@ -30,15 +42,18 @@ $clientCount = count($clients);
                     <h2><?php echo $clientCount . ' Results found'; ?> </h2>
                 </div>
                 <div class="col-md-12">
+                    <div class="col-md-8">
                     <?php
                     if($user->canModifyCustomer()){
-                        echo "<div class='col-md-8'>
-                                <h3>
-                                    <a href='add-customer.php'>Add a client</a>
-                                </h3>
-                            </div>";
+                        echo "<h3 class='col-md-5'>
+                                <a href='add-customer.php'>Add a client</a>
+                            </h3>";
                     }
                     ?>
+                        <form action="" method="POST" class="col-md-offset-3 col-md-4">
+                            <input type="submit" class="btn btn-warning" name="overLimit" value="Clients over limit">
+                        </form>
+                    </div>
                     <form class="form-inline col-md-4" action="customers.php" method="POST">
                         <div class="form-group">
                             <label class="sr-only" for="searchbar"></label>
