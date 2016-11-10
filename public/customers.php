@@ -6,11 +6,14 @@ $client = new Client();
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $input = $_POST['searchInput'];
-    var_dump($input);
     if(!Validator::notEmpty()->validate($input)){
         $user->redirect('customers.php', 'EmptySearchfield');
     }
     $clients = $client->searchInClients($input);
+
+    if(empty($clients)){
+        $user->redirect('customers.php', 'NoResultsFound');
+    }
 }
 else {
     $clients = $client->getAllClients();

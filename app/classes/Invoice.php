@@ -51,6 +51,28 @@ class Invoice
         return $result;
     }
 
+    public function searchInInvoices($searchInput){
+        $searchInput = '%' . $searchInput . '%';
+        $sql = "SELECT tbl_invoices.*, 
+                    tbl_clients.`client_id`, tbl_clients.`companyname`,
+                    tbl_projects.`projectname`
+                FROM `tbl_projects`
+                 INNER JOIN `tbl_clients`
+                 ON tbl_clients.`client_id` = tbl_projects.`client_id`
+                 INNER JOIN `tbl_invoices`
+                 ON tbl_invoices.`project_id` = tbl_projects.`project_id`
+                 WHERE tbl_clients.`companyname` LIKE :searchInput AND tbl_invoices.`paid` = 0;
+                 ORDER BY tbl_clients.`companyname`, tbl_projects.`projectname`,
+                 tbl_invoices.`invoice_nr`";
+
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':searchInput', $searchInput);
+        $stmt->execute();
+
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
     public function addInvoice($invoiceInfo){
         $sql = "INSERT INTO `tbl_invoices`
                 (`project_id`, `invoice_nr`, `explanation`, `price`, `tax_code`)

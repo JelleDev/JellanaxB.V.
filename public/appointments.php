@@ -1,9 +1,23 @@
 <?php
 require 'header.php';
+use Respect\Validation\Validator as Validator;
 
 $appointment = new Appointment();
 
-$appointmentInfo = $appointment->getMainAppointmentInfo();
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $input = $_POST['searchInput'];
+    if(!Validator::notEmpty()->validate($input)){
+        $user->redirect('appointments.php', 'EmptySearchfield');
+    }
+    $appointmentInfo = $appointment->searchInAppointments($input);
+
+    if(empty($appointmentInfo)){
+        $user->redirect('appointments.php', 'NoResultsFound');
+    }
+}
+else {
+    $appointmentInfo = $appointment->getMainAppointmentInfo();
+}
 
 $amountAppointments = count($appointmentInfo);
 ?>
@@ -18,9 +32,20 @@ $amountAppointments = count($appointmentInfo);
                 <div class="col-md-12">
                     <?php
                     if($user->canModifyCustomer()){
-                        echo "<h3><a href='search_companyname.php'>Add an appointment</a></h3>";
+                        echo "<div class='col-md-8'>
+                                <h3>
+                                    <a href='add-appointment.php'>Add a client</a>
+                                </h3>
+                            </div>";
                     }
                     ?>
+                    <form class="form-inline col-md-4" action="appointments.php" method="POST">
+                        <div class="form-group">
+                            <label class="sr-only" for="searchbar"></label>
+                            <input type="text" name="searchInput" id="searchbar" placeholder="Companyname">
+                        </div>
+                        <input type="submit" class="btn btn-primary" name="type" value="Search">
+                    </form>
                 </div>
             </div>
         </header>

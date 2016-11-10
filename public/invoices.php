@@ -1,9 +1,23 @@
 <?php
 require 'header.php';
+use Respect\Validation\Validator as Validator;
 
 $invoice = new Invoice();
 
-$invoiceInfo = $invoice->getAllInvoices();
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $input = $_POST['searchInput'];
+    if(!Validator::notEmpty()->validate($input)){
+        $user->redirect('invoices.php', 'EmptySearchfield');
+    }
+    $invoiceInfo = $invoice->searchInInvoices($input);
+
+    if(empty($invoiceInfo)){
+        $user->redirect('invoices.php', 'NoResultsFound');
+    }
+}
+else {
+    $invoiceInfo = $invoice->getAllInvoices();
+}
 
 $amountInvoices = count($invoiceInfo);
 ?>
@@ -18,9 +32,20 @@ $amountInvoices = count($invoiceInfo);
                 <div class="col-md-12">
                     <?php
                     if($user->canModifyInvoices()){
-                        echo "<h3><a href='search_companyname_invoice.php'>Add an invoice</a></h3>";
+                        echo "<div class='col-md-8'>
+                                <h3>
+                                    <a href='add-invoice.php'>Add a client</a>
+                                </h3>
+                            </div>";
                     }
                     ?>
+                    <form class="form-inline col-md-4" action="invoices.php" method="POST">
+                        <div class="form-group">
+                            <label class="sr-only" for="searchbar"></label>
+                            <input type="text" name="searchInput" id="searchbar" placeholder="Companyname">
+                        </div>
+                        <input type="submit" class="btn btn-primary" name="type" value="Search">
+                    </form>
                 </div>
             </div>
         </header>

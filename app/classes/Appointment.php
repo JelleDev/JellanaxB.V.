@@ -80,6 +80,27 @@ class Appointment
         return $companyData;
     }
 
+    public function searchInAppointments($searchInput){
+        $searchInput = '%' . $searchInput . '%';
+        $sql = "SELECT tbl_clients.`companyname`, tbl_projects.`projectname`, 
+            tbl_appointments.`location`, tbl_appointments.`date_time`, 
+            tbl_appointments.`appointment_id` 
+            FROM `tbl_projects`
+            INNER JOIN `tbl_clients`
+            ON tbl_clients.`client_id` = tbl_projects.`client_id`
+            INNER JOIN `tbl_appointments`
+            ON tbl_projects.`project_id` = tbl_appointments.`project_id`
+            WHERE tbl_clients.`companyname` LIKE :searchInput
+            ORDER BY tbl_appointments.`date_time`";
+
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':searchInput', $searchInput);
+        $stmt->execute();
+
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
     public function getCompanyName($client_id){
         $sql = "SELECT `companyname` 
                 FROM `tbl_clients` 

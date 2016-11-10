@@ -47,6 +47,23 @@ class Project {
         return $clientData;
     }
 
+    public function searchInProjects($searchInput){
+        $searchInput = '%' . $searchInput . '%';
+        $sql = "SELECT tbl_projects.*, tbl_clients.`companyname`
+                FROM `tbl_projects`
+                INNER JOIN `tbl_clients`
+                ON tbl_clients.`client_id` = tbl_projects.`client_id`
+                WHERE tbl_projects.`projectname` LIKE :searchInput
+                ORDER BY  tbl_projects.`deadline`, tbl_clients.`companyname`";
+
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':searchInput', $searchInput);
+        $stmt->execute();
+
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
     public function getCreditWorthy($client_id){
         $sql = "SELECT `creditworthy`
                 FROM `tbl_clients`
