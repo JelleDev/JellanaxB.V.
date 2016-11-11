@@ -51,7 +51,7 @@ $clientCount = count($clients);
                     }
                     ?>
                         <form action="" method="POST" class="col-md-offset-3 col-md-4">
-                            <input type="submit" class="btn btn-warning" name="overLimit" value="Clients over limit">
+                            <input type="submit" class="btn btn-primary customers_button" name="overLimit" value="Clients over limit">
                         </form>
                     </div>
                     <form class="form-inline col-md-4" action="customers.php" method="POST">
@@ -59,7 +59,7 @@ $clientCount = count($clients);
                             <label class="sr-only" for="searchbar"></label>
                             <input type="text" name="searchInput" id="searchbar" placeholder="Companyname">
                         </div>
-                        <input type="submit" class="btn btn-primary" name="type" value="Search">
+                        <input type="submit" class="btn btn-primary customers_button" name="type" value="Search">
                     </form>
                 </div>
             </div>

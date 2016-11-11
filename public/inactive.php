@@ -17,7 +17,7 @@ if(!$user->canAccesAll()){
             </div>
         </header>
         <section class="information">
-            <a href="paidinvoice.php">Paid invoices</a>
+            <a class="redirect-link" href="paidinvoice.php">Paid invoices</a>
         </section>
     </div>
     <aside class="col-md-3">

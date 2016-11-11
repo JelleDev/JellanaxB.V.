@@ -79,6 +79,10 @@ input[type="submit"] {
 
 /*INFORMATION SECTION*/
 
+input.customers_button {
+    margin: 5px 0 0 0;
+}
+
 .information {
     border: 1px solid #000000;
 }
@@ -262,6 +266,12 @@ img.ui-datepicker-trigger {
     font-family: sans-serif;
     background-color: #2780e3;
     color: white; 
+}
+
+/*INACTIVE PAGE*/
+
+a.redirect-link {
+  margin: 0 0 0 10px;
 }
 /*END INFORMATION SECTION*/
 
